@@ -9,6 +9,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "optimize:images": "node scripts/optimize-images.mjs",
+    "prepare:pages": "node scripts/prepare-pages.mjs",
     "preview": "astro preview",
     "astro": "astro"
   },

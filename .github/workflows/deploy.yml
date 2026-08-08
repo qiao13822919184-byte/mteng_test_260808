@@ -33,6 +33,11 @@ jobs:
       - name: Build with Astro
         run: npm run build
 
+      - name: Prepare GitHub Pages project path
+        run: npm run prepare:pages
+        env:
+          PAGES_BASE_PATH: /mteng_test_260808
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
