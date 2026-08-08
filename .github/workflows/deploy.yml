@@ -10,6 +10,10 @@ permissions:
   pages: write
   id-token: write
 
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -17,22 +21,18 @@ jobs:
       - name: Checkout your repository
         uses: actions/checkout@v4
 
-      # 1. 强制安装 Node.js 22 (满足 Astro 6+ 的硬性要求)
       - name: Install Node.js v22
         uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: 'npm'
 
-      # 2. 手动安装依赖
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
-      # 3. 手动执行构建命令
       - name: Build with Astro
         run: npm run build
 
-      # 4. 手动上传构建后的文件 (Astro 默认产物在 dist 文件夹)
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

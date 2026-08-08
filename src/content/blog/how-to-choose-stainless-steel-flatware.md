@@ -3,7 +3,7 @@ title: 如何选择不锈钢餐具：304、18-10 与 201 有什么区别？
 description: 采购不锈钢餐具时如何看懂材质标号？本文解释 304、18-10、201 不锈钢的区别，帮助你为餐厅、品牌或出口订单选对材质。
 date: 2026-06-20
 author: Yumingxing
-cover: /uploads/image3.png
+cover: /uploads/image3.webp
 tags:
   - 选材指南
   - 不锈钢餐具

@@ -106,7 +106,7 @@ h1, h2, h3, h4 {
     linear-gradient(152deg, #0d1a24 0%, #0a141c 46%, #0b161f 100%);
 }
 
-/* 光层：缓慢「呼吸」的两枚高光池 —— 冷钢青(左上) + 暖琥珀(右上)，定位于标题/光环之后 */
+/* 光层：静态高光池，保留原有冷钢青与暖琥珀视觉，避免大面积图层持续重绘 */
 .brand-hero::before {
   content: "";
   position: absolute;
@@ -118,10 +118,9 @@ h1, h2, h3, h4 {
     radial-gradient(40% 46% at 86% 0%, rgba(245, 150, 66, 0.34), transparent 60%),
     radial-gradient(46% 50% at 72% 96%, rgba(224, 70, 26, 0.16), transparent 62%),
     radial-gradient(54% 58% at 2% 88%, rgba(19, 94, 150, 0.22), transparent 64%);
-  animation: meshDrift 24s ease-in-out infinite;
 }
 
-/* 抛光高光层：一道极缓的斜向光，如光线扫过钢面（带停顿，偶发一闪而非持续） */
+/* 抛光高光层：保留原有斜向钢面高光，但不再持续扫描 */
 .brand-hero::after {
   content: "";
   position: absolute;
@@ -138,18 +137,6 @@ h1, h2, h3, h4 {
   );
   background-size: 250% 100%;
   background-position: 135% 0;
-  animation: steelSweep 8.5s ease-in-out infinite;
-}
-
-@keyframes meshDrift {
-  0%   { transform: translate3d(0, 0, 0) scale(1); }
-  50%  { transform: translate3d(2.2%, -1.6%, 0) scale(1.07); }
-  100% { transform: translate3d(0, 0, 0) scale(1); }
-}
-
-@keyframes steelSweep {
-  0%, 10%   { background-position: 135% 0; }
-  90%, 100% { background-position: -45% 0; }
 }
 
 .brand-gradient-text {
@@ -211,8 +198,8 @@ h1, h2, h3, h4 {
    ========================================================= */
 .glass {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.035));
-  backdrop-filter: blur(16px) saturate(150%);
-  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  backdrop-filter: blur(6px) saturate(120%);
+  -webkit-backdrop-filter: blur(6px) saturate(120%);
   border: 1px solid rgba(255, 255, 255, 0.14);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.18),
@@ -221,8 +208,8 @@ h1, h2, h3, h4 {
 }
 .glass-light {
   background: rgba(255, 255, 255, 0.72);
-  backdrop-filter: blur(10px) saturate(130%);
-  -webkit-backdrop-filter: blur(10px) saturate(130%);
+  backdrop-filter: blur(6px) saturate(115%);
+  -webkit-backdrop-filter: blur(6px) saturate(115%);
   border: 1px solid rgba(255, 255, 255, 0.7);
   box-shadow:
     var(--shadow-soft),
@@ -299,8 +286,8 @@ h1, h2, h3, h4 {
   color: #fff;
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.28);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 .btn-outline:hover {
   transform: translateY(-2px);
@@ -462,6 +449,7 @@ h1, h2, h3, h4 {
 .reveal.is-visible {
   opacity: 1;
   transform: none;
+  will-change: auto;
 }
 .reveal-d1 { --reveal-delay: 80ms; }
 .reveal-d2 { --reveal-delay: 160ms; }
@@ -500,8 +488,7 @@ h1, h2, h3, h4 {
 .shader-fade { animation: shaderIn 1.6s ease 0.35s both; }
 @keyframes shaderIn { from { opacity: 0; } to { opacity: 1; } }
 
-/* 英雄区鼠标光晕 + 延迟拖尾（暖琥珀头 + 钢青尾，screen 混合提亮流光；
-   仅首页 hero，dots 由内联脚本生成定位；触屏 / 降低动态时脚本不启用） */
+/* 英雄区鼠标光晕：单层暖琥珀 + 钢青渐变；触屏 / 降低动态时不启用 */
 .hero-glow {
   position: absolute;
   inset: 0;
@@ -514,12 +501,13 @@ h1, h2, h3, h4 {
   top: 0;
   left: 0;
   border-radius: 9999px;
-  mix-blend-mode: screen;
   opacity: 0;
   transition: opacity 0.6s ease;
+}
+.hero-glow.is-active > span {
+  opacity: 1;
   will-change: transform;
 }
-.hero-glow.is-active > span { opacity: 1; }
 
 /* 大字段落标题：优雅衬线 + 加粗，编辑感强（用户指定加粗 + 设计感字体） */
 .statement {

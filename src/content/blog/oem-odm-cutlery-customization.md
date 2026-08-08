@@ -3,7 +3,7 @@ title: 不锈钢餐具 OEM/ODM 定制流程详解
 description: 想做自己品牌的不锈钢餐具？本文拆解 OEM 与 ODM 的区别，以及从打样到量产、出口的完整定制流程。
 date: 2026-07-02
 author: Yumingxing
-cover: /uploads/手持1.png
+cover: /uploads/手持1.webp
 tags:
   - 定制
   - OEM

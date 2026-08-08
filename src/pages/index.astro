@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import SteelShader from '../components/ui/SteelShader';
+import SteelShader from '../components/ui/SteelShader.astro';
 import ProductCard from '../components/ProductCard.astro';
 import { getCollection } from 'astro:content';
 import site from '../data/site.json';
@@ -56,7 +56,7 @@ const specs = [
       class="shader-fade absolute inset-0 z-0 [mask-image:linear-gradient(to_bottom,#000_72%,transparent)] [-webkit-mask-image:linear-gradient(to_bottom,#000_72%,transparent)]"
       aria-hidden="true"
     >
-      <SteelShader client:only="react" />
+      <SteelShader />
     </div>
     <!-- 暗场蒙版：顶部（导航）+ 左侧（标题区）压暗，确保亮色流光上文字可读 -->
     <div
@@ -343,7 +343,7 @@ const specs = [
     </div>
   </section>
 
-  <!-- 英雄区鼠标光晕 + 延迟拖尾（纯原生 JS；触屏 / 降低动态时自动不启用） -->
+  <!-- 英雄区鼠标光晕（纯原生 JS；触屏 / 降低动态时自动不启用） -->
   <script is:inline>
     (function () {
       var host = document.getElementById('hero-glow-host');
@@ -353,47 +353,30 @@ const specs = [
       var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       if (!fine || reduce) return;
 
-      var N = 6, dots = [];
-      for (var i = 0; i < N; i++) {
-        var t = i / (N - 1);
-        var size = Math.round(300 - t * 240);            // 头 300 → 尾 60
-        var col = i < 3 ? '244,169,60' : '111,183,199';  // 暖琥珀头 / 钢青尾
-        var a = (0.26 - t * 0.2).toFixed(3);             // 头亮尾淡
-        var s = document.createElement('span');
-        s.style.width = size + 'px';
-        s.style.height = size + 'px';
-        s.style.background = 'radial-gradient(circle, rgba(' + col + ',' + a + ') 0%, rgba(' + col + ',0) 70%)';
-        layer.appendChild(s);
-        dots.push({ el: s, x: 0, y: 0 });
-      }
+      var glow = document.createElement('span');
+      glow.style.width = '260px';
+      glow.style.height = '260px';
+      glow.style.background = 'radial-gradient(circle, rgba(244,169,60,0.18) 0%, rgba(111,183,199,0.08) 38%, rgba(111,183,199,0) 72%)';
+      layer.appendChild(glow);
 
-      var tx = 0, ty = 0, raf = 0, running = false;
+      var tx = 0, ty = 0, raf = 0;
+      function render() {
+        glow.style.transform = 'translate3d(' + tx.toFixed(1) + 'px,' + ty.toFixed(1) + 'px,0) translate(-50%,-50%)';
+        raf = 0;
+      }
       function move(e) {
         var r = host.getBoundingClientRect();
         tx = e.clientX - r.left;
         ty = e.clientY - r.top;
         layer.classList.add('is-active');
-        if (!running) { running = true; raf = requestAnimationFrame(loop); }
+        if (!raf) raf = requestAnimationFrame(render);
       }
       function leave() {
         layer.classList.remove('is-active');
         if (raf) cancelAnimationFrame(raf);
-        running = false;
+        raf = 0;
       }
-      function loop() {
-        var px = tx, py = ty;
-        for (var i = 0; i < dots.length; i++) {
-          var d = dots[i];
-          var f = 0.30 - i * 0.03;                       // 头快尾慢 → 链式拖尾
-          if (f < 0.12) f = 0.12;
-          d.x += (px - d.x) * f;
-          d.y += (py - d.y) * f;
-          d.el.style.transform = 'translate(' + d.x.toFixed(1) + 'px,' + d.y.toFixed(1) + 'px) translate(-50%,-50%)';
-          px = d.x; py = d.y;                             // 下一个追前一个
-        }
-        raf = requestAnimationFrame(loop);
-      }
-      host.addEventListener('pointermove', move);
+      host.addEventListener('pointermove', move, { passive: true });
       host.addEventListener('pointerleave', leave);
     })();
   </script>

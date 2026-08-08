@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: "qiao13822919184-byte/test_2"
+  repo: "qiao13822919184-byte/mteng_test_260808"
   branch: main
 
 # 媒体文件（图片）存储到代码仓库 public/uploads，引用路径以 / 开头

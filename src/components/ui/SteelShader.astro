@@ -1,0 +1,88 @@
+---
+interface Props {
+  className?: string;
+}
+
+const { className = '' } = Astro.props;
+---
+
+<div class={`h-full w-full ${className}`} data-steel-shader aria-hidden="true"></div>
+
+<script>
+  import {
+    ShaderFitOptions,
+    ShaderMount,
+    getShaderColorFromString,
+    meshGradientFragmentShader,
+  } from '@paper-design/shaders';
+
+  const colors = [
+    '#0a3bd0',
+    '#0f6fd0',
+    '#16a3cf',
+    '#8fcdd6',
+    '#e7e0cb',
+    '#f3b32a',
+    '#f0731a',
+    '#6e1800',
+  ];
+
+  const uniforms = {
+    u_colors: colors.map(getShaderColorFromString),
+    u_colorsCount: colors.length,
+    u_distortion: 0.8,
+    u_swirl: 0.1,
+    u_grainMixer: 0,
+    u_grainOverlay: 0,
+    u_fit: ShaderFitOptions.contain,
+    u_rotation: 0,
+    u_scale: 1,
+    u_offsetX: 0,
+    u_offsetY: 0,
+    u_originX: 0.5,
+    u_originY: 0.5,
+    u_worldWidth: 0,
+    u_worldHeight: 0,
+  };
+
+  document.querySelectorAll<HTMLElement>('[data-steel-shader]').forEach((element) => {
+    if (element.dataset.shaderReady === 'true') return;
+    element.dataset.shaderReady = 'true';
+
+    const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const shader = new ShaderMount(
+      element,
+      meshGradientFragmentShader,
+      uniforms,
+      undefined,
+      motionQuery.matches ? 0 : 0.3,
+      0,
+      1,
+      1920 * 1080,
+    );
+
+    let isVisible = true;
+    const updateSpeed = () => {
+      const shouldRun = isVisible && !motionQuery.matches;
+      shader.setSpeed(shouldRun ? 0.3 : 0);
+      element.dataset.shaderRunning = shouldRun ? 'true' : 'false';
+    };
+    const observer = 'IntersectionObserver' in window
+      ? new IntersectionObserver(([entry]) => {
+          isVisible = Boolean(entry?.isIntersecting);
+          updateSpeed();
+        }, { threshold: 0.01 })
+      : null;
+
+    observer?.observe(element);
+    motionQuery.addEventListener('change', updateSpeed);
+    updateSpeed();
+
+    window.addEventListener('pagehide', (event) => {
+      if (event.persisted) return;
+      observer?.disconnect();
+      motionQuery.removeEventListener('change', updateSpeed);
+      shader.dispose();
+    }, { once: true });
+  });
+</script>

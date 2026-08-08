@@ -55,13 +55,32 @@ const orgSchema = {
     <!-- 页面级 head 注入（Product / Article JSON-LD 等） -->
     <slot name="head" />
 
-    <!-- Google Analytics 4 -->
-    <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`} is:inline></script>
+    <!-- Google Analytics 4：空闲时加载，避免与首屏渲染争用主线程 -->
     <script is:inline define:vars={{ gaId }}>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag('js', new Date());
-      gtag('config', gaId);
+      (function () {
+        if (!gaId) return;
+
+        function loadAnalytics() {
+          if (document.querySelector('script[data-ga4]')) return;
+          window.dataLayer = window.dataLayer || [];
+          window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+
+          var script = document.createElement('script');
+          script.async = true;
+          script.dataset.ga4 = 'true';
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(gaId);
+          document.head.appendChild(script);
+
+          window.gtag('js', new Date());
+          window.gtag('config', gaId);
+        }
+
+        if ('requestIdleCallback' in window) {
+          window.requestIdleCallback(loadAnalytics, { timeout: 2500 });
+        } else {
+          window.addEventListener('load', loadAnalytics, { once: true });
+        }
+      })();
     </script>
   </head>
   <body class="flex flex-col min-h-screen">
