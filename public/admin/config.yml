@@ -166,6 +166,46 @@ collections:
               - { label: "简介（首页系列卡 + 列表展示）", name: "summary", widget: "text" }
               - { label: "配图（首页「产品系列」展示）", name: "image", widget: "image" }
 
+      # ---- 1.5 产品 / 博客 / 联系页首屏 ----
+      - name: "pages"
+        label: "页面首屏与 SEO"
+        file: "src/data/pages.json"
+        fields:
+          - label: "产品中心"
+            name: "products"
+            widget: "object"
+            fields:
+              - { label: "SEO 标题", name: "seoTitle", widget: "string" }
+              - { label: "SEO 描述", name: "seoDescription", widget: "text" }
+              - { label: "面包屑名称", name: "breadcrumb", widget: "string" }
+              - { label: "小标签", name: "eyebrow", widget: "string" }
+              - { label: "主标题", name: "title", widget: "string" }
+              - { label: "简介", name: "description", widget: "text" }
+              - { label: "首屏图片", name: "heroImage", widget: "image" }
+              - { label: "图片替代文本", name: "heroImageAlt", widget: "string" }
+          - label: "博客"
+            name: "blog"
+            widget: "object"
+            fields:
+              - { label: "SEO 标题", name: "seoTitle", widget: "string" }
+              - { label: "SEO 描述", name: "seoDescription", widget: "text" }
+              - { label: "面包屑名称", name: "breadcrumb", widget: "string" }
+              - { label: "小标签", name: "eyebrow", widget: "string" }
+              - { label: "主标题", name: "title", widget: "string" }
+              - { label: "简介", name: "description", widget: "text" }
+              - { label: "首屏图片", name: "heroImage", widget: "image" }
+              - { label: "图片替代文本", name: "heroImageAlt", widget: "string" }
+          - label: "联系我们"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "面包屑名称", name: "breadcrumb", widget: "string" }
+              - { label: "小标签", name: "eyebrow", widget: "string" }
+              - { label: "主标题", name: "title", widget: "string" }
+              - { label: "简介", name: "description", widget: "text" }
+              - { label: "首屏图片", name: "heroImage", widget: "image" }
+              - { label: "图片替代文本", name: "heroImageAlt", widget: "string" }
+
   # ==========================================
   # 2. 产品管理（每个产品一个文件，可上传图片）
   # ==========================================
@@ -185,9 +225,7 @@ collections:
         widget: "select"
         options:
           - { label: "不锈钢餐具套装", value: "flatware-sets" }
-          - { label: "刀叉勺单品", value: "cutlery" }
-          - { label: "不锈钢厨房用具", value: "kitchenware" }
-          - { label: "不锈钢餐桌用品", value: "tableware" }
+          - { label: "不锈钢厨具套装", value: "kitchenware-sets" }
       - { label: "简介（列表/分享展示）", name: "summary", widget: "text" }
       - label: "产品图片（第一张为主图）"
         name: "images"

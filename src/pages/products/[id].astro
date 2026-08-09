@@ -78,14 +78,14 @@ const breadcrumbSchema = {
     <div class="grid lg:grid-cols-2 gap-10 lg:gap-14">
       <!-- Gallery -->
       <div class="reveal">
-        <div class="sheen group aspect-square rounded-3xl overflow-hidden bg-sand border border-line">
-          <img id="main-image" src={mainImg} alt={d.title} class="w-full h-full object-cover transition-opacity duration-300" />
+        <div class="sheen group aspect-square rounded-3xl overflow-hidden bg-white border border-line">
+          <img id="main-image" src={mainImg} alt={d.title} class="w-full h-full object-contain p-2 sm:p-4 transition-opacity duration-300" />
         </div>
         {images.length > 1 && (
           <div class="flex gap-3 mt-4">
             {images.map((img) => (
-              <button class="thumb-btn w-20 h-20 rounded-xl overflow-hidden border-2 border-transparent focus:border-ocean hover:opacity-80 transition" data-image={img}>
-                <img src={img} alt="" class="w-full h-full object-cover pointer-events-none" />
+              <button class="thumb-btn w-20 h-20 rounded-xl overflow-hidden border-2 border-transparent bg-white focus:border-ocean hover:opacity-80 transition" data-image={img}>
+                <img src={img} alt="" class="w-full h-full object-contain p-1 pointer-events-none" />
               </button>
             ))}
           </div>

@@ -1,26 +1,24 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
 import { getCollection } from 'astro:content';
+import pages from '../../data/pages.json';
 
 const posts = (await getCollection('blog')).sort((a, b) => +b.data.date - +a.data.date);
 const [featured, ...rest] = posts;
 ---
 <BaseLayout
-  title="博客 · 采购知识"
-  description="裕明兴博客：不锈钢餐具选购指南、批发常见问题、OEM/ODM 定制流程等采购知识，持续更新。"
+  title={pages.blog.seoTitle}
+  description={pages.blog.seoDescription}
 >
-  <section class="brand-hero text-white relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-16 md:py-20 relative z-10">
-      <nav class="text-sm text-white/60 mb-4">
-        <a href="/" class="hover:text-white transition-colors">首页</a> <span class="mx-1">/</span> <span class="text-white">博客</span>
-      </nav>
-      <p class="eyebrow eyebrow-amber mb-4">采购知识</p>
-      <h1 class="steel-text font-display font-extrabold text-4xl md:text-5xl">博客与采购指南</h1>
-      <p class="text-white/75 mt-4 max-w-2xl leading-relaxed">
-        关于不锈钢餐具的选材、批发、定制与出口知识，帮助你做出更好的采购决策。
-      </p>
-    </div>
-  </section>
+  <PageHero
+    breadcrumb={pages.blog.breadcrumb}
+    eyebrow={pages.blog.eyebrow}
+    title={pages.blog.title}
+    description={pages.blog.description}
+    image={pages.blog.heroImage}
+    imageAlt={pages.blog.heroImageAlt}
+  />
 
   <section class="max-w-7xl mx-auto px-4 sm:px-6 py-12">
     {posts.length === 0 && (

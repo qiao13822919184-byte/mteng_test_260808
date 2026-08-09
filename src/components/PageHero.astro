@@ -1,0 +1,40 @@
+---
+interface Props {
+  breadcrumb: string;
+  eyebrow: string;
+  title: string;
+  description: string;
+  image: string;
+  imageAlt: string;
+}
+
+const { breadcrumb, eyebrow, title, description, image, imageAlt } = Astro.props;
+---
+
+<section class="brand-hero text-white relative overflow-hidden border-b border-line">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-14 md:py-18 grid lg:grid-cols-[minmax(0,1.1fr)_minmax(360px,0.9fr)] gap-10 lg:gap-14 items-center relative z-10">
+    <div>
+      <nav class="reveal text-sm text-white/60 mb-5">
+        <a href="/" class="hover:text-white transition-colors">首页</a>
+        <span class="mx-1">/</span>
+        <span class="text-white/90">{breadcrumb}</span>
+      </nav>
+      <p class="reveal eyebrow eyebrow-amber mb-4">{eyebrow}</p>
+      <h1 class="reveal reveal-d1 steel-text font-display font-extrabold text-4xl md:text-5xl leading-tight">{title}</h1>
+      <p class="reveal reveal-d2 text-white/75 mt-5 max-w-2xl leading-relaxed">{description}</p>
+    </div>
+
+    <div class="reveal reveal-d2 relative rounded-2xl overflow-hidden border border-white/15 ring-1 ring-white/10 bg-white/[0.04] shadow-[0_24px_70px_-36px_rgba(0,0,0,0.85)] aspect-[16/10]">
+      <img
+        src={image}
+        alt={imageAlt}
+        width="1600"
+        height="1000"
+        loading="eager"
+        decoding="async"
+        fetchpriority="high"
+        class="w-full h-full object-cover"
+      />
+    </div>
+  </div>
+</section>

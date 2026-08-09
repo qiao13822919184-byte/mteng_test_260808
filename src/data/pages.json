@@ -1,0 +1,30 @@
+{
+  "products": {
+    "seoTitle": "不锈钢餐具与厨具产品中心 · 全球市场选品与外贸出口",
+    "seoDescription": "裕明兴产品中心精选不锈钢餐具与厨具两大系列，提供现货供应、常规生产、贴牌与 OEM/ODM 服务，支持小批量试单及批量出口。",
+    "breadcrumb": "产品中心",
+    "eyebrow": "不锈钢餐具与厨具选品中心",
+    "title": "精准匹配全球市场需求的不锈钢餐具与厨具",
+    "description": "聚焦不锈钢餐具与厨具两大核心系列，根据不同国家和地区的市场需求推荐款式，灵活支持现货发货、常规批量排产及贴牌定制。点击产品即可通过 WhatsApp 获取项目报价。",
+    "heroImage": "/uploads/yumingxing-products-hero.webp",
+    "heroImageAlt": "裕明兴不锈钢餐具与厨具产品海报"
+  },
+  "blog": {
+    "seoTitle": "博客与采购指南",
+    "seoDescription": "裕明兴博客：不锈钢餐具与厨具选购、批发、贴牌定制和出口知识。",
+    "breadcrumb": "博客",
+    "eyebrow": "采购知识",
+    "title": "博客与采购指南",
+    "description": "分享不锈钢餐具与厨具的选材、批发、定制和出口知识，帮助采购商做出更清晰的决策。",
+    "heroImage": "/uploads/yumingxing-global-partners.webp",
+    "heroImageAlt": "裕明兴全球渠道与合作伙伴"
+  },
+  "contact": {
+    "breadcrumb": "联系我们",
+    "eyebrow": "联系我们",
+    "title": "联系裕明兴，开启合作",
+    "description": "无论是询价、选品、定制还是样品需求，欢迎通过以下任一方式联系我们。",
+    "heroImage": "/uploads/yumingxing-contact-factory.webp",
+    "heroImageAlt": "裕明兴工厂与生产环境"
+  }
+}

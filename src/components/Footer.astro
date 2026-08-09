@@ -8,10 +8,8 @@ const cols = [
   {
     title: '产品',
     links: [
-      { label: '餐具套装', href: '/products?cat=flatware-sets' },
-      { label: '刀叉勺单品', href: '/products?cat=cutlery' },
-      { label: '厨房用具', href: '/products?cat=kitchenware' },
-      { label: '餐桌用品', href: '/products?cat=tableware' },
+      { label: '不锈钢餐具套装', href: '/products?cat=flatware-sets' },
+      { label: '不锈钢厨具套装', href: '/products?cat=kitchenware-sets' },
     ],
   },
   {
@@ -62,6 +60,14 @@ const cols = [
         <li class="flex items-start gap-2">
           <span class="text-steel-light"></span>
           <a href={waLink} target="_blank" rel="noopener" data-wa data-wa-product="footer" class="hover:text-white">WhatsApp: {site.contact.whatsappDisplay}</a>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-steel-light"></span>
+          <a href={`tel:${site.contact.phoneDisplay.replace(/[^\d+]/g, '')}`} class="hover:text-white">电话: {site.contact.phoneDisplay}</a>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-steel-light"></span>
+          <span>微信: {site.contact.wechat}</span>
         </li>
         <li class="flex items-start gap-2">
           <span class="text-steel-light"></span>

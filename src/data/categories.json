@@ -4,29 +4,15 @@
       "slug": "flatware-sets",
       "name": "不锈钢餐具套装",
       "nameEn": "Flatware Sets",
-      "summary": "刀、叉、勺成套餐具，适配酒店、餐厅与零售品牌。",
-      "image": "https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=1200&auto=format&fit=crop"
+      "summary": "成套刀、叉、勺及配套餐桌用品，适配酒店、餐厅与零售品牌。",
+      "image": "/uploads/category-flatware.webp"
     },
     {
-      "slug": "cutlery",
-      "name": "刀叉勺单品",
-      "nameEn": "Cutlery",
-      "summary": "主餐刀、叉、汤勺、咖啡勺等单品，可混批与定制 LOGO。",
-      "image": "https://images.unsplash.com/photo-1592417817098-8fd3d9eb14a5?q=80&w=1200&auto=format&fit=crop"
-    },
-    {
-      "slug": "kitchenware",
-      "name": "不锈钢厨房用具",
-      "nameEn": "Kitchenware",
-      "summary": "厨房铲勺、漏勺、料理工具等耐用厨具，商用与家用兼顾。",
-      "image": "https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=1200&auto=format&fit=crop"
-    },
-    {
-      "slug": "tableware",
-      "name": "不锈钢餐桌用品",
-      "nameEn": "Tableware",
-      "summary": "餐盘、碗、托盘等不锈钢桌面用品，配套整体餐具方案。",
-      "image": "https://images.unsplash.com/photo-1592417817098-8fd3d9eb14a5?q=80&w=1200&auto=format&fit=crop"
+      "slug": "kitchenware-sets",
+      "name": "不锈钢厨具套装",
+      "nameEn": "Kitchenware Sets",
+      "summary": "炒铲、汤勺、漏勺与料理工具等成套厨具，商用与家用兼顾。",
+      "image": "/uploads/category-kitchenware.webp"
     }
   ]
 }

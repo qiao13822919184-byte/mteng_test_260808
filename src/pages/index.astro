@@ -8,7 +8,7 @@ import home from '../data/home.json';
 import categoriesData from '../data/categories.json';
 const categories = categoriesData.categories;
 
-const waText = encodeURIComponent('您好，我想咨询裕明兴的不锈钢餐具产品与报价。');
+const waText = encodeURIComponent('您好，我想咨询裕明兴的不锈钢餐厨具产品与报价。');
 const waLink = `https://wa.me/${site.contact.whatsappDigits}?text=${waText}`;
 
 const allProducts = await getCollection('products');
@@ -39,9 +39,9 @@ const icons = {
 
 // 工艺/数据卡（呼应 Nyra data cards），取自真实参数
 const specs = [
-  { k: '材质', v: '304 / 18-10', note: '食品级不锈钢 · 耐腐蚀不易锈', motif: 'gauge' },
+  { k: '材质', v: '201 / 304 / 410 / 430', note: '按产品用途与目标市场匹配材质', motif: 'gauge' },
   { k: '工艺', v: '镜面 · 拉丝 · 激光', note: '自有抛光 / 冲压 / 激光打标产线', motif: 'eq' },
-  { k: '出口', v: '50+', note: '远销北美 · 欧洲 · 中东 · 东南亚', motif: 'dots' },
+  { k: '出口', v: '60+', note: '远销北美 · 欧洲 · 澳洲 · 中东 · 东南亚', motif: 'dots' },
 ];
 ---
 <BaseLayout
@@ -77,7 +77,7 @@ const specs = [
       <svg class="spin-slow absolute inset-0 w-full h-full" viewBox="0 0 100 100">
         <defs><path id="ymx-ring" d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" /></defs>
         <text class="fill-white/45" style="font-size:7px;letter-spacing:1.6px;font-weight:600;">
-          <textPath href="#ymx-ring" startOffset="0%">OEM · ODM · 304 · 18-10 · 出口品质 · </textPath>
+          <textPath href="#ymx-ring" startOffset="0%">批发 · 代工 · 430 · 304 · 410 · 全球出口经验 · </textPath>
         </text>
       </svg>
     </div>
@@ -93,10 +93,10 @@ const specs = [
         {home.hero.subtitle}
       </p>
       <div class="animate-rise mt-9 flex flex-wrap gap-4">
-        <a href={waLink} target="_blank" rel="noopener" data-wa data-wa-product="hero" class="btn btn-primary px-7 py-3.5 text-base">
+        <a href="/products" class="btn btn-primary px-7 py-3.5 text-base">
           {home.hero.primaryCta}
         </a>
-        <a href="/products" class="btn btn-outline px-7 py-3.5 text-base">{home.hero.secondaryCta}</a>
+        <a href={waLink} target="_blank" rel="noopener" data-wa data-wa-product="hero" class="btn btn-outline px-7 py-3.5 text-base">{home.hero.secondaryCta}</a>
       </div>
 
       <!-- Stat strip -->
@@ -112,9 +112,9 @@ const specs = [
 
       <!-- Feature ticker（呼应 Nyra 底部小字带） -->
       <div class="mt-7 flex flex-wrap items-center gap-x-5 gap-y-2 text-white/55 text-xs tracking-wide">
-        <span>源头工厂直供</span><span class="text-white/25">····</span>
-        <span>食品级 304 / 18-10</span><span class="text-white/25">····</span>
-        <span>OEM / ODM 定制</span><span class="text-white/25">····</span>
+        <span>批发</span><span class="text-white/25">····</span>
+        <span>代工</span><span class="text-white/25">····</span>
+        <span>201 / 304 / 410 / 430</span><span class="text-white/25">····</span>
         <span>全球出口经验</span>
       </div>
     </div>
@@ -134,7 +134,7 @@ const specs = [
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-20 sm:py-28">
       <div class="reveal max-w-3xl">
         <p class="eyebrow mb-4">产品系列</p>
-        <h2 class="statement text-3xl sm:text-4xl md:text-5xl">无论成套餐具，还是单品定制，都能找到合适的系列。</h2>
+        <h2 class="statement text-3xl sm:text-4xl md:text-5xl">无论成套餐具，还是厨具组合，都能找到适合目标市场的产品方案。</h2>
       </div>
 
       <!-- Tabs -->

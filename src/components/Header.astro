@@ -13,7 +13,7 @@ const path = Astro.url.pathname;
 const isActive = (href) =>
   href === '/' ? path === '/' : path.startsWith(href);
 
-const waText = encodeURIComponent('您好，我想咨询裕明兴的不锈钢餐具产品。');
+const waText = encodeURIComponent('您好，我想咨询裕明兴的不锈钢餐厨具产品。');
 const waLink = `https://wa.me/${site.contact.whatsappDigits}?text=${waText}`;
 ---
 <header class="sticky top-0 z-50 w-full">

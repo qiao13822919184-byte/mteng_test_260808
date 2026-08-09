@@ -1,33 +1,30 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
 import ProductCard from '../../components/ProductCard.astro';
 import { getCollection } from 'astro:content';
 import categoriesData from '../../data/categories.json';
 const categories = categoriesData.categories;
 import site from '../../data/site.json';
+import pages from '../../data/pages.json';
 
 const products = (await getCollection('products')).sort((a, b) => a.data.order - b.data.order);
 
-const waText = encodeURIComponent('您好，我想批量采购裕明兴的不锈钢餐具，请提供报价。');
+const waText = encodeURIComponent('您好，我想批量采购裕明兴的不锈钢餐厨具，请提供报价。');
 const waLink = `https://wa.me/${site.contact.whatsappDigits}?text=${waText}`;
 ---
 <BaseLayout
-  title="产品中心"
-  description="裕明兴不锈钢餐具与厨具产品中心：餐具套装、刀叉勺单品、厨房用具与餐桌用品，支持 OEM/ODM 定制与批量出口。"
+  title={pages.products.seoTitle}
+  description={pages.products.seoDescription}
 >
-  <!-- Page header -->
-  <section class="brand-hero text-white relative overflow-hidden border-b border-line">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 pt-16 pb-20 md:pt-20 md:pb-24 relative z-10">
-      <nav class="text-sm text-white/60 mb-5">
-        <a href="/" class="hover:text-white transition-colors">首页</a> <span class="mx-1">/</span> <span class="text-white/90">产品中心</span>
-      </nav>
-      <p class="eyebrow eyebrow-amber mb-4">产品中心</p>
-      <h1 class="steel-text font-display font-extrabold text-4xl md:text-5xl">覆盖全场景的不锈钢制品</h1>
-      <p class="text-white/75 mt-5 max-w-2xl leading-relaxed">
-        精选不锈钢餐具与厨具，采用 304 / 18-10 食品级材质，支持 OEM/ODM 定制与批量出口。点击任一产品即可 WhatsApp 询价。
-      </p>
-    </div>
-  </section>
+  <PageHero
+    breadcrumb={pages.products.breadcrumb}
+    eyebrow={pages.products.eyebrow}
+    title={pages.products.title}
+    description={pages.products.description}
+    image={pages.products.heroImage}
+    imageAlt={pages.products.heroImageAlt}
+  />
 
   <section class="max-w-7xl mx-auto px-4 sm:px-6 py-12">
     <!-- Filter pills -->
