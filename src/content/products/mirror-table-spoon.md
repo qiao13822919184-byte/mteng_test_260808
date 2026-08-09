@@ -1,6 +1,6 @@
 ---
 title: "镜面主餐勺（散装/批发）"
-category: "cutlery"
+category: "flatware-sets"
 summary: "经典圆头主餐勺，18-10 不锈钢镜面工艺，可混批与定制 LOGO。"
 images:
   - "https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=1200&auto=format&fit=crop"

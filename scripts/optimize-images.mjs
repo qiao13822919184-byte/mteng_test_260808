@@ -18,7 +18,11 @@ for (const name of imageNames) {
   const output = path.join(uploadsDirectory, `${path.basename(name, path.extname(name))}.webp`);
   const before = (await stat(input)).size;
 
-  await sharp(input).webp({ lossless: true, effort: 6 }).toFile(output);
+  await sharp(input)
+    .rotate()
+    .resize({ width: 1920, withoutEnlargement: true })
+    .webp({ quality: 86, effort: 6, smartSubsample: true })
+    .toFile(output);
 
   const after = (await stat(output)).size;
   const saved = Math.round((1 - after / before) * 100);

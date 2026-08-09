@@ -1,6 +1,6 @@
 ---
 title: "经典四齿主餐叉"
-category: "cutlery"
+category: "flatware-sets"
 summary: "四齿西餐主叉，齿尖顺滑、受力均匀，适配酒店与西餐厅。"
 images:
   - "https://images.unsplash.com/photo-1592417817098-8fd3d9eb14a5?q=80&w=1200&auto=format&fit=crop"

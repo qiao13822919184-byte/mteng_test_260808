@@ -1,6 +1,6 @@
 ---
 title: "不锈钢双层隔热餐盘"
-category: "tableware"
+category: "flatware-sets"
 summary: "双层隔热结构，防烫防摔，适合食堂、户外与商用配餐。"
 images:
   - "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=1200&auto=format&fit=crop"
@@ -13,7 +13,7 @@ specs:
   - { label: "直径", value: "20 / 23 / 26cm 可选" }
   - { label: "结构", value: "双层隔热" }
 featured: true
-order: 8
+order: 5
 ---
 
 双层隔热不锈钢餐盘，**304 不锈钢** 制造，夹层结构有效隔热防烫，盘体防摔耐用。适合学校食堂、户外野餐及商用配餐使用。

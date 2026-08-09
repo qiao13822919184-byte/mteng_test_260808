@@ -1,6 +1,6 @@
 ---
 title: "锯齿牛排刀套装（6 把）"
-category: "cutlery"
+category: "flatware-sets"
 summary: "锋利锯齿刀刃，加厚手柄，6 把成套，适合牛排馆与高端零售。"
 images:
   - "https://images.unsplash.com/photo-1593618998160-e34014e67546?q=80&w=1200&auto=format&fit=crop"

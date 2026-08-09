@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
 import site from '../data/site.json';
+import pages from '../data/pages.json';
 
 const c = site.contact;
 const waLinkPlain = `https://wa.me/${c.whatsappDigits}`;
@@ -26,6 +28,8 @@ const localBusinessSchema = {
 const methods = [
   { label: 'WhatsApp', value: c.whatsappDisplay, href: waLinkPlain, note: '点击直接对话', wa: true },
   { label: '邮箱 Email', value: c.email, href: `mailto:${c.email}`, note: '商务合作与询价', wa: false },
+  { label: '电话 Phone', value: c.phoneDisplay, href: `tel:${c.phoneDisplay.replace(/[^\d+]/g, '')}`, note: '工作时间内接听', wa: false },
+  { label: '微信 WeChat', value: c.wechat, href: null, note: '添加时请备注采购需求', wa: false },
   { label: '地址 Address', value: c.addressLine, href: null, note: site.companyName, wa: false },
   { label: '营业时间', value: c.businessHours, href: null, note: '欢迎随时留言', wa: false },
 ];
@@ -36,23 +40,18 @@ const methods = [
 >
   <script type="application/ld+json" slot="head" set:html={JSON.stringify(localBusinessSchema)} />
 
-  <!-- Hero -->
-  <section class="brand-hero text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-20">
-      <nav class="reveal text-sm text-white/60 mb-5">
-        <a href="/" class="hover:text-white transition-colors">首页</a> <span class="mx-1">/</span> <span class="text-white">联系我们</span>
-      </nav>
-      <p class="reveal eyebrow eyebrow-amber mb-4">联系我们</p>
-      <h1 class="reveal steel-text font-display font-extrabold text-4xl md:text-5xl max-w-3xl leading-tight">联系裕明兴，开启合作</h1>
-      <p class="reveal reveal-d1 mt-5 text-lg text-white/75 max-w-2xl leading-relaxed">
-        无论是询价、定制还是样品需求，欢迎通过以下任一方式联系我们，我们通常在一个工作日内回复。
-      </p>
-    </div>
-  </section>
+  <PageHero
+    breadcrumb={pages.contact.breadcrumb}
+    eyebrow={pages.contact.eyebrow}
+    title={pages.contact.title}
+    description={pages.contact.description}
+    image={pages.contact.heroImage}
+    imageAlt={pages.contact.heroImageAlt}
+  />
 
   <!-- Methods -->
   <section class="max-w-7xl mx-auto px-4 sm:px-6 -mt-12 relative z-10">
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
       {methods.map((m, i) => (
         <div class={`reveal reveal-d${i + 1} card-hover bg-white rounded-2xl border border-line p-6 shadow-[var(--shadow-soft)]`}>
           <p class="eyebrow">{m.label}</p>
