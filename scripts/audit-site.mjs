@@ -17,7 +17,7 @@ const normal=p=>p.endsWith('/')?p:p+'/';
 for(const [route,file] of routes){
  const html=fs.readFileSync(file,'utf8'),all=nodes(parse(html)),title=text(byTag(all,'title')[0]||{}),canonical=all.find(n=>n.tagName==='link'&&attr(n,'rel')==='canonical');
  const is404=route==='/404.html';
- if(is404){check(html.includes('noindex'),'404 must be noindex');continue;}
+ if(is404){check(html.includes('noindex'),'404 must be noindex');check(!canonical,'404 must not declare a canonical');continue;}
  check(title.length>0,`${route}: missing title`);
  check(byTag(all,'h1').length===1,`${route}: H1 count must be one`);
  check(attr(canonical,'href')===origin+route,`${route}: canonical mismatch`);
