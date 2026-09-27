@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">让实物、规格与批准版本一一对应</title><desc id="desc">标记样品; 型号 · 版本 · 日期; 逐项评价; 规格 · 表面 · 包装; 确认范围; 已通过 · 需修改 · 待确认. 原创编辑示意图，不是检测结果。</desc>
+<rect width="1600" height="900" fill="#fbf7ef"/>
+<rect width="1600" height="16" fill="#0b1e33"/>
+<g font-family="Arial, Noto Sans SC, Microsoft YaHei, sans-serif">
+<text x="96" y="111" fill="#135e96" font-size="23" font-weight="700" letter-spacing="3">封样批准记录</text>
+<text x="96" y="207" fill="#0b1e33" font-size="57" font-weight="700">让实物、规格与批准版本一一对应</text>
+<path d="M96 260H1504" stroke="#e7ddc9" stroke-width="2"/>
+<g transform="translate(96,320)"><rect width="448" height="310" rx="24" fill="#ffffff" stroke="#e7ddc9" stroke-width="2"/><circle cx="62" cy="64" r="28" fill="#eef6f8"/><text x="62" y="74" text-anchor="middle" font-size="27" font-weight="700" fill="#0b1e33">01</text><text x="36" y="158" font-size="40" font-weight="650" fill="#0b1e33">标记样品</text><text x="36" y="216" font-size="26" fill="#5b6b7c">型号 · 版本 · 日期</text><path d="M36 260H145" stroke="#2e8fa8" stroke-width="5" stroke-linecap="round"/></g><path d="M548 470h22m-7-7 7 7-7 7" fill="none" stroke="#2e8fa8" stroke-width="3"/>
+<g transform="translate(576,320)"><rect width="448" height="310" rx="24" fill="#ffffff" stroke="#e7ddc9" stroke-width="2"/><circle cx="62" cy="64" r="28" fill="#eef6f8"/><text x="62" y="74" text-anchor="middle" font-size="27" font-weight="700" fill="#0b1e33">02</text><text x="36" y="158" font-size="40" font-weight="650" fill="#0b1e33">逐项评价</text><text x="36" y="216" font-size="26" fill="#5b6b7c">规格 · 表面 · 包装</text><path d="M36 260H245" stroke="#2e8fa8" stroke-width="5" stroke-linecap="round"/></g><path d="M1028 470h22m-7-7 7 7-7 7" fill="none" stroke="#2e8fa8" stroke-width="3"/>
+<g transform="translate(1056,320)"><rect width="448" height="310" rx="24" fill="#ffffff" stroke="#e7ddc9" stroke-width="2"/><circle cx="62" cy="64" r="28" fill="#f4a93c"/><text x="62" y="74" text-anchor="middle" font-size="27" font-weight="700" fill="#0b1e33">03</text><text x="36" y="158" font-size="40" font-weight="650" fill="#0b1e33">确认范围</text><text x="36" y="216" font-size="26" fill="#5b6b7c">已通过 · 需修改 · 待确认</text><path d="M36 260H376" stroke="#2e8fa8" stroke-width="5" stroke-linecap="round"/></g>
+<text x="96" y="750" fill="#5b6b7c" font-size="25">采购记录方法：同时写明适用条件与尚未确认的事项。</text>
+<text x="96" y="832" fill="#0b1e33" font-size="24" font-weight="700">YUMINGXING</text>
+<text x="1504" y="832" text-anchor="end" fill="#5b6b7c" font-size="20">B001 / 原创示意图 · 非检测数据</text>
+</g></svg>
