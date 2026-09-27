@@ -1,0 +1,52 @@
+{
+  "groups": {
+    "Identity": [
+      "sku",
+      "model",
+      "seoTitle",
+      "metaDescription",
+      "h1",
+      "lastReviewed"
+    ],
+    "Construction": [
+      "color",
+      "edge",
+      "tine",
+      "handleConstruction",
+      "logoPosition"
+    ],
+    "Packing": [
+      "pcsPerCarton",
+      "cartonSize",
+      "grossWeight",
+      "netWeight",
+      "cbm"
+    ],
+    "Order conditions": [
+      "moqStock",
+      "moqLogo",
+      "moqCustomMold",
+      "sampleAvailability",
+      "sampleFee",
+      "sampleLeadTime",
+      "toolingFee",
+      "toolingRefundPolicy",
+      "productionLeadTime",
+      "paymentTerms",
+      "loadingPort",
+      "aql",
+      "tolerances"
+    ]
+  },
+  "arrays": [
+    "buyerSegments",
+    "useCases",
+    "setComposition",
+    "logoMethods",
+    "artworkFormats",
+    "packagingOptions",
+    "incoterms",
+    "qcCheckpoints",
+    "relatedProducts"
+  ]
+}

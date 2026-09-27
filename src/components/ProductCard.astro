@@ -1,23 +1,27 @@
 ---
+import ResponsiveImage from "./ResponsiveImage.astro";
 import categoriesData from '../data/categories.json';
-const categories = categoriesData.categories;
-
-const { product } = Astro.props;
+import enCategories from '../data/en/categories.json';
+import {entrySlug} from '../lib/publishing';
+const {product,locale='zh-CN'}=Astro.props;
+const categories = locale==='en'?enCategories.categories:categoriesData.categories;
 const d = product.data;
 const cat = categories.find((c) => c.slug === d.category);
-const img = (d.images && d.images[0]) || site_fallback();
+const first=d.images && d.images[0];
+const img = (typeof first==='string'?first:first?.file) || site_fallback();
 function site_fallback() {
   return 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=1200&auto=format&fit=crop';
 }
 ---
 <a
-  href={`/products/${product.id}`}
+  href={`${locale==='en'?'/en':''}/products/${entrySlug(product)}/`}
   class="reveal card-hover group block bg-white rounded-2xl overflow-hidden border border-line shadow-sm"
 >
   <div class="sheen aspect-[4/3] overflow-hidden bg-sand">
-    <img
+    <ResponsiveImage
       src={img}
-      alt={d.title}
+      alt={typeof first==='object'?first.alt:d.title}
+      width="800" height="600"
       loading="lazy"
       class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
     />
@@ -33,7 +37,7 @@ function site_fallback() {
       {d.moq && <span class="text-[11px] px-2 py-0.5 rounded-full bg-sand text-ink-soft font-medium">MOQ {d.moq}</span>}
     </div>
     <span class="inline-flex items-center gap-1 text-sm font-semibold text-orange mt-4">
-      查看详情 <span class="group-hover:translate-x-1 transition-transform">→</span>
+      {locale==='en'?'View details':'查看详情'} <span class="group-hover:translate-x-1 transition-transform">→</span>
     </span>
   </div>
 </a>

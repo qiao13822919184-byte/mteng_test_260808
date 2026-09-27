@@ -1,0 +1,20 @@
+{
+  "categories": [
+    {
+      "slug": "flatware-sets",
+      "name": "Stainless Steel Cutlery Sets",
+      "nameEn": "Flatware",
+      "summary": "Knives, forks and spoons for hospitality, retail and private-label programmes.",
+      "image": "/uploads/flatware-portuguese-silver.webp",
+      "href": "/en/stainless-steel-cutlery/"
+    },
+    {
+      "slug": "kitchenware-sets",
+      "name": "Stainless Steel Kitchen Utensils",
+      "nameEn": "Kitchen utensils",
+      "summary": "Turners, ladles, skimmers and cooking-tool sets for wholesale, foodservice and retail.",
+      "image": "/uploads/kitchenware-ymx-2142.webp",
+      "href": "/en/stainless-steel-kitchen-utensils/"
+    }
+  ]
+}

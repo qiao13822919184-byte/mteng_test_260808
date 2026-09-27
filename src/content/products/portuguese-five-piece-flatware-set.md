@@ -8,8 +8,6 @@ images:
   - /uploads/flatware-portuguese-black.webp
 material: 410 / 430 / 304 不锈钢
 finish: 镜面抛光；金色/黑色表面方案可选
-moq: 2000 套
-leadTime: 约 10 天（以订单确认后的排期为准）
 specs:
   - label: 产品组合
     value: 主餐刀 / 主餐叉 / 主餐勺 / 沙拉甜品叉 / 甜品勺

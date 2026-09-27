@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHero from '../../../components/PageHero.astro';
+import ProductCard from '../../../components/ProductCard.astro';
+import {getCollection} from 'astro:content';
+import {isPublished} from '../../../lib/publishing';
+import categories from '../../../data/en/categories.json';
+const products=(await getCollection('productsEn',isPublished)).sort((a,b)=>a.data.order-b.data.order);
+---
+<BaseLayout locale="en" title="Stainless Steel Cutlery & Kitchenware Catalog | Yumingxing" description="Explore Yumingxing cutlery and kitchen utensil models for wholesale, OEM and private-label enquiries. Confirm specifications and quantities by model.">
+  <PageHero locale="en" breadcrumb="Products" eyebrow="PRODUCT CATALOGUE" title="Cutlery and Kitchenware for Wholesale, OEM and Private Label" description="Select a collection, compare the available models and send your specification for a quotation." image="/uploads/flatware-portuguese-silver.webp" imageAlt="Portuguese-style cutlery collection" />
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-12">
+    <nav class="flex flex-wrap gap-3 mb-10" aria-label="Product categories">{categories.categories.map(c=><a class="btn btn-ghost px-5 py-3" href={c.href}>{c.name}</a>)}</nav>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">{products.map(product=><ProductCard product={product} locale="en" />)}</div>
+  </section>
+</BaseLayout>

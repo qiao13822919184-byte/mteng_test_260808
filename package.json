@@ -11,7 +11,10 @@
     "optimize:images": "node scripts/optimize-images.mjs",
     "prepare:pages": "node scripts/prepare-pages.mjs",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "test:publishing": "node --experimental-strip-types scripts/test-publishing.mjs",
+    "test:site": "node scripts/audit-site.mjs",
+    "verify": "npm run test:publishing && npm run build && npm run test:site"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",
@@ -22,6 +25,8 @@
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.20",
+    "js-yaml": "^5.4.2",
+    "parse5": "^8.0.1",
     "sharp": "^0.35.3"
   }
 }

@@ -7,7 +7,7 @@
   "description": "裕明兴五金制品厂位于广东省揭阳市榕城区，专注 410/430/304/201 不锈钢餐具与厨具的研发、生产与批发，服务商超、酒店、餐厅与电商渠道，提供稳定的批量供应与定制支持。",
   "siteUrl": "https://www.mteng.ltd",
   "logoText": "Yumingxing",
-  "foundedYear": "2008",
+  "foundedYear": "",
   "contact": {
     "whatsappDigits": "8613822919184",
     "whatsappDisplay": "+86 138 2291 9184",
@@ -19,10 +19,22 @@
     "businessHours": "周一至周日 10:00 - 18:00 (GMT+8)"
   },
   "highlights": [
-    { "value": "20+", "label": "年生产经验" },
-    { "value": "201 / 304 / 410 / 430", "label": "不锈钢材质覆盖" },
-    { "value": "B2B", "label": "商超 / 酒店 / 餐厅 / 电商专供" },
-    { "value": "60+", "label": "出口国家与地区" }
+    {
+      "value": "揭阳",
+      "label": "广东 · 不锈钢餐厨具"
+    },
+    {
+      "value": "201 / 304 / 410 / 430",
+      "label": "按产品与部件确认材质"
+    },
+    {
+      "value": "B2B",
+      "label": "商超 / 酒店 / 餐厅 / 电商"
+    },
+    {
+      "value": "OEM / ODM",
+      "label": "按项目评估定制方案"
+    }
   ],
   "analytics": {
     "ga4Id": "G-XDRRT64432"

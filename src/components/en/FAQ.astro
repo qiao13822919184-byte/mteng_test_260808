@@ -1,0 +1,9 @@
+---
+const {items=[]}=Astro.props;
+---
+{items.length>0 && <section class="max-w-3xl mx-auto px-4 sm:px-6 py-12">
+  <h2 class="statement text-3xl mb-8">Buyer questions</h2>
+  <div class="space-y-3">{items.map(f=><details class="group bg-white rounded-xl border border-line px-5 py-4">
+    <summary class="cursor-pointer font-semibold text-ink">{f.q}</summary><p class="text-ink-muted mt-3 leading-relaxed">{f.a}</p>
+  </details>)}</div>
+</section>}

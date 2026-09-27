@@ -1,0 +1,128 @@
+{
+  "/uploads/flatware-portuguese-black.webp": [
+    {
+      "src": "/uploads/responsive/flatware-portuguese-black-480.webp",
+      "width": 480
+    },
+    {
+      "src": "/uploads/responsive/flatware-portuguese-black-800.webp",
+      "width": 800
+    },
+    {
+      "src": "/uploads/responsive/flatware-portuguese-black-1200.webp",
+      "width": 1200
+    }
+  ],
+  "/uploads/flatware-portuguese-gold.webp": [
+    {
+      "src": "/uploads/responsive/flatware-portuguese-gold-480.webp",
+      "width": 480
+    },
+    {
+      "src": "/uploads/responsive/flatware-portuguese-gold-800.webp",
+      "width": 800
+    },
+    {
+      "src": "/uploads/responsive/flatware-portuguese-gold-1200.webp",
+      "width": 1200
+    }
+  ],
+  "/uploads/flatware-portuguese-silver.webp": [
+    {
+      "src": "/uploads/responsive/flatware-portuguese-silver-480.webp",
+      "width": 480
+    },
+    {
+      "src": "/uploads/responsive/flatware-portuguese-silver-800.webp",
+      "width": 800
+    },
+    {
+      "src": "/uploads/responsive/flatware-portuguese-silver-1200.webp",
+      "width": 1200
+    }
+  ],
+  "/uploads/kitchenware-ymx-2011.webp": [
+    {
+      "src": "/uploads/responsive/kitchenware-ymx-2011-480.webp",
+      "width": 480
+    },
+    {
+      "src": "/uploads/responsive/kitchenware-ymx-2011-800.webp",
+      "width": 800
+    },
+    {
+      "src": "/uploads/responsive/kitchenware-ymx-2011-1200.webp",
+      "width": 1200
+    }
+  ],
+  "/uploads/kitchenware-ymx-2021.webp": [
+    {
+      "src": "/uploads/responsive/kitchenware-ymx-2021-480.webp",
+      "width": 480
+    },
+    {
+      "src": "/uploads/responsive/kitchenware-ymx-2021-800.webp",
+      "width": 800
+    },
+    {
+      "src": "/uploads/responsive/kitchenware-ymx-2021-1200.webp",
+      "width": 1200
+    }
+  ],
+  "/uploads/kitchenware-ymx-2024.webp": [
+    {
+      "src": "/uploads/responsive/kitchenware-ymx-2024-480.webp",
+      "width": 480
+    },
+    {
+      "src": "/uploads/responsive/kitchenware-ymx-2024-800.webp",
+      "width": 800
+    },
+    {
+      "src": "/uploads/responsive/kitchenware-ymx-2024-1200.webp",
+      "width": 1200
+    }
+  ],
+  "/uploads/kitchenware-ymx-2032.webp": [
+    {
+      "src": "/uploads/responsive/kitchenware-ymx-2032-480.webp",
+      "width": 480
+    },
+    {
+      "src": "/uploads/responsive/kitchenware-ymx-2032-800.webp",
+      "width": 800
+    },
+    {
+      "src": "/uploads/responsive/kitchenware-ymx-2032-1200.webp",
+      "width": 1200
+    }
+  ],
+  "/uploads/kitchenware-ymx-2041.webp": [
+    {
+      "src": "/uploads/responsive/kitchenware-ymx-2041-480.webp",
+      "width": 480
+    },
+    {
+      "src": "/uploads/responsive/kitchenware-ymx-2041-800.webp",
+      "width": 800
+    },
+    {
+      "src": "/uploads/responsive/kitchenware-ymx-2041-1200.webp",
+      "width": 1200
+    }
+  ],
+  "/uploads/kitchenware-ymx-2142.webp": [
+    {
+      "src": "/uploads/responsive/kitchenware-ymx-2142-480.webp",
+      "width": 480
+    },
+    {
+      "src": "/uploads/responsive/kitchenware-ymx-2142-800.webp",
+      "width": 800
+    },
+    {
+      "src": "/uploads/responsive/kitchenware-ymx-2142-1200.webp",
+      "width": 1200
+    }
+  ]
+}
