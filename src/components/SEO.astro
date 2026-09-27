@@ -19,7 +19,7 @@ const ogImageURL = new URL(image, Astro.site || Astro.url);
 ---
 <title>{fullTitle}</title>
 <meta name="description" content={description} />
-<link rel="canonical" href={canonicalURL} />
+{!noindex && <link rel="canonical" href={canonicalURL} />}
 {alternates?.alternate && <>
   <link rel="alternate" hreflang="zh-CN" href={absolute(alternates.zh)} />
   <link rel="alternate" hreflang="en" href={absolute(alternates.en)} />
