@@ -1,13 +1,14 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ProductCard from '../../components/ProductCard.astro';
+import { isPublished, absolute , safeJson} from '../../lib/publishing';
 import { getCollection, render } from 'astro:content';
 import categoriesData from '../../data/categories.json';
 const categories = categoriesData.categories;
 import site from '../../data/site.json';
 
 export async function getStaticPaths() {
-  const products = await getCollection('products');
+  const products = await getCollection('products', isPublished);
   return products.map((p) => ({
     params: { id: p.id },
     props: {
@@ -46,11 +47,11 @@ const productSchema = {
   '@context': 'https://schema.org/',
   '@type': 'Product',
   name: d.title,
-  image: images.length ? images : [mainImg],
+  image: (images.length ? images : [mainImg]).map(absolute),
   description: d.summary,
   category: cat ? cat.name : undefined,
   brand: { '@type': 'Brand', name: site.brand },
-  manufacturer: { '@type': 'Organization', name: site.companyName },
+  manufacturer: { '@id': absolute('/#organization') },
   material: d.material,
 };
 const breadcrumbSchema = {
@@ -64,8 +65,8 @@ const breadcrumbSchema = {
 };
 ---
 <BaseLayout title={d.title} description={d.summary} image={mainImg}>
-  <script type="application/ld+json" slot="head" set:html={JSON.stringify(productSchema)} />
-  <script type="application/ld+json" slot="head" set:html={JSON.stringify(breadcrumbSchema)} />
+  <script type="application/ld+json" slot="head" set:html={safeJson(productSchema)} />
+  <script type="application/ld+json" slot="head" set:html={safeJson(breadcrumbSchema)} />
 
   <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
     <!-- Breadcrumb -->
@@ -131,7 +132,7 @@ const breadcrumbSchema = {
       <aside class="reveal reveal-d1 lg:sticky lg:top-24 self-start">
         <div class="brand-hero text-white rounded-2xl p-6">
           <h3 class="font-display font-bold text-lg">需要批量报价？</h3>
-          <p class="text-white/75 text-sm mt-2 leading-relaxed">告诉我们数量与定制需求，一个工作日内回复。</p>
+          <p class="text-white/75 text-sm mt-2 leading-relaxed">告诉我们数量与定制需求，获取对应的报价方案。</p>
           <a href={waLink} target="_blank" rel="noopener" data-wa data-wa-product={`aside_${d.title}`} class="btn btn-primary w-full mt-5 py-3">立即询价</a>
           <div class="mt-4 pt-4 border-t border-white/15 text-sm text-white/70 space-y-1.5">
             <p>✉ {site.contact.email}</p>

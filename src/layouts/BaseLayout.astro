@@ -4,37 +4,34 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import WhatsAppFloat from '../components/WhatsAppFloat.astro';
 import SEO from '../components/SEO.astro';
-import site from '../data/site.json';
+import { getSite, localeLinks } from '../lib/locale';
+import { absolute, canonicalPath, safeJson } from '../lib/publishing';
+import identity from '../data/en/about.json';
 
-const { title, description, image, noindex = false } = Astro.props;
+const { title, description, image, noindex = false, locale = 'zh-CN', type='website', exactTitle=false } = Astro.props;
+const site=getSite(locale);
+const alternates=await localeLinks(Astro.url.pathname,locale);
+const url=absolute(canonicalPath(Astro.url.pathname));
 const gaId = site.analytics.ga4Id;
 
 // 全站组织结构化数据（GEO / 知识图谱友好）
 const orgSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
-  name: site.companyName,
-  alternateName: site.brand,
-  url: site.siteUrl,
-  description: site.description,
-  foundingDate: site.foundedYear,
-  address: {
-    '@type': 'PostalAddress',
-    addressCountry: 'CN',
-    addressRegion: '广东省',
-    addressLocality: '揭阳市榕城区',
-  },
-  contactPoint: {
-    '@type': 'ContactPoint',
-    contactType: 'sales',
-    email: site.contact.email,
-    telephone: site.contact.phoneDisplay,
-    availableLanguage: ['zh-CN', 'en'],
-  },
+ '@context':'https://schema.org','@type':'Organization','@id':absolute('/#organization'),
+ name:'Yumingxing',alternateName:'裕明兴',url:absolute('/'),
+ ...(identity.legalEnglishName ? {legalName:identity.legalEnglishName}:{}),
+ address:{'@type':'PostalAddress',addressCountry:'CN',addressRegion:'Guangdong',addressLocality:'Jieyang, Rongcheng',...(identity.fullEnglishAddress?{streetAddress:identity.fullEnglishAddress}:{})},
+ contactPoint:{'@type':'ContactPoint',contactType:'sales',email:site.contact.email,telephone:site.contact.phoneDisplay,availableLanguage:['zh-CN','en']}
 };
+const pageSchema={'@context':'https://schema.org','@type':'WebPage','@id':url+'#webpage',url,name:title || site.seo.defaultTitle,inLanguage:locale,isPartOf:{'@id':absolute('/#website')},about:{'@id':absolute('/#organization')}};
+const isDetail=/\/(products|blog)\/[^/]+\/?$/.test(Astro.url.pathname);
+const breadcrumb={'@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:locale==='en'?'Home':'首页',item:absolute(locale==='en'?'/en/':'/')},{'@type':'ListItem',position:2,name:title || site.seo.defaultTitle,item:url}]};
+const hasOwnBreadcrumb=(Astro.url.pathname.startsWith('/en/')&&!['/en/products/','/en/blog/'].includes(Astro.url.pathname)&&!Astro.url.pathname.startsWith('/en/blog/')) || /\/products\/[^/]+\/?$/.test(Astro.url.pathname);
+const showBreadcrumb=!['/','/en/'].includes(Astro.url.pathname)&&!hasOwnBreadcrumb;
+const websiteSchema={'@context':'https://schema.org','@type':'WebSite','@id':absolute('/#website'),url:absolute('/'),name:'Yumingxing',publisher:{'@id':absolute('/#organization')},inLanguage:['zh-CN','en']};
+
 ---
 <!doctype html>
-<html lang="zh-CN">
+<html lang={locale}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -47,11 +44,15 @@ const orgSchema = {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Noto+Serif+SC:wght@600;700;900&display=swap" rel="stylesheet" />
 
-    <SEO title={title} description={description} image={image} noindex={noindex} />
+    <SEO title={title} description={description} image={image} noindex={noindex} locale={locale} alternates={alternates} type={type} exactTitle={exactTitle} />
+    <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
 
     <!-- Organization 结构化数据 -->
-    <script type="application/ld+json" set:html={JSON.stringify(orgSchema)} />
+    <script type="application/ld+json" set:html={safeJson(orgSchema)} />
 
+    <script type="application/ld+json" set:html={safeJson(pageSchema)} />
+    {['/', '/en/'].includes(Astro.url.pathname) && <script type="application/ld+json" set:html={safeJson(websiteSchema)} />}
+    {showBreadcrumb && <script type="application/ld+json" set:html={safeJson(breadcrumb)} />}
     <!-- 页面级 head 注入（Product / Article JSON-LD 等） -->
     <slot name="head" />
 
@@ -84,24 +85,29 @@ const orgSchema = {
     </script>
   </head>
   <body class="flex flex-col min-h-screen">
-    <Header />
+    <Header locale={locale} switchUrl={alternates.switchUrl} />
     <main class="flex-grow w-full">
       <slot />
     </main>
-    <Footer />
-    <WhatsAppFloat />
+    <Footer locale={locale} />
+    <WhatsAppFloat locale={locale} />
 
     <!-- WhatsApp 点击转化埋点：任何带 data-wa 的元素被点击都会上报 GA4 -->
     <script is:inline>
       document.addEventListener('click', function (e) {
         const t = e.target.closest('[data-wa]');
         if (!t) return;
+        if (!t.href || !t.href.startsWith('https://wa.me/')) return;
         if (typeof window.gtag === 'function') {
-          window.gtag('event', 'click_whatsapp', {
+          window.gtag('event', document.documentElement.lang === 'en' ? 'click_whatsapp_en' : 'click_whatsapp', {
             product_name: t.getAttribute('data-wa-product') || 'general',
             action_type: 'consultation',
           });
         }
+      });
+      document.addEventListener('click', function(e) {
+        const t=e.target.closest('[data-event]');
+        if(t && typeof window.gtag==='function') window.gtag('event',t.getAttribute('data-event'),{page_path:location.pathname});
       });
     </script>
 

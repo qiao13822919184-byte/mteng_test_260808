@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import ProductCard from '../../components/ProductCard.astro';
+import FAQ from '../../components/en/FAQ.astro';
+import RFQ from '../../components/en/RFQ.astro';
+import data from '../../data/en/pages.json';
+import identity from '../../data/en/about.json';
+import {getCollection} from 'astro:content';
+import {isPublished,absolute,safeJson,publicDocument} from '../../lib/publishing';
+export function getStaticPaths(){return data.pages.filter(p=>isPublished({data:p})).map(page=>({params:{page:page.slug},props:{page}}));}
+const {page:p}=Astro.props;
+const products=p.category?(await getCollection('productsEn',isPublished)).filter(x=>x.data.category===p.category).sort((a,b)=>a.data.order-b.data.order):[];
+const links=p.links.map(slug=>data.pages.find(x=>x.slug===slug&&isPublished({data:x}))).filter(Boolean);
+const documents=[...(p.documents||[]),...(p.slug==='quality-compliance'?identity.documents:[])].filter(publicDocument);
+const pictures=[...(p.factoryImages||[]),...(p.slug==='factory'?identity.factoryImages:[])].filter(x=>x.originalVerified);
+const breadcrumb={'@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Home',item:absolute('/en/')},{'@type':'ListItem',position:2,name:p.h1,item:absolute(`/en/${p.slug}/`)}]};
+---
+<BaseLayout locale="en" title={p.title} description={p.description} image={p.image}>
+  <script slot="head" type="application/ld+json" set:html={safeJson(breadcrumb)} />
+  <PageHero locale="en" breadcrumb={p.slug.replaceAll('-',' ')} eyebrow={p.eyebrow} title={p.h1} description={p.description} image={p.image} imageAlt={p.imageAlt} />
+  {products.length>0&&<section class="max-w-7xl mx-auto px-4 sm:px-6 py-12"><h2 class="statement text-3xl mb-8">Explore the current collection</h2><div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">{products.map(product=><ProductCard product={product} locale="en" />)}</div></section>}
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 py-12 space-y-12">
+    {p.sections.map(s=><section><h2 class="statement text-2xl sm:text-3xl">{s.heading}</h2><p class="text-ink-soft leading-relaxed mt-4">{s.body}</p>
+      {s.bullets.length>0&&<ul class="list-disc pl-6 text-ink-soft mt-5 space-y-2">{s.bullets.map(b=><li>{b}</li>)}</ul>}
+      {s.table.length>0&&<dl class="mt-6 rounded-xl border border-line overflow-hidden divide-y divide-line">{s.table.map(row=><div class="grid sm:grid-cols-[minmax(0,1fr)_minmax(0,3fr)]"><dt class="bg-sand/60 p-4 font-semibold">{row.label}</dt><dd class="p-4 bg-white text-ink-soft">{row.value}</dd></div>)}</dl>}
+    </section>)}
+    {pictures.map(pic=><figure><img src={pic.file} alt={pic.alt} width="1200" height="800" loading="lazy" class="rounded-2xl w-full" />{pic.caption&&<figcaption class="text-sm text-ink-muted mt-3">{pic.caption}</figcaption>}</figure>)}
+    {documents.length>0&&<section><h2 class="statement text-2xl mb-5">Available documents</h2><ul class="space-y-4">{documents.map(d=><li><a class="text-ocean underline" href={d.url||d.file}>{d.name}</a><p>{d.number} · {d.date} · {d.scope}</p></li>)}</ul></section>}
+    {p.reviewer&&p.lastReviewed&&<p class="text-sm text-ink-muted">Reviewed by {p.reviewer} · {p.lastReviewed}</p>}
+    {links.length>0&&<nav aria-label="Related sourcing pages" class="flex flex-wrap gap-3">{links.map(l=><a class="btn btn-ghost px-5 py-3" href={`/en/${l.slug}/`}>{l.slug.replaceAll('-',' ')}</a>)}</nav>}
+    <div class="flex flex-wrap gap-3"><a class="btn btn-primary px-6 py-3" href="/en/contact/#rfq">Request a Quote</a><a class="btn btn-ghost px-6 py-3" data-event="request_sample_en" href="/en/contact/?product=Sample%20enquiry#rfq">Request a Sample</a></div>
+  </div>
+  <FAQ items={p.faq} />
+  {p.rfq&&<RFQ />}
+</BaseLayout>

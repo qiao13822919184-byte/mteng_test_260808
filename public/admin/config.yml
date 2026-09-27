@@ -1,268 +1,1674 @@
 backend:
   name: github
-  repo: "qiao13822919184-byte/mteng_test_260808"
+  repo: qiao13822919184-byte/mteng_test_260808
   branch: main
-
-# 媒体文件（图片）存储到代码仓库 public/uploads，引用路径以 / 开头
-media_folder: "public/uploads"
-public_folder: "/uploads"
-
-# 本地 npm run dev 时可开启本地后台联调
+media_folder: public/uploads
+public_folder: /uploads
 local_backend: true
-
-# 后台界面语言
-locale: "zh_Hans"
-
+locale: zh_Hans
 collections:
-  # ==========================================
-  # 1. 网站设置（公司信息 / 首页 / 关于我们）
-  # ==========================================
-  - name: "settings"
-    label: "网站设置"
+  - name: settings
+    label: 网站设置
     delete: false
     editor:
       preview: false
     files:
-      # ---- 1.1 基本信息 / 联系方式 ----
-      - name: "site"
-        label: "基本信息与联系方式"
-        file: "src/data/site.json"
+      - name: site
+        label: 基本信息与联系方式
+        file: src/data/site.json
         fields:
-          - { label: "品牌英文名", name: "brand", widget: "string" }
-          - { label: "公司全称", name: "companyName", widget: "string" }
-          - { label: "公司简称", name: "companyShort", widget: "string" }
-          - { label: "标语", name: "tagline", widget: "string" }
-          - { label: "Slogan", name: "slogan", widget: "string" }
-          - { label: "公司简介", name: "description", widget: "text" }
-          - { label: "网站网址", name: "siteUrl", widget: "string" }
-          - { label: "Logo 文字", name: "logoText", widget: "string" }
-          - { label: "成立年份", name: "foundedYear", widget: "string" }
-          - label: "联系方式"
-            name: "contact"
-            widget: "object"
+          - label: 品牌英文名
+            name: brand
+            widget: string
+          - label: 公司全称
+            name: companyName
+            widget: string
+          - label: 公司简称
+            name: companyShort
+            widget: string
+          - label: 标语
+            name: tagline
+            widget: string
+          - label: Slogan
+            name: slogan
+            widget: string
+          - label: 公司简介
+            name: description
+            widget: text
+          - label: 网站网址
+            name: siteUrl
+            widget: string
+          - label: Logo 文字
+            name: logoText
+            widget: string
+          - label: 成立年份
+            name: foundedYear
+            widget: string
+          - label: 联系方式
+            name: contact
+            widget: object
             fields:
-              - { label: "WhatsApp 号码（纯数字，含国家码）", name: "whatsappDigits", widget: "string", hint: "例如 8613822919184，不要加 + 或空格" }
-              - { label: "WhatsApp 显示文本", name: "whatsappDisplay", widget: "string" }
-              - { label: "邮箱", name: "email", widget: "string" }
-              - { label: "电话显示", name: "phoneDisplay", widget: "string" }
-              - { label: "微信", name: "wechat", widget: "string", required: false }
-              - { label: "地址（简）", name: "addressLine", widget: "string" }
-              - { label: "地址（全）", name: "addressFull", widget: "string" }
-              - { label: "营业时间", name: "businessHours", widget: "string" }
-          - label: "数据亮点（首页/关于页展示）"
-            name: "highlights"
-            widget: "list"
+              - label: WhatsApp 号码（纯数字，含国家码）
+                name: whatsappDigits
+                widget: string
+                hint: 例如 8613822919184，不要加 + 或空格
+              - label: WhatsApp 显示文本
+                name: whatsappDisplay
+                widget: string
+              - label: 邮箱
+                name: email
+                widget: string
+              - label: 电话显示
+                name: phoneDisplay
+                widget: string
+              - label: 微信
+                name: wechat
+                widget: string
+                required: false
+              - label: 地址（简）
+                name: addressLine
+                widget: string
+              - label: 地址（全）
+                name: addressFull
+                widget: string
+              - label: 营业时间
+                name: businessHours
+                widget: string
+          - label: 数据亮点（首页/关于页展示）
+            name: highlights
+            widget: list
             fields:
-              - { label: "数值", name: "value", widget: "string" }
-              - { label: "说明", name: "label", widget: "string" }
-          - label: "统计代码"
-            name: "analytics"
-            widget: "object"
+              - label: 数值
+                name: value
+                widget: string
+              - label: 说明
+                name: label
+                widget: string
+          - label: 统计代码
+            name: analytics
+            widget: object
             fields:
-              - { label: "GA4 衡量 ID", name: "ga4Id", widget: "string" }
-          - label: "SEO 默认值"
-            name: "seo"
-            widget: "object"
+              - label: GA4 衡量 ID
+                name: ga4Id
+                widget: string
+          - label: SEO 默认值
+            name: seo
+            widget: object
             fields:
-              - { label: "默认标题", name: "defaultTitle", widget: "string" }
-              - { label: "默认描述", name: "defaultDescription", widget: "text" }
-              - { label: "默认分享图（社交分享缩略图）", name: "ogImage", widget: "string", hint: "微信/Facebook 等分享时显示，必须填完整 https 网址，不能用 /uploads 相对路径" }
-
-      # ---- 1.2 首页内容 ----
-      - name: "home"
-        label: "首页内容"
-        file: "src/data/home.json"
+              - label: 默认标题
+                name: defaultTitle
+                widget: string
+              - label: 默认描述
+                name: defaultDescription
+                widget: text
+              - label: 默认分享图（社交分享缩略图）
+                name: ogImage
+                widget: string
+                hint: 微信/Facebook 等分享时显示，必须填完整 https 网址，不能用 /uploads 相对路径
+      - name: home
+        label: 首页内容
+        file: src/data/home.json
         fields:
-          - label: "首屏 Hero"
-            name: "hero"
-            widget: "object"
+          - label: 首屏 Hero
+            name: hero
+            widget: object
             fields:
-              - { label: "小标签", name: "eyebrow", widget: "string" }
-              - { label: "主标题", name: "title", widget: "string" }
-              - { label: "副标题", name: "subtitle", widget: "text" }
-              - { label: "主按钮文字", name: "primaryCta", widget: "string" }
-              - { label: "次按钮文字", name: "secondaryCta", widget: "string" }
-          - label: "核心优势（4 项）"
-            name: "valueProps"
-            widget: "list"
+              - label: 小标签
+                name: eyebrow
+                widget: string
+              - label: 主标题
+                name: title
+                widget: string
+              - label: 副标题
+                name: subtitle
+                widget: text
+              - label: 主按钮文字
+                name: primaryCta
+                widget: string
+              - label: 次按钮文字
+                name: secondaryCta
+                widget: string
+          - label: 核心优势（4 项）
+            name: valueProps
+            widget: list
             fields:
-              - { label: "图标", name: "icon", widget: "select", options: ["factory", "shield", "pencil", "globe"] }
-              - { label: "标题", name: "title", widget: "string" }
-              - { label: "描述", name: "desc", widget: "text" }
-          - label: "为什么选择我们"
-            name: "whyUs"
-            widget: "object"
+              - label: 图标
+                name: icon
+                widget: select
+                options:
+                  - factory
+                  - shield
+                  - pencil
+                  - globe
+              - label: 标题
+                name: title
+                widget: string
+              - label: 描述
+                name: desc
+                widget: text
+          - label: 为什么选择我们
+            name: whyUs
+            widget: object
             fields:
-              - { label: "标题", name: "title", widget: "string" }
-              - { label: "副标题", name: "subtitle", widget: "string" }
-              - { label: "要点", name: "points", widget: "list", field: { label: "要点", name: "point", widget: "string" } }
-              - { label: "配图", name: "image", widget: "image" }
-          - label: "合作流程（4 步）"
-            name: "process"
-            widget: "list"
+              - label: 标题
+                name: title
+                widget: string
+              - label: 副标题
+                name: subtitle
+                widget: string
+              - label: 要点
+                name: points
+                widget: list
+                field:
+                  label: 要点
+                  name: point
+                  widget: string
+              - label: 配图
+                name: image
+                widget: image
+          - label: 合作流程（4 步）
+            name: process
+            widget: list
             fields:
-              - { label: "步骤号", name: "step", widget: "string" }
-              - { label: "标题", name: "title", widget: "string" }
-              - { label: "描述", name: "desc", widget: "text" }
-          - label: "常见问题 FAQ"
-            name: "faq"
-            widget: "list"
+              - label: 步骤号
+                name: step
+                widget: string
+              - label: 标题
+                name: title
+                widget: string
+              - label: 描述
+                name: desc
+                widget: text
+          - label: 常见问题 FAQ
+            name: faq
+            widget: list
             fields:
-              - { label: "问题", name: "q", widget: "string" }
-              - { label: "回答", name: "a", widget: "text" }
-          - label: "底部号召区"
-            name: "ctaBand"
-            widget: "object"
+              - label: 问题
+                name: q
+                widget: string
+              - label: 回答
+                name: a
+                widget: text
+          - label: 底部号召区
+            name: ctaBand
+            widget: object
             fields:
-              - { label: "标题", name: "title", widget: "string" }
-              - { label: "副标题", name: "subtitle", widget: "text" }
-              - { label: "按钮文字", name: "button", widget: "string" }
-
-      # ---- 1.3 关于我们 ----
-      - name: "about"
-        label: "关于我们"
-        file: "src/data/about.json"
+              - label: 标题
+                name: title
+                widget: string
+              - label: 副标题
+                name: subtitle
+                widget: text
+              - label: 按钮文字
+                name: button
+                widget: string
+      - name: about
+        label: 关于我们
+        file: src/data/about.json
         fields:
-          - label: "首屏"
-            name: "hero"
-            widget: "object"
+          - label: 首屏
+            name: hero
+            widget: object
             fields:
-              - { label: "小标签", name: "eyebrow", widget: "string" }
-              - { label: "标题", name: "title", widget: "string" }
-              - { label: "副标题", name: "subtitle", widget: "text" }
-          - label: "公司故事"
-            name: "story"
-            widget: "object"
+              - label: 小标签
+                name: eyebrow
+                widget: string
+              - label: 标题
+                name: title
+                widget: string
+              - label: 副标题
+                name: subtitle
+                widget: text
+          - label: 公司故事
+            name: story
+            widget: object
             fields:
-              - { label: "标题", name: "title", widget: "string" }
-              - { label: "段落", name: "paragraphs", widget: "list", field: { label: "段落", name: "p", widget: "text" } }
-              - { label: "配图", name: "image", widget: "image" }
-          - label: "工厂能力"
-            name: "capabilities"
-            widget: "list"
+              - label: 标题
+                name: title
+                widget: string
+              - label: 段落
+                name: paragraphs
+                widget: list
+                field:
+                  label: 段落
+                  name: p
+                  widget: text
+              - label: 配图
+                name: image
+                widget: image
+          - label: 工厂能力
+            name: capabilities
+            widget: list
             fields:
-              - { label: "标题", name: "title", widget: "string" }
-              - { label: "描述", name: "desc", widget: "text" }
-          - label: "数据统计"
-            name: "stats"
-            widget: "list"
+              - label: 标题
+                name: title
+                widget: string
+              - label: 描述
+                name: desc
+                widget: text
+          - label: 数据统计
+            name: stats
+            widget: list
             fields:
-              - { label: "数值", name: "value", widget: "string" }
-              - { label: "说明", name: "label", widget: "string" }
-
-      # ---- 1.4 产品分类（首页「产品系列」+ 产品页筛选共用） ----
-      - name: "categories"
-        label: "产品分类"
-        file: "src/data/categories.json"
+              - label: 数值
+                name: value
+                widget: string
+              - label: 说明
+                name: label
+                widget: string
+      - name: categories
+        label: 产品分类
+        file: src/data/categories.json
         fields:
-          - label: "分类列表"
-            name: "categories"
-            label_singular: "分类"
-            widget: "list"
+          - label: 分类列表
+            name: categories
+            label_singular: 分类
+            widget: list
             fields:
-              - { label: "标识 slug（关联产品，请勿随意修改）", name: "slug", widget: "string", hint: "与产品的「分类」一一对应，如 flatware-sets；修改会导致已有产品归类错乱" }
-              - { label: "中文名称", name: "name", widget: "string" }
-              - { label: "英文名称", name: "nameEn", widget: "string", required: false }
-              - { label: "简介（首页系列卡 + 列表展示）", name: "summary", widget: "text" }
-              - { label: "配图（首页「产品系列」展示）", name: "image", widget: "image" }
-
-      # ---- 1.5 产品 / 博客 / 联系页首屏 ----
-      - name: "pages"
-        label: "页面首屏与 SEO"
-        file: "src/data/pages.json"
+              - label: 标识 slug（关联产品，请勿随意修改）
+                name: slug
+                widget: string
+                hint: 与产品的「分类」一一对应，如 flatware-sets；修改会导致已有产品归类错乱
+              - label: 中文名称
+                name: name
+                widget: string
+              - label: 英文名称
+                name: nameEn
+                widget: string
+                required: false
+              - label: 简介（首页系列卡 + 列表展示）
+                name: summary
+                widget: text
+              - label: 配图（首页「产品系列」展示）
+                name: image
+                widget: image
+      - name: pages
+        label: 页面首屏与 SEO
+        file: src/data/pages.json
         fields:
-          - label: "产品中心"
-            name: "products"
-            widget: "object"
+          - label: 产品中心
+            name: products
+            widget: object
             fields:
-              - { label: "SEO 标题", name: "seoTitle", widget: "string" }
-              - { label: "SEO 描述", name: "seoDescription", widget: "text" }
-              - { label: "面包屑名称", name: "breadcrumb", widget: "string" }
-              - { label: "小标签", name: "eyebrow", widget: "string" }
-              - { label: "主标题", name: "title", widget: "string" }
-              - { label: "简介", name: "description", widget: "text" }
-              - { label: "首屏图片", name: "heroImage", widget: "image" }
-              - { label: "图片替代文本", name: "heroImageAlt", widget: "string" }
-          - label: "博客"
-            name: "blog"
-            widget: "object"
+              - label: SEO 标题
+                name: seoTitle
+                widget: string
+              - label: SEO 描述
+                name: seoDescription
+                widget: text
+              - label: 面包屑名称
+                name: breadcrumb
+                widget: string
+              - label: 小标签
+                name: eyebrow
+                widget: string
+              - label: 主标题
+                name: title
+                widget: string
+              - label: 简介
+                name: description
+                widget: text
+              - label: 首屏图片
+                name: heroImage
+                widget: image
+              - label: 图片替代文本
+                name: heroImageAlt
+                widget: string
+          - label: 博客
+            name: blog
+            widget: object
             fields:
-              - { label: "SEO 标题", name: "seoTitle", widget: "string" }
-              - { label: "SEO 描述", name: "seoDescription", widget: "text" }
-              - { label: "面包屑名称", name: "breadcrumb", widget: "string" }
-              - { label: "小标签", name: "eyebrow", widget: "string" }
-              - { label: "主标题", name: "title", widget: "string" }
-              - { label: "简介", name: "description", widget: "text" }
-              - { label: "首屏图片", name: "heroImage", widget: "image" }
-              - { label: "图片替代文本", name: "heroImageAlt", widget: "string" }
-          - label: "联系我们"
-            name: "contact"
-            widget: "object"
+              - label: SEO 标题
+                name: seoTitle
+                widget: string
+              - label: SEO 描述
+                name: seoDescription
+                widget: text
+              - label: 面包屑名称
+                name: breadcrumb
+                widget: string
+              - label: 小标签
+                name: eyebrow
+                widget: string
+              - label: 主标题
+                name: title
+                widget: string
+              - label: 简介
+                name: description
+                widget: text
+              - label: 首屏图片
+                name: heroImage
+                widget: image
+              - label: 图片替代文本
+                name: heroImageAlt
+                widget: string
+          - label: 联系我们
+            name: contact
+            widget: object
             fields:
-              - { label: "面包屑名称", name: "breadcrumb", widget: "string" }
-              - { label: "小标签", name: "eyebrow", widget: "string" }
-              - { label: "主标题", name: "title", widget: "string" }
-              - { label: "简介", name: "description", widget: "text" }
-              - { label: "首屏图片", name: "heroImage", widget: "image" }
-              - { label: "图片替代文本", name: "heroImageAlt", widget: "string" }
-
-  # ==========================================
-  # 2. 产品管理（每个产品一个文件，可上传图片）
-  # ==========================================
-  - name: "products"
-    label: "产品"
-    label_singular: "产品"
-    folder: "src/content/products"
+              - label: 面包屑名称
+                name: breadcrumb
+                widget: string
+              - label: 小标签
+                name: eyebrow
+                widget: string
+              - label: 主标题
+                name: title
+                widget: string
+              - label: 简介
+                name: description
+                widget: text
+              - label: 首屏图片
+                name: heroImage
+                widget: image
+              - label: 图片替代文本
+                name: heroImageAlt
+                widget: string
+  - name: products
+    label: 产品
+    label_singular: 产品
+    folder: src/content/products
     create: true
-    extension: "md"
-    format: "frontmatter"
-    slug: "{{slug}}"
-    summary: "{{title}}"
+    extension: md
+    format: frontmatter
+    slug: '{{slug}}'
+    summary: '{{title}}'
     fields:
-      - { label: "产品名称", name: "title", widget: "string" }
-      - label: "分类"
-        name: "category"
-        widget: "select"
+      - label: 产品名称
+        name: title
+        widget: string
+      - label: 分类
+        name: category
+        widget: select
         options:
-          - { label: "不锈钢餐具套装", value: "flatware-sets" }
-          - { label: "不锈钢厨具套装", value: "kitchenware-sets" }
-      - { label: "简介（列表/分享展示）", name: "summary", widget: "text" }
-      - label: "产品图片（第一张为主图）"
-        name: "images"
-        widget: "list"
-        field: { label: "图片", name: "image", widget: "image" }
-      - { label: "材质", name: "material", widget: "string", required: false }
-      - { label: "表面工艺", name: "finish", widget: "string", required: false }
-      - { label: "起订量 MOQ", name: "moq", widget: "string", required: false }
-      - { label: "交期", name: "leadTime", widget: "string", required: false }
-      - label: "额外规格行（可选）"
-        name: "specs"
-        widget: "list"
+          - label: 不锈钢餐具套装
+            value: flatware-sets
+          - label: 不锈钢厨具套装
+            value: kitchenware-sets
+      - label: 简介（列表/分享展示）
+        name: summary
+        widget: text
+      - label: 产品图片（第一张为主图）
+        name: images
+        widget: list
+        field:
+          label: 图片
+          name: image
+          widget: image
+      - label: 材质
+        name: material
+        widget: string
+        required: false
+      - label: 表面工艺
+        name: finish
+        widget: string
+        required: false
+      - label: 起订量 MOQ
+        name: moq
+        widget: string
+        required: false
+      - label: 交期
+        name: leadTime
+        widget: string
+        required: false
+      - label: 额外规格行（可选）
+        name: specs
+        widget: list
         required: false
         fields:
-          - { label: "名称", name: "label", widget: "string" }
-          - { label: "数值", name: "value", widget: "string" }
-      - { label: "设为精选（首页展示）", name: "featured", widget: "boolean", default: false, required: false }
-      - { label: "排序（数字越小越靠前）", name: "order", widget: "number", default: 99, value_type: "int", required: false }
-      - { label: "详细介绍", name: "body", widget: "markdown" }
-
-  # ==========================================
-  # 3. 博客管理（每篇文章一个文件）
-  # ==========================================
-  - name: "blog"
-    label: "博客"
-    label_singular: "文章"
-    folder: "src/content/blog"
+          - label: 名称
+            name: label
+            widget: string
+          - label: 数值
+            name: value
+            widget: string
+      - label: 设为精选（首页展示）
+        name: featured
+        widget: boolean
+        default: false
+        required: false
+      - label: 排序（数字越小越靠前）
+        name: order
+        widget: number
+        default: 99
+        value_type: int
+        required: false
+      - label: 详细介绍
+        name: body
+        widget: markdown
+      - label: Draft
+        name: draft
+        widget: boolean
+        required: true
+        default: false
+      - label: Status
+        name: status
+        widget: select
+        required: true
+        options:
+          - draft
+          - approved
+          - published
+        default: published
+      - label: Publish At
+        name: publishAt
+        widget: datetime
+        required: false
+        hint: >-
+          Only published, non-draft entries at or before this time are built. A new build is required at the scheduled
+          time.
+      - label: Translation Key
+        name: translationKey
+        widget: string
+        required: false
+        hint: Use the Chinese entry ID only for a real translation.
+      - label: Date Modified
+        name: dateModified
+        widget: datetime
+        required: false
+  - name: blog
+    label: 博客
+    label_singular: 文章
+    folder: src/content/blog
     create: true
-    extension: "md"
-    format: "frontmatter"
-    slug: "{{slug}}"
-    summary: "{{title}}"
+    extension: md
+    format: frontmatter
+    slug: '{{slug}}'
+    summary: '{{title}}'
     fields:
-      - { label: "标题", name: "title", widget: "string" }
-      - { label: "描述（SEO/列表摘要）", name: "description", widget: "string", required: false }
-      - { label: "发布日期", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
-      - { label: "作者", name: "author", widget: "string", default: "Yumingxing", required: false }
-      - { label: "封面图", name: "cover", widget: "image", required: false }
-      - { label: "标签", name: "tags", widget: "list", required: false, field: { label: "标签", name: "tag", widget: "string" } }
-      - { label: "正文内容", name: "body", widget: "markdown" }
+      - label: 标题
+        name: title
+        widget: string
+      - label: 描述（SEO/列表摘要）
+        name: description
+        widget: string
+        required: false
+      - label: 发布日期
+        name: date
+        widget: datetime
+        format: YYYY-MM-DD
+        date_format: YYYY-MM-DD
+        time_format: false
+      - label: 作者
+        name: author
+        widget: string
+        default: Yumingxing
+        required: false
+      - label: 封面图
+        name: cover
+        widget: image
+        required: false
+      - label: 标签
+        name: tags
+        widget: list
+        required: false
+        field:
+          label: 标签
+          name: tag
+          widget: string
+      - label: 正文内容
+        name: body
+        widget: markdown
+      - label: Draft
+        name: draft
+        widget: boolean
+        required: true
+        default: false
+      - label: Status
+        name: status
+        widget: select
+        required: true
+        options:
+          - draft
+          - approved
+          - published
+        default: published
+      - label: Publish At
+        name: publishAt
+        widget: datetime
+        required: false
+        hint: >-
+          Only published, non-draft entries at or before this time are built. A new build is required at the scheduled
+          time.
+      - label: Translation Key
+        name: translationKey
+        widget: string
+        required: false
+        hint: Use the Chinese entry ID only for a real translation.
+      - label: Date Modified
+        name: dateModified
+        widget: datetime
+        required: false
+  - name: englishSettings
+    label: English — Site Settings
+    delete: false
+    editor:
+      preview: false
+    files:
+      - label: English — Site Settings
+        name: site
+        file: src/data/en/site.json
+        fields:
+          - label: Brand
+            name: brand
+            widget: string
+            required: false
+          - label: Company Name
+            name: companyName
+            widget: string
+            required: false
+          - label: Company Short
+            name: companyShort
+            widget: string
+            required: false
+          - label: Tagline
+            name: tagline
+            widget: string
+            required: false
+          - label: Slogan
+            name: slogan
+            widget: string
+            required: false
+          - label: Description
+            name: description
+            widget: text
+            required: false
+          - label: Site Url
+            name: siteUrl
+            widget: string
+            required: false
+          - label: Logo Text
+            name: logoText
+            widget: string
+            required: false
+          - label: Founded Year
+            name: foundedYear
+            widget: string
+            required: false
+          - label: Contact
+            name: contact
+            widget: object
+            required: true
+            fields:
+              - label: Whatsapp Digits
+                name: whatsappDigits
+                widget: string
+                required: false
+              - label: Whatsapp Display
+                name: whatsappDisplay
+                widget: string
+                required: false
+              - label: Email
+                name: email
+                widget: string
+                required: false
+              - label: Phone Display
+                name: phoneDisplay
+                widget: string
+                required: false
+              - label: Wechat
+                name: wechat
+                widget: string
+                required: false
+              - label: Address Line
+                name: addressLine
+                widget: string
+                required: false
+              - label: Address Full
+                name: addressFull
+                widget: string
+                required: false
+              - label: Business Hours
+                name: businessHours
+                widget: string
+                required: false
+          - label: Highlights
+            name: highlights
+            widget: list
+            required: false
+            fields:
+              - label: Value
+                name: value
+                widget: string
+                required: false
+              - label: Label
+                name: label
+                widget: string
+                required: false
+          - label: Analytics
+            name: analytics
+            widget: object
+            required: true
+            fields:
+              - label: Ga4 Id
+                name: ga4Id
+                widget: string
+                required: false
+          - label: Seo
+            name: seo
+            widget: object
+            required: true
+            fields:
+              - label: Default Title
+                name: defaultTitle
+                widget: string
+                required: false
+              - label: Default Description
+                name: defaultDescription
+                widget: string
+                required: false
+              - label: Og Image
+                name: ogImage
+                widget: image
+                required: false
+      - label: English — Categories
+        name: categories
+        file: src/data/en/categories.json
+        fields:
+          - label: Categories
+            name: categories
+            widget: list
+            required: false
+            fields:
+              - label: Slug
+                name: slug
+                widget: string
+                required: false
+              - label: Name
+                name: name
+                widget: string
+                required: false
+              - label: Name En
+                name: nameEn
+                widget: string
+                required: false
+              - label: Summary
+                name: summary
+                widget: text
+                required: false
+              - label: Image
+                name: image
+                widget: image
+                required: false
+              - label: Href
+                name: href
+                widget: string
+                required: false
+      - name: evidence
+        label: English — Verified identity and assets
+        file: src/data/en/about.json
+        fields:
+          - label: Display Name
+            name: displayName
+            widget: string
+            required: false
+          - label: Legal English Name
+            name: legalEnglishName
+            widget: string
+            required: false
+          - label: Full English Address
+            name: fullEnglishAddress
+            widget: string
+            required: false
+          - label: Reviewer
+            name: reviewer
+            widget: string
+            required: false
+          - label: Last Reviewed
+            name: lastReviewed
+            widget: string
+            required: false
+          - label: Documents
+            name: documents
+            widget: list
+            required: false
+            fields:
+              - label: Name
+                name: name
+                widget: string
+                required: true
+              - label: Number
+                name: number
+                widget: string
+                required: true
+              - label: Date
+                name: date
+                widget: datetime
+                required: true
+                format: YYYY-MM-DD
+                time_format: false
+              - label: Scope
+                name: scope
+                widget: text
+                required: true
+              - label: Issuer
+                name: issuer
+                widget: string
+                required: false
+              - label: Expiry
+                name: expiry
+                widget: string
+                required: false
+              - label: Sku
+                name: sku
+                widget: string
+                required: false
+              - label: Material
+                name: material
+                widget: string
+                required: false
+              - label: Market
+                name: market
+                widget: string
+                required: false
+              - label: File
+                name: file
+                widget: file
+                required: false
+              - label: Url
+                name: url
+                widget: string
+                required: false
+              - label: Visibility
+                name: visibility
+                widget: select
+                required: true
+                options:
+                  - internal
+                  - public
+                default: internal
+                hint: >-
+                  Display control only. Files in public/uploads and this public repository remain publicly accessible.
+                  Keep confidential documents outside the repository.
+              - label: Status
+                name: status
+                widget: select
+                required: true
+                options:
+                  - current
+                  - archived
+                default: current
+          - label: Factory Images
+            name: factoryImages
+            widget: list
+            required: false
+            fields:
+              - label: File
+                name: file
+                widget: image
+                required: true
+              - label: Alt
+                name: alt
+                widget: string
+                required: true
+              - label: Caption
+                name: caption
+                widget: string
+                required: false
+              - label: Original Verified
+                name: originalVerified
+                widget: boolean
+                required: true
+                default: false
+  - name: englishHome
+    label: English — Homepage
+    delete: false
+    editor:
+      preview: false
+    files:
+      - label: English — Homepage
+        name: home
+        file: src/data/en/home.json
+        fields:
+          - label: Hero
+            name: hero
+            widget: object
+            required: true
+            fields:
+              - label: Eyebrow
+                name: eyebrow
+                widget: string
+                required: false
+              - label: Title
+                name: title
+                widget: string
+                required: false
+              - label: Subtitle
+                name: subtitle
+                widget: text
+                required: false
+              - label: Primary Cta
+                name: primaryCta
+                widget: string
+                required: false
+              - label: Secondary Cta
+                name: secondaryCta
+                widget: string
+                required: false
+          - label: Value Props
+            name: valueProps
+            widget: list
+            required: false
+            fields:
+              - label: Icon
+                name: icon
+                widget: string
+                required: false
+              - label: Title
+                name: title
+                widget: string
+                required: false
+              - label: Desc
+                name: desc
+                widget: text
+                required: false
+          - label: Why Us
+            name: whyUs
+            widget: object
+            required: true
+            fields:
+              - label: Title
+                name: title
+                widget: string
+                required: false
+              - label: Subtitle
+                name: subtitle
+                widget: text
+                required: false
+              - label: Image
+                name: image
+                widget: image
+                required: false
+              - label: Image Alt
+                name: imageAlt
+                widget: string
+                required: false
+              - label: Points
+                name: points
+                widget: list
+                required: false
+          - label: Process
+            name: process
+            widget: list
+            required: false
+            fields:
+              - label: Step
+                name: step
+                widget: string
+                required: false
+              - label: Title
+                name: title
+                widget: string
+                required: false
+              - label: Desc
+                name: desc
+                widget: text
+                required: false
+          - label: Faq
+            name: faq
+            widget: list
+            required: false
+            fields:
+              - label: Q
+                name: q
+                widget: string
+                required: false
+              - label: A
+                name: a
+                widget: text
+                required: false
+          - label: Cta Band
+            name: ctaBand
+            widget: object
+            required: true
+            fields:
+              - label: Title
+                name: title
+                widget: string
+                required: false
+              - label: Subtitle
+                name: subtitle
+                widget: text
+                required: false
+              - label: Button
+                name: button
+                widget: string
+                required: false
+          - label: Seo Title
+            name: seoTitle
+            widget: string
+            required: false
+          - label: Meta Description
+            name: metaDescription
+            widget: string
+            required: false
+  - name: englishPages
+    label: English — Core Pages
+    delete: false
+    editor:
+      preview: false
+    files:
+      - label: English — Core Pages
+        name: core
+        file: src/data/en/pages.json
+        fields:
+          - label: Pages
+            name: pages
+            widget: list
+            required: false
+            fields:
+              - label: Slug
+                name: slug
+                widget: string
+                required: false
+              - label: Title
+                name: title
+                widget: string
+                required: false
+              - label: H1
+                name: h1
+                widget: string
+                required: false
+              - label: Description
+                name: description
+                widget: text
+                required: false
+              - label: Eyebrow
+                name: eyebrow
+                widget: string
+                required: false
+              - label: Image
+                name: image
+                widget: image
+                required: false
+              - label: Image Alt
+                name: imageAlt
+                widget: string
+                required: false
+              - label: Sections
+                name: sections
+                widget: list
+                required: false
+                fields:
+                  - label: Heading
+                    name: heading
+                    widget: string
+                    required: false
+                  - label: Body
+                    name: body
+                    widget: text
+                    required: false
+                  - label: Bullets
+                    name: bullets
+                    widget: list
+                    required: false
+                  - label: Table
+                    name: table
+                    widget: list
+                    required: false
+                    fields:
+                      - label: Label
+                        name: label
+                        widget: string
+                        required: true
+                      - label: Value
+                        name: value
+                        widget: text
+                        required: true
+              - label: Faq
+                name: faq
+                widget: list
+                required: false
+                fields:
+                  - label: Q
+                    name: q
+                    widget: string
+                    required: true
+                  - label: A
+                    name: a
+                    widget: text
+                    required: true
+              - label: Links
+                name: links
+                widget: list
+                required: false
+              - label: Status
+                name: status
+                widget: select
+                required: false
+                options:
+                  - draft
+                  - published
+              - label: Draft
+                name: draft
+                widget: boolean
+                required: false
+              - label: Category
+                name: category
+                widget: string
+                required: false
+              - label: Rfq
+                name: rfq
+                widget: boolean
+                required: false
+              - label: Publish At
+                name: publishAt
+                widget: datetime
+                required: false
+              - label: Last Reviewed
+                name: lastReviewed
+                widget: string
+                required: false
+              - label: Reviewer
+                name: reviewer
+                widget: string
+                required: false
+              - label: Documents
+                name: documents
+                widget: list
+                required: false
+                fields:
+                  - label: Name
+                    name: name
+                    widget: string
+                    required: true
+                  - label: Number
+                    name: number
+                    widget: string
+                    required: true
+                  - label: Date
+                    name: date
+                    widget: datetime
+                    required: true
+                    format: YYYY-MM-DD
+                    time_format: false
+                  - label: Scope
+                    name: scope
+                    widget: text
+                    required: true
+                  - label: Issuer
+                    name: issuer
+                    widget: string
+                    required: false
+                  - label: Expiry
+                    name: expiry
+                    widget: string
+                    required: false
+                  - label: Sku
+                    name: sku
+                    widget: string
+                    required: false
+                  - label: Material
+                    name: material
+                    widget: string
+                    required: false
+                  - label: Market
+                    name: market
+                    widget: string
+                    required: false
+                  - label: File
+                    name: file
+                    widget: file
+                    required: false
+                  - label: Url
+                    name: url
+                    widget: string
+                    required: false
+                  - label: Visibility
+                    name: visibility
+                    widget: select
+                    required: true
+                    options:
+                      - internal
+                      - public
+                    default: internal
+                    hint: >-
+                      Display control only. Files in public/uploads and this public repository remain publicly
+                      accessible. Keep confidential documents outside the repository.
+                  - label: Status
+                    name: status
+                    widget: select
+                    required: true
+                    options:
+                      - current
+                      - archived
+                    default: current
+              - label: Factory Images
+                name: factoryImages
+                widget: list
+                required: false
+                fields:
+                  - label: File
+                    name: file
+                    widget: image
+                    required: true
+                  - label: Alt
+                    name: alt
+                    widget: string
+                    required: true
+                  - label: Caption
+                    name: caption
+                    widget: string
+                    required: false
+                  - label: Original Verified
+                    name: originalVerified
+                    widget: boolean
+                    required: true
+                    default: false
+  - name: productsEn
+    label: English — Products
+    folder: src/content/products-en
+    create: true
+    slug: '{{slug}}'
+    identifier_field: slug
+    summary: '{{title}} — {{status}}'
+    fields:
+      - label: Locale
+        name: locale
+        widget: hidden
+        required: false
+        default: en
+      - label: Slug
+        name: slug
+        widget: string
+        required: true
+        pattern:
+          - ^[a-z0-9]+(?:-[a-z0-9]+)*$
+          - Use lowercase English letters, numbers and hyphens.
+      - label: Title
+        name: title
+        widget: string
+        required: true
+      - label: Draft
+        name: draft
+        widget: boolean
+        required: true
+        default: true
+      - label: Status
+        name: status
+        widget: select
+        required: true
+        options:
+          - draft
+          - approved
+          - published
+        default: draft
+      - label: Publish At
+        name: publishAt
+        widget: datetime
+        required: false
+        hint: >-
+          Only published, non-draft entries at or before this time are built. A new build is required at the scheduled
+          time.
+      - label: Translation Key
+        name: translationKey
+        widget: string
+        required: false
+        hint: Use the Chinese entry ID only for a real translation.
+      - label: Date Modified
+        name: dateModified
+        widget: datetime
+        required: false
+      - label: Sku
+        name: sku
+        widget: string
+        required: false
+      - label: Model
+        name: model
+        widget: string
+        required: false
+      - label: Seo Title
+        name: seoTitle
+        widget: string
+        required: false
+      - label: Meta Description
+        name: metaDescription
+        widget: string
+        required: false
+      - label: H1
+        name: h1
+        widget: string
+        required: false
+      - label: Last Reviewed
+        name: lastReviewed
+        widget: string
+        required: false
+      - label: Color
+        name: color
+        widget: string
+        required: false
+      - label: Edge
+        name: edge
+        widget: string
+        required: false
+      - label: Tine
+        name: tine
+        widget: string
+        required: false
+      - label: Handle Construction
+        name: handleConstruction
+        widget: string
+        required: false
+      - label: Logo Position
+        name: logoPosition
+        widget: string
+        required: false
+      - label: Pcs Per Carton
+        name: pcsPerCarton
+        widget: string
+        required: false
+      - label: Carton Size
+        name: cartonSize
+        widget: string
+        required: false
+      - label: Gross Weight
+        name: grossWeight
+        widget: string
+        required: false
+      - label: Net Weight
+        name: netWeight
+        widget: string
+        required: false
+      - label: Cbm
+        name: cbm
+        widget: string
+        required: false
+      - label: Moq Stock
+        name: moqStock
+        widget: string
+        required: false
+      - label: Moq Logo
+        name: moqLogo
+        widget: string
+        required: false
+      - label: Moq Custom Mold
+        name: moqCustomMold
+        widget: string
+        required: false
+      - label: Sample Availability
+        name: sampleAvailability
+        widget: string
+        required: false
+      - label: Sample Fee
+        name: sampleFee
+        widget: string
+        required: false
+      - label: Sample Lead Time
+        name: sampleLeadTime
+        widget: string
+        required: false
+      - label: Tooling Fee
+        name: toolingFee
+        widget: string
+        required: false
+      - label: Tooling Refund Policy
+        name: toolingRefundPolicy
+        widget: string
+        required: false
+      - label: Production Lead Time
+        name: productionLeadTime
+        widget: string
+        required: false
+      - label: Payment Terms
+        name: paymentTerms
+        widget: string
+        required: false
+      - label: Loading Port
+        name: loadingPort
+        widget: string
+        required: false
+      - label: Aql
+        name: aql
+        widget: string
+        required: false
+      - label: Tolerances
+        name: tolerances
+        widget: string
+        required: false
+      - label: Summary
+        name: summary
+        widget: text
+        required: true
+      - label: Category
+        name: category
+        widget: select
+        required: true
+        options:
+          - flatware-sets
+          - kitchenware-sets
+      - label: Images
+        name: images
+        widget: list
+        required: false
+        fields:
+          - label: File
+            name: file
+            widget: image
+            required: true
+          - label: Alt
+            name: alt
+            widget: string
+            required: true
+            hint: Describe the visible product in English.
+          - label: Caption
+            name: caption
+            widget: string
+            required: false
+          - label: Original Verified
+            name: originalVerified
+            widget: boolean
+            required: false
+            default: false
+      - label: Material
+        name: material
+        widget: string
+        required: false
+      - label: Finish
+        name: finish
+        widget: string
+        required: false
+      - label: Moq
+        name: moq
+        widget: string
+        required: false
+      - label: Country Of Origin
+        name: countryOfOrigin
+        widget: string
+        required: false
+      - label: Buyer Segments
+        name: buyerSegments
+        widget: list
+        required: false
+      - label: Use Cases
+        name: useCases
+        widget: list
+        required: false
+      - label: Set Composition
+        name: setComposition
+        widget: list
+        required: false
+      - label: Logo Methods
+        name: logoMethods
+        widget: list
+        required: false
+      - label: Artwork Formats
+        name: artworkFormats
+        widget: list
+        required: false
+      - label: Packaging Options
+        name: packagingOptions
+        widget: list
+        required: false
+      - label: Incoterms
+        name: incoterms
+        widget: list
+        required: false
+      - label: Qc Checkpoints
+        name: qcCheckpoints
+        widget: list
+        required: false
+      - label: Related Products
+        name: relatedProducts
+        widget: list
+        required: false
+      - label: Components
+        name: components
+        widget: list
+        required: false
+        fields:
+          - label: Name
+            name: name
+            widget: string
+            required: true
+          - label: Material Grade
+            name: materialGrade
+            widget: string
+            required: false
+          - label: Length
+            name: length
+            widget: string
+            required: false
+          - label: Width
+            name: width
+            widget: string
+            required: false
+          - label: Thickness
+            name: thickness
+            widget: string
+            required: false
+          - label: Weight
+            name: weight
+            widget: string
+            required: false
+      - label: Specs
+        name: specs
+        widget: list
+        required: false
+        fields:
+          - label: Label
+            name: label
+            widget: string
+            required: true
+          - label: Value
+            name: value
+            widget: string
+            required: true
+      - label: Documents
+        name: documents
+        widget: list
+        required: false
+        fields:
+          - label: Name
+            name: name
+            widget: string
+            required: true
+          - label: Number
+            name: number
+            widget: string
+            required: true
+          - label: Date
+            name: date
+            widget: datetime
+            required: true
+            format: YYYY-MM-DD
+            time_format: false
+          - label: Scope
+            name: scope
+            widget: text
+            required: true
+          - label: Issuer
+            name: issuer
+            widget: string
+            required: false
+          - label: Expiry
+            name: expiry
+            widget: string
+            required: false
+          - label: Sku
+            name: sku
+            widget: string
+            required: false
+          - label: Material
+            name: material
+            widget: string
+            required: false
+          - label: Market
+            name: market
+            widget: string
+            required: false
+          - label: File
+            name: file
+            widget: file
+            required: false
+          - label: Url
+            name: url
+            widget: string
+            required: false
+          - label: Visibility
+            name: visibility
+            widget: select
+            required: true
+            options:
+              - internal
+              - public
+            default: internal
+            hint: >-
+              Display control only. Files in public/uploads and this public repository remain publicly accessible. Keep
+              confidential documents outside the repository.
+          - label: Status
+            name: status
+            widget: select
+            required: true
+            options:
+              - current
+              - archived
+            default: current
+      - label: Faq
+        name: faq
+        widget: list
+        required: false
+        fields:
+          - label: Q
+            name: q
+            widget: string
+            required: true
+          - label: A
+            name: a
+            widget: text
+            required: true
+      - label: Featured
+        name: featured
+        widget: boolean
+        required: false
+        default: false
+      - label: Order
+        name: order
+        widget: number
+        required: false
+        default: 99
+      - label: Body
+        name: body
+        widget: markdown
+        required: false
+  - name: blogEn
+    label: English — Buyer Guides
+    folder: src/content/blog-en
+    create: true
+    slug: '{{slug}}'
+    identifier_field: slug
+    summary: '{{title}} — {{status}}'
+    fields:
+      - label: Locale
+        name: locale
+        widget: hidden
+        required: false
+        default: en
+      - label: Slug
+        name: slug
+        widget: string
+        required: true
+        pattern:
+          - ^[a-z0-9]+(?:-[a-z0-9]+)*$
+          - Use lowercase English letters, numbers and hyphens.
+      - label: Title
+        name: title
+        widget: string
+        required: true
+      - label: Draft
+        name: draft
+        widget: boolean
+        required: true
+        default: true
+      - label: Status
+        name: status
+        widget: select
+        required: true
+        options:
+          - draft
+          - approved
+          - published
+        default: draft
+      - label: Publish At
+        name: publishAt
+        widget: datetime
+        required: false
+        hint: >-
+          Only published, non-draft entries at or before this time are built. A new build is required at the scheduled
+          time.
+      - label: Translation Key
+        name: translationKey
+        widget: string
+        required: false
+        hint: Use the Chinese entry ID only for a real translation.
+      - label: Date Modified
+        name: dateModified
+        widget: datetime
+        required: false
+      - label: Description
+        name: description
+        widget: text
+        required: true
+      - label: Seo Title
+        name: seoTitle
+        widget: string
+        required: false
+      - label: Meta Description
+        name: metaDescription
+        widget: string
+        required: false
+      - label: Date
+        name: date
+        widget: datetime
+        required: true
+        format: YYYY-MM-DD
+        time_format: false
+      - label: Author
+        name: author
+        widget: string
+        required: true
+        default: Yumingxing
+      - label: Reviewer
+        name: reviewer
+        widget: string
+        required: false
+      - label: Last Reviewed
+        name: lastReviewed
+        widget: string
+        required: false
+      - label: Cover
+        name: cover
+        widget: image
+        required: false
+      - label: Cover Alt
+        name: coverAlt
+        widget: string
+        required: false
+      - label: Tags
+        name: tags
+        widget: list
+        required: false
+      - label: Topic
+        name: topic
+        widget: string
+        required: false
+      - label: Related Products
+        name: relatedProducts
+        widget: list
+        required: false
+      - label: Sources
+        name: sources
+        widget: list
+        required: false
+        fields:
+          - label: Label
+            name: label
+            widget: string
+            required: true
+          - label: Url
+            name: url
+            widget: string
+            required: true
+      - label: Body
+        name: body
+        widget: markdown
+        required: true

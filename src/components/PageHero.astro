@@ -1,21 +1,23 @@
 ---
+import ResponsiveImage from "./ResponsiveImage.astro";
 interface Props {
   breadcrumb: string;
   eyebrow: string;
   title: string;
   description: string;
-  image: string;
+  image?: string;
+  locale?: string;
   imageAlt: string;
 }
 
-const { breadcrumb, eyebrow, title, description, image, imageAlt } = Astro.props;
+const { breadcrumb, eyebrow, title, description, image, imageAlt, locale = 'zh-CN' } = Astro.props;
 ---
 
 <section class="brand-hero text-white relative overflow-hidden border-b border-line">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 py-14 md:py-18 grid lg:grid-cols-[minmax(0,1.1fr)_minmax(360px,0.9fr)] gap-10 lg:gap-14 items-center relative z-10">
     <div>
       <nav class="reveal text-sm text-white/60 mb-5">
-        <a href="/" class="hover:text-white transition-colors">首页</a>
+        <a href={locale==='en'?'/en/':'/'} class="hover:text-white transition-colors">{locale==='en'?'Home':'首页'}</a>
         <span class="mx-1">/</span>
         <span class="text-white/90">{breadcrumb}</span>
       </nav>
@@ -24,8 +26,8 @@ const { breadcrumb, eyebrow, title, description, image, imageAlt } = Astro.props
       <p class="reveal reveal-d2 text-white/75 mt-5 max-w-2xl leading-relaxed">{description}</p>
     </div>
 
-    <div class="reveal reveal-d2 relative rounded-2xl overflow-hidden border border-white/15 ring-1 ring-white/10 bg-white/[0.04] shadow-[0_24px_70px_-36px_rgba(0,0,0,0.85)] aspect-[16/10]">
-      <img
+    {image && <div class="reveal reveal-d2 relative rounded-2xl overflow-hidden border border-white/15 ring-1 ring-white/10 bg-white/[0.04] shadow-[0_24px_70px_-36px_rgba(0,0,0,0.85)] aspect-[16/10]">
+      <ResponsiveImage
         src={image}
         alt={imageAlt}
         width="1600"
@@ -35,6 +37,6 @@ const { breadcrumb, eyebrow, title, description, image, imageAlt } = Astro.props
         fetchpriority="high"
         class="w-full h-full object-cover"
       />
-    </div>
+    </div>}
   </div>
 </section>

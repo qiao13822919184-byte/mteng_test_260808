@@ -1,7 +1,9 @@
 ---
-import site from '../data/site.json';
+import {getSite,labels,prefix} from '../lib/locale';
+const {locale='zh-CN',switchUrl='/en/'}=Astro.props;
+const site=getSite(locale), ui=labels(locale), base=prefix(locale);
 
-const nav = [
+const nav = locale==='en' ? [{label:'Home',href:'/en/'},{label:'Products',href:'/en/products/'},{label:'Factory',href:'/en/factory/'},{label:'Buyer Guides',href:'/en/blog/'},{label:'Contact',href:'/en/contact/'}] : [
   { label: '首页', href: '/' },
   { label: '产品', href: '/products' },
   { label: '博客', href: '/blog' },
@@ -11,9 +13,9 @@ const nav = [
 
 const path = Astro.url.pathname;
 const isActive = (href) =>
-  href === '/' ? path === '/' : path.startsWith(href);
+  ['/', '/en/'].includes(href) ? path === href : path.startsWith(href);
 
-const waText = encodeURIComponent('您好，我想咨询裕明兴的不锈钢餐厨具产品。');
+const waText = encodeURIComponent(locale==='en' ? 'Hello Yumingxing, I would like a quotation. Page: '+new URL(Astro.url.pathname,site.siteUrl).href : '您好，我想咨询裕明兴的不锈钢餐厨具产品。');
 const waLink = `https://wa.me/${site.contact.whatsappDigits}?text=${waText}`;
 ---
 <header class="sticky top-0 z-50 w-full">
@@ -21,7 +23,7 @@ const waLink = `https://wa.me/${site.contact.whatsappDigits}?text=${waText}`;
   <div class="backdrop-blur-xl bg-cream/75 border-b border-line shadow-[0_10px_30px_-26px_rgba(11,30,51,0.35)]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
       <!-- Logo -->
-      <a href="/" class="group flex items-center gap-3 shrink-0">
+      <a href={`${base}/`} class="group flex items-center gap-3 shrink-0">
         <span class="relative brand-gradient w-10 h-10 rounded-xl grid place-items-center shadow-sm transition-transform duration-300 group-hover:scale-105">
           <span class="absolute -inset-1 rounded-2xl bg-steel-light/0 group-hover:bg-steel-light/25 blur-md transition-colors duration-300"></span>
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="relative">
@@ -35,7 +37,7 @@ const waLink = `https://wa.me/${site.contact.whatsappDigits}?text=${waText}`;
       </a>
 
       <!-- Desktop nav -->
-      <nav class="hidden md:flex items-center gap-8 font-medium text-[15px]">
+      <nav class={locale==='en' ? "hidden lg:flex items-center gap-5 font-medium text-sm" : "hidden md:flex items-center gap-8 font-medium text-[15px]"}>
         {nav.map((item) => (
           <a
             href={item.href}
@@ -48,6 +50,7 @@ const waLink = `https://wa.me/${site.contact.whatsappDigits}?text=${waText}`;
 
       <!-- CTA + mobile toggle -->
       <div class="flex items-center gap-2">
+        <a href={switchUrl} lang={locale==='en'?'zh-CN':'en'} aria-label={locale==='en'?'Switch to Chinese':'Switch to English'} class="text-xs font-semibold text-ocean px-2 py-2 shrink-0">{locale==='en'?'中文':'EN'}</a>
         <a
           href={waLink}
           target="_blank"
@@ -57,13 +60,13 @@ const waLink = `https://wa.me/${site.contact.whatsappDigits}?text=${waText}`;
           class="btn btn-primary hidden sm:inline-flex text-sm px-5 py-2.5"
         >
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
-          询价
+          {ui.quote}
         </a>
         <button
           id="nav-toggle"
-          aria-label="打开菜单"
+          aria-label={ui.menu}
           aria-expanded="false"
-          class="md:hidden w-10 h-10 grid place-items-center rounded-lg border border-line text-ink"
+          class={`${locale==='en'?'lg:hidden':'md:hidden'} w-10 h-10 shrink-0 grid place-items-center rounded-lg border border-line text-ink}`}
         >
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
         </button>
@@ -71,7 +74,7 @@ const waLink = `https://wa.me/${site.contact.whatsappDigits}?text=${waText}`;
     </div>
 
     <!-- Mobile panel -->
-    <nav id="mobile-nav" class="md:hidden hidden border-t border-line bg-cream">
+    <nav id="mobile-nav" class={`${locale==='en'?'lg:hidden':'md:hidden'} hidden border-t border-line bg-cream`}>
       <div class="max-w-7xl mx-auto px-4 py-3 flex flex-col">
         {nav.map((item) => (
           <a
@@ -82,7 +85,7 @@ const waLink = `https://wa.me/${site.contact.whatsappDigits}?text=${waText}`;
           </a>
         ))}
         <a href={waLink} target="_blank" rel="noopener" data-wa data-wa-product="mobile_cta" class="btn btn-primary mt-2 py-3">
-          WhatsApp 询价
+          {ui.wa}
         </a>
       </div>
     </nav>

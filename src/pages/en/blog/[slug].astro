@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ProductCard from '../../../components/ProductCard.astro';
+import {getCollection,render} from 'astro:content';
+import {isPublished,entrySlug,absolute,safeJson} from '../../../lib/publishing';
+export async function getStaticPaths(){return(await getCollection('blogEn',isPublished)).map(post=>({params:{slug:entrySlug(post)},props:{post}}));}
+const {post}=Astro.props,d=post.data,{Content}=await render(post),url=absolute(`/en/blog/${entrySlug(post)}/`);
+const products=(await getCollection('productsEn',isPublished)).filter(p=>d.relatedProducts.includes(entrySlug(p)));
+const schema={'@context':'https://schema.org','@type':'Article',headline:d.title,description:d.description,datePublished:d.date.toISOString(),...(d.dateModified?{dateModified:d.dateModified.toISOString()}:{}),image:d.cover?[absolute(d.cover)]:undefined,author:d.author==='Yumingxing'?{'@id':absolute('/#organization')}:{'@type':'Person',name:d.author},publisher:{'@id':absolute('/#organization')},mainEntityOfPage:{'@id':url+'#webpage'},inLanguage:'en'};
+---
+<BaseLayout locale="en" title={d.seoTitle||d.title} description={d.metaDescription||d.description} image={d.cover} type="article">
+  <script slot="head" type="application/ld+json" set:html={safeJson(schema)} />
+  <article class="max-w-3xl mx-auto px-4 sm:px-6 py-12">
+    <nav class="text-sm text-ink-muted mb-8"><a href="/en/">Home</a> / <a href="/en/blog/">Buyer Guides</a></nav>
+    <h1 class="font-display font-extrabold text-3xl md:text-4xl leading-tight">{d.title}</h1>
+    <p class="mt-4 text-sm text-ink-muted"><time datetime={d.date.toISOString()}>{d.date.toISOString().slice(0,10)}</time> · {d.author}</p>
+    {d.reviewer&&d.lastReviewed&&<p class="text-sm text-ink-muted mt-2">Reviewed by {d.reviewer} · {d.lastReviewed}</p>}
+    {d.cover&&<img src={d.cover} alt={d.coverAlt||d.title} width="1000" height="562" class="w-full rounded-2xl my-8" />}
+    <div class="prose prose-lg max-w-none mt-8"><Content /></div>
+    {d.sources.length>0&&<section class="mt-8"><h2 class="font-bold text-xl">Sources</h2><ul>{d.sources.map(s=><li><a class="underline text-ocean" href={s.url}>{s.label}</a></li>)}</ul></section>}
+    {products.length>0&&<section class="mt-12"><h2 class="statement text-2xl mb-6">Related catalogue models</h2><div class="grid sm:grid-cols-2 gap-5">{products.map(p=><ProductCard product={p} locale="en" />)}</div></section>}
+    <a href="/en/contact/#rfq" class="btn btn-primary px-6 py-3 mt-10">Discuss Your Sourcing Brief</a>
+  </article>
+</BaseLayout>

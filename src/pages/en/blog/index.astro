@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHero from '../../../components/PageHero.astro';
+import {getCollection} from 'astro:content';
+import {isPublished,entrySlug} from '../../../lib/publishing';
+const posts=(await getCollection('blogEn',isPublished)).sort((a,b)=>+b.data.date-+a.data.date);
+---
+<BaseLayout locale="en" title="Cutlery & Kitchenware Sourcing Guides | Yumingxing" description="Prepare product enquiries, compare sourcing requirements and plan cutlery and kitchenware orders with Yumingxing buyer guides.">
+  <PageHero locale="en" breadcrumb="Buyer Guides" eyebrow="SOURCING GUIDES" title="Guides for Cutlery and Kitchenware Buyers" description="Practical information for defining a product brief, confirming specifications and requesting a quotation." image="/uploads/flatware-portuguese-silver.webp" imageAlt="Stainless steel cutlery for sourcing enquiries" />
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-12"><div class="grid md:grid-cols-3 gap-5">{posts.map(post=><a href={`/en/blog/${entrySlug(post)}/`} class="reveal card-hover bg-white rounded-2xl overflow-hidden border border-line">
+    {post.data.cover&&<img src={post.data.cover} alt={post.data.coverAlt||post.data.title} width="800" height="450" loading="lazy" class="w-full aspect-video object-cover" />}
+    <div class="p-5"><time class="text-sm text-ink-muted" datetime={post.data.date.toISOString()}>{post.data.date.toISOString().slice(0,10)}</time><h2 class="font-display font-bold text-xl mt-3">{post.data.title}</h2><p class="text-ink-muted mt-3">{post.data.description}</p></div>
+  </a>)}</div></section>
+</BaseLayout>

@@ -1,0 +1,94 @@
+{
+  "hero": {
+    "eyebrow": "FACTORY-DIRECT · OEM/ODM · GLOBAL B2B SUPPLY",
+    "title": "Stainless Steel Cutlery & Kitchenware Manufacturer in Jieyang, China",
+    "subtitle": "Yumingxing supplies stainless steel cutlery sets and kitchen utensils for wholesalers, retailers, hospitality buyers and private-label brands. Discuss the material, finish, set composition, logo and packaging for your market.",
+    "primaryCta": "Browse Products",
+    "secondaryCta": "Request a Quote"
+  },
+  "valueProps": [
+    {
+      "icon": "factory",
+      "title": "Factory-Direct Manufacturing",
+      "desc": "Discuss product specifications and order requirements with Yumingxing in Jieyang."
+    },
+    {
+      "icon": "shield",
+      "title": "Material Options",
+      "desc": "Select grades by product construction, intended use and destination requirements. Confirm every component."
+    },
+    {
+      "icon": "pencil",
+      "title": "OEM/ODM and Private Label",
+      "desc": "Discuss logos, finishes, set composition and packaging. Structural changes require a feasibility review."
+    },
+    {
+      "icon": "globe",
+      "title": "Project Coordination",
+      "desc": "Confirm packing, carton marks, inspection requirements and delivery terms before order approval."
+    }
+  ],
+  "whyUs": {
+    "title": "From Material Selection to Final Packing",
+    "subtitle": "Build the order around an agreed specification",
+    "image": "/uploads/flatware-portuguese-silver.webp",
+    "imageAlt": "Portuguese-style stainless steel knife, fork and spoon set",
+    "points": [
+      "Confirm material and dimensions for each component.",
+      "Compare the sample, finish and set composition against the specification.",
+      "Agree inspection and packaging requirements before ordering.",
+      "Request documents that match the product and destination."
+    ]
+  },
+  "process": [
+    {
+      "step": "01",
+      "title": "Share Your Sourcing Brief",
+      "desc": "Send the model or reference image, quantity, destination, material, finish and target date."
+    },
+    {
+      "step": "02",
+      "title": "Confirm Specification and Sample",
+      "desc": "Agree feasibility, quotation, MOQ and the sample route before bulk approval."
+    },
+    {
+      "step": "03",
+      "title": "Agree Production and Checks",
+      "desc": "Record the approved specification, sample and inspection requirements in the order."
+    },
+    {
+      "step": "04",
+      "title": "Confirm Packing and Shipment",
+      "desc": "Check carton marks, packing details, inspection arrangements and agreed delivery terms."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What does Yumingxing supply?",
+      "a": "Stainless steel cutlery sets and kitchen utensils for B2B orders, including wholesale, hospitality, retail and private-label projects. Availability and specifications are confirmed by model."
+    },
+    {
+      "q": "Do you support OEM, ODM and private-label enquiries?",
+      "a": "Depending on the product, discuss logos, finish, set composition, handle treatment and branded packaging. New molds and structural changes require a separate feasibility review."
+    },
+    {
+      "q": "Which stainless steel grades are available?",
+      "a": "Options in the current catalogue include 201, 304, 410 and 430 stainless steel. Availability differs by model and component; confirm the exact grade of each piece before ordering."
+    },
+    {
+      "q": "What should I send for a quotation?",
+      "a": "Send the model or reference photo, quantity, destination, material, finish, logo and packaging requirements, and target delivery date. Request written confirmation of MOQ, samples and lead time."
+    },
+    {
+      "q": "Can I request samples and test documents?",
+      "a": "Ask for sample availability, fees and timing for your model. Any material or food-contact document must match the relevant product, material batch and destination requirements."
+    }
+  ],
+  "ctaBand": {
+    "title": "Tell Us What You Need to Source",
+    "subtitle": "Send the model or reference photo, quantity and destination. We will review the brief and reply with the available route.",
+    "button": "Request a Quote"
+  },
+  "seoTitle": "Stainless Steel Cutlery Manufacturer in China | Yumingxing",
+  "metaDescription": "Source stainless steel cutlery and kitchen utensils from Yumingxing in Jieyang, China. Discuss OEM/ODM, logos and packaging for wholesale, hospitality and retail."
+}

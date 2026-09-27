@@ -1,0 +1,49 @@
+---
+import site from '../../data/en/site.json';
+const {model=''}=Astro.props;
+const fields=[['company','Company',true],['email','Business Email',true],['phone','WhatsApp / Phone',false],['product','Product / Model / Reference URL',true],['quantity','Expected Quantity',true],['destination','Destination Country / Port',true],['material','Material / Finish',false],['branding','Logo / Packaging Requirements',false],['targetDate','Target Delivery Date',false]];
+---
+<section id="rfq" class="max-w-5xl mx-auto px-4 sm:px-6 py-12">
+  <div class="bg-white rounded-2xl border border-line p-6 sm:p-10">
+    <p class="eyebrow mb-3">PREPARE YOUR ENQUIRY</p>
+    <h2 class="statement text-3xl">Your sourcing brief</h2>
+    <p class="text-ink-muted mt-4 max-w-3xl">Send the model, quantity and destination. We will review the brief and reply with the available route.</p>
+    <p class="text-sm text-ink-muted mt-3">This form prepares a message in your email application or WhatsApp. Nothing is sent until you send it there. Attach drawings or reference photos in your email application.</p>
+    <form data-rfq data-email={site.contact.email} data-wa-number={site.contact.whatsappDigits} class="mt-8 grid sm:grid-cols-2 gap-5">
+      {fields.map(([name,label,required])=><label class="block text-sm font-medium text-ink">{label}{required?' *':''}
+        <input class="block w-full border border-line rounded-lg p-3 mt-2 bg-cream text-ink" name={name} type={name==='email'?'email':name==='targetDate'?'date':'text'} required={required} value={name==='product'?model:undefined} maxlength="250" />
+      </label>)}
+      <label class="block text-sm font-medium text-ink sm:col-span-2">Message
+        <textarea class="block w-full border border-line rounded-lg p-3 mt-2 bg-cream text-ink" name="message" rows="4" maxlength="1500"></textarea>
+      </label>
+      <div class="sm:col-span-2 flex flex-wrap gap-3">
+        <button class="btn btn-primary px-6 py-3" type="submit">Prepare Email Enquiry</button>
+        <button class="btn btn-ghost px-6 py-3" type="submit" name="channel" value="whatsapp">Continue in WhatsApp</button>
+      </div>
+      <p data-rfq-status role="status" aria-live="polite" class="sm:col-span-2 text-sm text-ink-muted"></p>
+    </form>
+    <noscript><p class="mt-6">Email your brief to <a class="underline" href={`mailto:${site.contact.email}`}>{site.contact.email}</a>, or <a class="underline" href={`https://wa.me/${site.contact.whatsappDigits}`}>contact us on WhatsApp</a>.</p></noscript>
+    <p class="text-xs text-ink-muted mt-5">Contact details entered here are used to prepare your enquiry. We do not include your name, email, phone or message in analytics events. Email and WhatsApp process the message through their own services.</p>
+  </div>
+</section>
+<script>
+  document.querySelectorAll<HTMLFormElement>('[data-rfq]').forEach(form=>{
+    const incoming=new URLSearchParams(location.search);
+    const product=form.elements.namedItem('product') as HTMLInputElement;
+    if(!product.value && incoming.get('product')) product.value=incoming.get('product')!.slice(0,250);
+    form.addEventListener('submit',event=>{
+      event.preventDefault();
+      const values=new FormData(form);
+      const channel=(event as SubmitEvent).submitter?.getAttribute('value')==='whatsapp'?'whatsapp':'email';
+      const lines=Array.from(values.entries()).map(([k,v])=>`${k}: ${v}`).join('\n');
+      const body=`Hello Yumingxing,\nI would like to discuss this sourcing brief.\n\n${lines}\n\nPlease confirm MOQ, sample options and lead time.\nPage: https://www.mteng.ltd${location.pathname}`;
+      // This event means handoff initiated, not that an enquiry was delivered.
+      const w=window as typeof window & {gtag?:(...args:unknown[])=>void};
+      w.gtag?.('event','rfq_handoff_en',{channel,page_path:location.pathname});
+      const status=form.querySelector('[data-rfq-status]')!;
+      status.textContent=channel==='email'?'Opening your email application. Attach reference files and send the email there.':'Opening WhatsApp. Review and send the message there.';
+      if(channel==='whatsapp') window.open(`https://wa.me/${form.dataset.waNumber}?text=${encodeURIComponent(body)}`,'_blank','noopener');
+      else location.href=`mailto:${form.dataset.email}?subject=${encodeURIComponent('Product enquiry: '+String(values.get('product')))}&body=${encodeURIComponent(body)}`;
+    });
+  });
+</script>

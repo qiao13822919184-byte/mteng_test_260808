@@ -1,0 +1,55 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ProductCard from '../../../components/ProductCard.astro';
+import FAQ from '../../../components/en/FAQ.astro';
+import {getCollection,render} from 'astro:content';
+import {isPublished,entrySlug,absolute,safeJson,publicDocument} from '../../../lib/publishing';
+import categories from '../../../data/en/categories.json';
+import site from '../../../data/en/site.json';
+import fields from '../../../data/en/purchase-fields.json';
+export async function getStaticPaths(){return(await getCollection('productsEn',isPublished)).map(product=>({params:{slug:entrySlug(product)},props:{product}}));}
+const {product}=Astro.props,d=product.data,{Content}=await render(product),cat=categories.categories.find(c=>c.slug===d.category);
+const url=absolute(`/en/products/${entrySlug(product)}/`),model=d.sku||d.model||d.title;
+const wa=`https://wa.me/${site.contact.whatsappDigits}?text=${encodeURIComponent(`Hello Yumingxing, I am sourcing ${model}. Destination: [country]. Estimated quantity: [qty]. Material/finish: [details]. Logo/packaging: [details]. Please confirm MOQ, sample options and lead time. Page: ${url}`)}`;
+const enquiry=`/en/contact/?product=${encodeURIComponent(model)}#rfq`;
+const row=(label,value)=>value?{label,value}:null;
+const specs=[row('Model',d.model),row('SKU',d.sku),row('Material',d.material),row('Finish',d.finish),row('MOQ',d.moq),row('Sample availability',d.sampleAvailability),row('Sample lead time',d.sampleLeadTime),row('Production lead time',d.productionLeadTime),...(d.specs||[])].filter(Boolean);
+const extra=Object.entries(fields.groups).map(([group,names])=>({group,rows:names.filter(n=>!['sku','model','seoTitle','metaDescription','h1','lastReviewed','sampleAvailability','sampleLeadTime','productionLeadTime'].includes(n)).map(n=>row(n.replace(/([A-Z])/g,' $1'),d[n])).filter(Boolean)}));
+const properties=[...specs,...extra.flatMap(g=>g.rows)];
+const schema={'@context':'https://schema.org','@type':'Product','@id':url+'#product',url,name:d.title,description:d.summary,image:d.images.map(i=>absolute(i.file)),sku:d.sku,model:d.model,brand:{'@type':'Brand',name:'Yumingxing'},manufacturer:{'@id':absolute('/#organization')},material:d.material,countryOfOrigin:d.countryOfOrigin?{'@type':'Country',name:d.countryOfOrigin}:undefined,additionalProperty:properties.map(r=>({'@type':'PropertyValue',name:r.label,value:r.value}))};
+const breadcrumb={'@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Home',item:absolute('/en/')},{'@type':'ListItem',position:2,name:'Products',item:absolute('/en/products/')},{'@type':'ListItem',position:3,name:d.title,item:url}]};
+const related=(await getCollection('productsEn',isPublished)).filter(p=>p.id!==product.id&&(d.relatedProducts.length?d.relatedProducts.includes(entrySlug(p)):p.data.category===d.category)).slice(0,3);
+---
+<BaseLayout locale="en" title={d.seoTitle||d.title} description={d.metaDescription||d.summary} image={d.images[0].file}>
+  <script slot="head" type="application/ld+json" set:html={safeJson(schema)} />
+  <script slot="head" type="application/ld+json" set:html={safeJson(breadcrumb)} />
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+    <nav class="text-sm text-ink-muted mb-8" aria-label="Breadcrumb"><a href="/en/">Home</a> / <a href="/en/products/">Products</a> / <span>{d.title}</span></nav>
+    <div class="grid lg:grid-cols-2 gap-10 lg:gap-14">
+      <div><div class="sheen aspect-square rounded-3xl overflow-hidden bg-white border border-line"><img id="product-image" src={d.images[0].file} alt={d.images[0].alt} width="1000" height="1000" fetchpriority="high" class="w-full h-full object-contain p-2 sm:p-4" /></div>
+        {d.images.length>1&&<div class="flex flex-wrap gap-3 mt-4">{d.images.map(i=><a href={i.file} data-product-image={i.file} data-alt={i.alt} class="w-20 h-20 rounded-xl overflow-hidden border border-line bg-white" aria-label={`View ${i.alt}`}><img src={i.file} alt={i.alt} width="80" height="80" loading="lazy" class="w-full h-full object-contain" /></a>)}</div>}
+      </div>
+      <div>{cat&&<a href={cat.href} class="eyebrow">{cat.name}</a>}<h1 class="font-display font-extrabold text-3xl md:text-4xl text-ink mt-2 leading-tight">{d.h1||d.title}</h1><p class="text-ink-muted mt-4 text-lg leading-relaxed">{d.summary}</p>
+        <dl class="mt-7 rounded-2xl border border-line overflow-hidden divide-y divide-line">{specs.map(r=><div class="grid grid-cols-[minmax(0,1fr)_minmax(0,2fr)]"><dt class="bg-sand/60 px-4 py-3 text-sm font-semibold">{r.label}</dt><dd class="px-4 py-3 bg-white text-sm">{r.value}</dd></div>)}</dl>
+        <div class="mt-8 flex flex-wrap gap-3"><a href={enquiry} class="btn btn-primary px-6 py-3">Request Quote</a><a href={enquiry} data-event="request_sample_en" class="btn btn-ghost px-6 py-3">Request Sample</a><a href={wa} target="_blank" rel="noopener" data-wa data-wa-product={model} class="btn btn-ghost px-6 py-3">WhatsApp</a></div>
+      </div>
+    </div>
+    <div class="max-w-4xl mt-12 space-y-10">
+      {fields.arrays.filter(n=>n!=='relatedProducts'&&d[n]?.length).map(n=><section><h2 class="statement text-2xl capitalize">{n.replace(/([A-Z])/g,' $1')}</h2><ul class="list-disc pl-6 mt-4 space-y-2 text-ink-soft">{d[n].map(v=><li>{v}</li>)}</ul></section>)}
+      {extra.filter(g=>g.rows.length).map(g=><section><h2 class="statement text-2xl">{g.group}</h2><dl class="mt-4 space-y-3">{g.rows.map(r=><div><dt class="font-semibold capitalize">{r.label}</dt><dd class="text-ink-soft">{r.value}</dd></div>)}</dl></section>)}
+      {d.components.length>0&&<section><h2 class="statement text-2xl">Component specifications</h2><div class="mt-5 space-y-5">{d.components.map(c=><div class="p-5 border border-line rounded-xl"><h3 class="font-semibold">{c.name}</h3><dl>{Object.entries(c).filter(([k,v])=>k!=='name'&&v).map(([k,v])=><div><dt class="inline font-medium capitalize">{k}: </dt><dd class="inline">{v}</dd></div>)}</dl></div>)}</div></section>}
+      <div class="prose prose-lg max-w-none"><Content /></div>
+      {d.documents.filter(publicDocument).map(doc=><div><a class="underline text-ocean" href={doc.url||doc.file}>{doc.name}</a><p>{doc.number} · {doc.date} · {doc.scope}</p></div>)}
+      {d.lastReviewed&&<p class="text-sm text-ink-muted">Last reviewed: {d.lastReviewed}</p>}
+      <nav class="flex flex-wrap gap-3"><a class="text-ocean underline" href="/en/oem-odm-cutlery/">Customisation routes</a><a class="text-ocean underline" href="/en/quality-compliance/">Quality and documents</a><a class="text-ocean underline" href="/en/blog/what-to-include-in-a-cutlery-rfq/">Prepare your enquiry</a></nav>
+    </div>
+    {related.length>0&&<section class="mt-14"><h2 class="statement text-3xl mb-8">Related products</h2><div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">{related.map(p=><ProductCard product={p} locale="en" />)}</div></section>}
+  </div>
+  <FAQ items={d.faq} />
+</BaseLayout>
+<script>
+  document.querySelectorAll<HTMLAnchorElement>('[data-product-image]').forEach(link=>link.addEventListener('click',event=>{
+    event.preventDefault();const img=document.getElementById('product-image') as HTMLImageElement;
+    img.src=link.dataset.productImage!;img.alt=link.dataset.alt!;
+  }));
+</script>

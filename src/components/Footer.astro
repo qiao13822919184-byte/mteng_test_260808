@@ -1,10 +1,12 @@
 ---
-import site from '../data/site.json';
+import {getSite,labels} from '../lib/locale';
+const {locale='zh-CN'}=Astro.props;
+const site=getSite(locale),ui=labels(locale);
 
 const year = new Date().getFullYear();
 const waLink = `https://wa.me/${site.contact.whatsappDigits}`;
 
-const cols = [
+const cols = locale==='en' ? [{title:'Products',links:[{label:'Cutlery & Flatware',href:'/en/stainless-steel-cutlery/'},{label:'Kitchen Utensils',href:'/en/stainless-steel-kitchen-utensils/'},{label:'Product Catalogue',href:'/en/products/'}]},{title:'Company',links:[{label:'About',href:'/en/about/'},{label:'Factory',href:'/en/factory/'},{label:'Quality & Documents',href:'/en/quality-compliance/'},{label:'OEM/ODM',href:'/en/oem-odm-cutlery/'},{label:'Hotel & Restaurant',href:'/en/hotel-restaurant-cutlery/'},{label:'Buyer Guides',href:'/en/blog/'},{label:'Request a Quote',href:'/en/contact/'}]}] : [
   {
     title: '产品',
     links: [
@@ -51,7 +53,7 @@ const cols = [
 
     <!-- Contact -->
     <div>
-      <h3 class="font-display font-semibold text-white/90 mb-4 tracking-wide">联系</h3>
+      <h3 class="font-display font-semibold text-white/90 mb-4 tracking-wide">{ui.contact}</h3>
       <ul class="space-y-2.5 text-sm text-white/70">
         <li class="flex items-start gap-2">
           <span class="text-steel-light">✉</span>
@@ -63,11 +65,11 @@ const cols = [
         </li>
         <li class="flex items-start gap-2">
           <span class="text-steel-light"></span>
-          <a href={`tel:${site.contact.phoneDisplay.replace(/[^\d+]/g, '')}`} class="hover:text-white">电话: {site.contact.phoneDisplay}</a>
+          <a href={`tel:${site.contact.phoneDisplay.replace(/[^\d+]/g, '')}`} class="hover:text-white">{ui.phone}: {site.contact.phoneDisplay}</a>
         </li>
         <li class="flex items-start gap-2">
           <span class="text-steel-light"></span>
-          <span>微信: {site.contact.wechat}</span>
+          <span>{ui.wechat}: {site.contact.wechat}</span>
         </li>
         <li class="flex items-start gap-2">
           <span class="text-steel-light"></span>
@@ -79,7 +81,7 @@ const cols = [
 
   <div class="border-t border-white/10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-white/55 text-xs">
-      <p>© {year} {site.companyName}. 版权所有.</p>
+      <p>© {year} {site.companyName}. {ui.rights}</p>
       <p>{site.tagline} · {site.contact.businessHours}</p>
     </div>
   </div>

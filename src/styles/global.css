@@ -614,3 +614,12 @@ h1, h2, h3, h4 {
   .sheen::after { display: none; }
   .btn { transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease; }
 }
+
+/* Only English text flow needs additional wrap protection. */
+html[lang="en"] h1,html[lang="en"] h2,html[lang="en"] h3 { overflow-wrap: break-word; }
+html[lang="en"] .spec-card > div.font-display { font-size:clamp(1.4rem,2.5vw,2.25rem); }
+html[lang="en"] input,html[lang="en"] textarea,html[lang="en"] select { min-width:0; max-width:100%; }
+html[lang="en"] :focus-visible { outline:2px solid #12657a; outline-offset:4px; }
+@media (max-width: 639px) {
+  html[lang="en"] header [data-wa-product="header_cta"] { display:none; }
+}

@@ -1,0 +1,371 @@
+{
+  "at": "2026-09-27T05:57:19.480Z",
+  "pages": 34,
+  "englishPages": 19,
+  "sitemapUrls": 34,
+  "errors": [],
+  "warnings": [],
+  "details": [
+    {
+      "route": "/about/",
+      "title": "关于我们 | Yumingxing 裕明兴",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/how-to-choose-stainless-steel-flatware/",
+      "title": "如何选择不锈钢餐具：304、18-10 与 201 有什么区别？ | Yumingxing 裕明兴",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 0
+    },
+    {
+      "route": "/blog/",
+      "title": "博客与采购指南 | Yumingxing 裕明兴",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/oem-odm-cutlery-customization/",
+      "title": "不锈钢餐具 OEM/ODM 定制流程详解 | Yumingxing 裕明兴",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 0
+    },
+    {
+      "route": "/blog/stainless-flatware-wholesale-faq/",
+      "title": "不锈钢餐具批发常见问题（MOQ、交期与定制） | Yumingxing 裕明兴",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 0
+    },
+    {
+      "route": "/contact/",
+      "title": "联系我们 | Yumingxing 裕明兴",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Organization"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/en/about/",
+      "title": "About Yumingxing Hardware Products Factory | Yumingxing",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/en/blog/",
+      "title": "Cutlery & Kitchenware Sourcing Guides | Yumingxing",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/en/blog/what-to-include-in-a-cutlery-rfq/",
+      "title": "What to Include in a Cutlery RFQ | Yumingxing",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 0
+    },
+    {
+      "route": "/en/contact/",
+      "title": "Request a Cutlery Quote | Yumingxing",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/en/factory/",
+      "title": "Cutlery Factory in Jieyang, China | Yumingxing",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "alternates": 0
+    },
+    {
+      "route": "/en/hotel-restaurant-cutlery/",
+      "title": "Hotel & Restaurant Cutlery Supplier in China | Yumingxing",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "alternates": 0
+    },
+    {
+      "route": "/en/",
+      "title": "Stainless Steel Cutlery Manufacturer in China | Yumingxing",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "WebSite",
+        "FAQPage"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/en/oem-odm-cutlery/",
+      "title": "OEM/ODM Cutlery & Private Label Manufacturer | Yumingxing",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "alternates": 0
+    },
+    {
+      "route": "/en/products/",
+      "title": "Stainless Steel Cutlery & Kitchenware Catalog | Yumingxing",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/en/products/portuguese-five-piece-flatware-set/",
+      "title": "Portuguese-Style Five-Piece Stainless Steel Flatware Set | Yumingxing",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/en/products/ymx-2011-black-handle-kitchenware-set/",
+      "title": "YMX-2011 Black Riveted-Handle Kitchen Utensil Set | Yumingxing",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/en/products/ymx-2021-flat-handle-kitchenware-set/",
+      "title": "YMX-2021 Flat-Handle Stainless Steel Kitchen Utensil Set | Yumingxing",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/en/products/ymx-2024-yellow-accent-kitchenware-set/",
+      "title": "YMX-2024 Yellow-Accent Kitchen Utensil Set | Yumingxing",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/en/products/ymx-2032-square-wood-handle-kitchenware-set/",
+      "title": "YMX-2032 Square Wood-Pattern Handle Kitchen Utensil Set | Yumingxing",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/en/products/ymx-2041-golden-wood-kitchenware-set/",
+      "title": "YMX-2041 Golden Wood-Pattern Kitchen Utensil Set | Yumingxing",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/en/products/ymx-2142-201-stainless-kitchenware-set/",
+      "title": "YMX-2142 201 Stainless Steel Kitchen Utensil Set | Yumingxing",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/en/quality-compliance/",
+      "title": "Cutlery Quality Control & Compliance | Yumingxing",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "alternates": 0
+    },
+    {
+      "route": "/en/stainless-steel-cutlery/",
+      "title": "Wholesale Stainless Steel Cutlery & Flatware | Yumingxing",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "alternates": 0
+    },
+    {
+      "route": "/en/stainless-steel-kitchen-utensils/",
+      "title": "Stainless Steel Kitchen Utensils Manufacturer | Yumingxing",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "alternates": 0
+    },
+    {
+      "route": "/",
+      "title": "裕明兴 | 不锈钢餐具与厨具源头工厂",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "WebSite",
+        "FAQPage"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/products/",
+      "title": "不锈钢餐具与厨具产品中心 · 全球市场选品与外贸出口 | Yumingxing 裕明兴",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/products/portuguese-five-piece-flatware-set/",
+      "title": "葡萄牙五主件 | Yumingxing 裕明兴",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/products/ymx-2011-black-handle-kitchenware-set/",
+      "title": "YMX-2011 黑珍珠柄不锈钢厨具套装 | Yumingxing 裕明兴",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/products/ymx-2021-flat-handle-kitchenware-set/",
+      "title": "YMX-2021 扁柄一体式不锈钢厨具套装 | Yumingxing 裕明兴",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/products/ymx-2024-yellow-accent-kitchenware-set/",
+      "title": "YMX-2024 黄心点缀柄不锈钢厨具套装 | Yumingxing 裕明兴",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/products/ymx-2032-square-wood-handle-kitchenware-set/",
+      "title": "YMX-2032 方木纹柄不锈钢厨具套装 | Yumingxing 裕明兴",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/products/ymx-2041-golden-wood-kitchenware-set/",
+      "title": "YMX-2041 金桃木纹连体柄不锈钢厨具套装 | Yumingxing 裕明兴",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/products/ymx-2142-201-stainless-kitchenware-set/",
+      "title": "YMX-2142 201不锈钢三厘尖柄厨具套装 | Yumingxing 裕明兴",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    }
+  ]
+}

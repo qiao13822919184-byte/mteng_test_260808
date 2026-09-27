@@ -1,0 +1,6 @@
+---
+import manifest from '../data/image-variants.json';
+const {src,alt,class:className,width=1000,height=750,loading='lazy',fetchpriority,sizes='(max-width: 640px) 100vw, 50vw'}=Astro.props;
+const variants=manifest[src];
+---
+<img src={variants?variants[variants.length-1].src:src} srcset={variants?variants.map(v=>`${v.src} ${v.width}w`).join(', '):undefined} sizes={variants?sizes:undefined} alt={alt} class={className} width={width} height={height} loading={loading} fetchpriority={fetchpriority} decoding="async" />

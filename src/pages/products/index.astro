@@ -2,13 +2,14 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHero from '../../components/PageHero.astro';
 import ProductCard from '../../components/ProductCard.astro';
+import { isPublished } from '../../lib/publishing';
 import { getCollection } from 'astro:content';
 import categoriesData from '../../data/categories.json';
 const categories = categoriesData.categories;
 import site from '../../data/site.json';
 import pages from '../../data/pages.json';
 
-const products = (await getCollection('products')).sort((a, b) => a.data.order - b.data.order);
+const products = (await getCollection('products', isPublished)).sort((a, b) => a.data.order - b.data.order);
 
 const waText = encodeURIComponent('您好，我想批量采购裕明兴的不锈钢餐厨具，请提供报价。');
 const waLink = `https://wa.me/${site.contact.whatsappDigits}?text=${waText}`;
