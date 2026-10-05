@@ -1,4 +1,5 @@
 ---
+import BlogImage from './BlogImage.astro';
 import ResponsiveImage from "./ResponsiveImage.astro";
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SteelShader from '../components/ui/SteelShader.astro';
@@ -310,7 +311,7 @@ const specs = en ? [{k:'Materials',v:'201 / 304 / 410 / 430',note:'Confirm the g
           <a href={`${base}/blog/${post.data.slug || post.id}/`} class={`reveal reveal-d${i + 1} card-hover group bg-white rounded-2xl overflow-hidden border border-line`}>
             {post.data.cover && (
               <div class="sheen aspect-[16/9] overflow-hidden bg-sand">
-                <ResponsiveImage src={post.data.cover} alt={post.data.coverAlt || post.data.title} width="800" height="450" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <BlogImage src={post.data.cover} alt={post.data.coverAlt || post.data.title} width="800" height="450" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>
             )}
             <div class="p-5">

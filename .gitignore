@@ -1,6 +1,11 @@
 # build output
 dist/
 
+# Rebuilt from blog cover originals on every dev/build, including GitHub Actions.
+public/uploads/blog-responsive/
+src/data/blog-image-variants.json
+src/data/blog-image-variants.json.*.tmp
+
 # generated types
 .astro/
 

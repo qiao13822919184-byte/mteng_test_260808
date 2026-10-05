@@ -6,15 +6,19 @@
     "node": ">=22.12.0"
   },
   "scripts": {
+    "predev": "npm run optimize:blog-images",
     "dev": "astro dev",
+    "prebuild": "npm run optimize:blog-images",
     "build": "astro build",
+    "optimize:blog-images": "node scripts/optimize-blog-images.mjs",
     "optimize:images": "node scripts/optimize-images.mjs",
     "prepare:pages": "node scripts/prepare-pages.mjs",
     "preview": "astro preview",
     "astro": "astro",
     "test:publishing": "node --experimental-strip-types scripts/test-publishing.mjs",
     "test:site": "node scripts/audit-site.mjs",
-    "verify": "npm run test:publishing && npm run build && npm run test:site"
+    "test:blog-images": "node scripts/test-blog-images.mjs",
+    "verify": "npm run test:publishing && npm run test:blog-images && npm run build && npm run test:site"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",

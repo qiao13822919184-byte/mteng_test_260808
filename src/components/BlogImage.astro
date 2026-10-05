@@ -1,0 +1,12 @@
+---
+import manifest from '../data/blog-image-variants.json';
+const { src, alt, class: className, detail = false, loading = 'lazy', fetchpriority,
+  sizes = '(max-width: 767px) 100vw, (max-width: 1280px) 33vw, 410px' } = Astro.props;
+const all = manifest[src];
+if (!all?.length) throw new Error(`Blog cover was not optimized: ${src}. Run npm run optimize:blog-images.`);
+const variants = all.filter(v => v.width <= (detail ? 1200 : 800));
+const fallback = variants[variants.length - 1];
+---
+<img src={fallback.src} srcset={variants.map(v => `${v.src} ${v.width}w`).join(', ')} sizes={sizes}
+  width={fallback.width} height={fallback.height} alt={alt} class={className}
+  loading={loading} fetchpriority={fetchpriority} decoding="async" data-blog-image={detail ? 'detail' : 'thumbnail'} />

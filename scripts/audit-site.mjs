@@ -12,6 +12,7 @@ const byTag=(ns,t)=>ns.filter(n=>n.tagName===t);
 const errors=[],warnings=[],pages=[];
 const check=(test,message)=>{if(!test)errors.push(message)};
 const origin='https://www.mteng.ltd';
+const blogImages=JSON.parse(fs.readFileSync('src/data/blog-image-variants.json','utf8'));
 const routes=new Map(files.map(file=>['/'+path.relative('dist',file).replaceAll(path.sep,'/').replace(/index\.html$/,''),file]));
 const normal=p=>p.endsWith('/')?p:p+'/';
 for(const [route,file] of routes){
@@ -35,7 +36,25 @@ for(const [route,file] of routes){
    const p=decodeURIComponent(u.pathname),exists=routes.has(normal(p))||fs.existsSync(path.join('dist',p));
    check(exists,`${route}: broken ${n.tagName} ${ref}`);
  }
- for(const image of byTag(all,'img'))check(attr(image,'alt')!==undefined,`${route}: image missing alt`);
+ for(const image of byTag(all,'img')){
+   check(attr(image,'alt')!==undefined,`${route}: image missing alt`);
+   if(['/','/en/'].includes(route)||/^\/(en\/)?blog\//.test(route))check(!blogImages[attr(image,'src')],`${route}: blog cover is loading its original instead of a thumbnail`);
+   if(attr(image,'data-blog-image')){
+     const variants=(attr(image,'srcset')||'').split(',').map(s=>s.trim().split(/\s+/));
+     check(!!attr(image,'sizes')&&!!attr(image,'width')&&!!attr(image,'height'),`${route}: responsive blog image dimensions missing`);
+     const detail=attr(image,'data-blog-image')==='detail';
+     for(const [src,descriptor] of variants){
+       const width=Number(descriptor?.replace(/w$/,''));
+       const asset=path.join('dist',src);
+       check(src.startsWith('/uploads/blog-responsive/')&&src.endsWith('.webp'),`${route}: unexpected blog image ${src}`);
+       check(width>0&&width<=(detail?1200:800),`${route}: oversized blog image candidate ${descriptor}`);
+       check(fs.existsSync(asset),`${route}: missing srcset asset ${src}`);
+       if(fs.existsSync(asset))check(fs.statSync(asset).size<=(width<=800?200_000:350_000),`${route}: blog image exceeds transfer budget ${src}`);
+     }
+     check(variants.some(([src])=>src===attr(image,'src')),`${route}: blog fallback must also be an optimized variant`);
+     if(detail)check(attr(image,'loading')==='eager',`${route}: article cover must not be lazy loaded`);
+   }
+ }
  if(route.startsWith('/en/')){
    check(attr(byTag(all,'html')[0],'lang')==='en',`${route}: incorrect lang`);
    const body=byTag(all,'body')[0];
