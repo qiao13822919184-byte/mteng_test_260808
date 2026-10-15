@@ -1,46 +1,50 @@
 ---
-locale: en
-translationKey: ymx-2142-201-stainless-kitchenware-set
-slug: ymx-2142-201-stainless-kitchenware-set
-status: published
 draft: false
-title: YMX-2142 201 Stainless Steel Kitchen Utensil Set
-h1: YMX-2142 201 Stainless Steel Kitchen Utensil Set
-model: YMX-2142
-summary: >-
-  YMX-2142 201 Stainless Steel Kitchen Utensil Set for wholesale, retail and project sourcing. Confirm the component
-  specification, set configuration and packaging before ordering.
+status: published
+translationKey: ymx-2142-201-stainless-kitchenware-set
+dateModified: '2026-10-16'
 category: kitchenware-sets
-images:
-  - file: /uploads/kitchenware-ymx-2142.webp
-    alt: YMX-2142 201 Stainless Steel Kitchen Utensil Set
-    caption: Catalogue product image
-    originalVerified: false
-material: 201 stainless steel
-finish: Mirror polished
-setComposition:
-  - Turner, ladle, skimmer and cooking spoon options; confirm the set
-buyerSegments:
-  - Wholesale
-  - Retail
-  - Hospitality
-  - Private label
-specs: []
 featured: true
-order: 11
-countryOfOrigin: China
-faq:
-  - q: How do I obtain a quotation?
-    a: >-
-      Send the model, quantity, destination, material, finish and packaging requirements. Request written confirmation
-      of MOQ, sample costs and production timing.
-relatedProducts: []
+order: 7
+locale: en
+slug: ymx-2142-201-stainless-kitchenware-set
+title: YHX-2142 Pointed-Handle Kitchen Utensils
+summary: Tapered flat handles with hanging holes form an all-steel cooking utensil range.
+images:
+  - file: /uploads/catalogue-20261016/kw-07.webp
+    alt: YHX-2142 Pointed-Handle Kitchen Utensils complete range
+    originalVerified: true
+model: YHX-2142
+material: 201 stainless steel
+moq: 1,000 pcs; confirm the component mix
+incoterms:
+  - EXW
+specs:
+  - label: Catalogue reference
+    value: KW-07
+  - label: Available components
+    value: '10'
+lastReviewed: '2026-10-16'
 ---
 
-## Procurement notes
+## Component selection
 
-Specify the tools in each set and confirm the material of both the head and handle. A wood-pattern finish describes appearance and should not be read as a claim of solid wood construction.
+The photograph shows the range. Select individual components and quantities when requesting a quotation.
 
-## Sample and packaging brief
+| Component | Steel grade | Length × width (cm) | Weight (g/pc) |
+| --- | --- | --- | --- |
+| Wok Spatula | 201 | 35.1 × 10.2 | 140 |
+| Slotted Wok Spatula | 201 | 36.2 × 7.8 | 124 |
+| Soup Ladle | 201 | 33.5 × 9.5 | 148 |
+| Large Skimmer | 201 | 35.7 × 11.7 | 162 |
+| Meat Fork | 201 | 36 × 3.6 | 92 |
+| Short-Handle Rice Serving Spoon | 201 | 26.2 × 7.7 | 100 |
+| Serving Spoon | 201 | 36 × 7 | 130 |
+| Slotted Serving Spoon | 201 | 36 × 7 | 120 |
+| No. 10 Skimmer | 201 | 33.5 × 9.5 | 138 |
+| Pasta Server | 201 | 33.2 × 8.6 | 115 |
 
-Ask for sample availability, fees and delivery timing for this model. Include your destination, quantity per item, desired packaging and logo reference. Agree the approved sample, inspection criteria and delivery terms in the quotation.
+Measurements and weights are reference values. Confirm the selected specification and sample before ordering.
+
+## OEM and quotation
+OEM customization is available. Send reference **KW-07**, selected components, quantity and destination for an EXW quotation. Confirm packaging, samples and production lead time with the order.

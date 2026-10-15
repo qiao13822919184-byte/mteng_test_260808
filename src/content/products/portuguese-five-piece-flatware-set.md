@@ -1,47 +1,38 @@
 ---
-title: 葡萄牙五主件
+draft: false
+status: published
+translationKey: portuguese-five-piece-flatware-set
+dateModified: '2026-10-16'
 category: flatware-sets
-summary: 现代简约不锈钢西餐餐具系列，包含主餐刀、主餐叉、主餐勺、沙拉/甜品叉与甜品勺，适用于酒店、餐厅、零售及品牌定制采购。
-images:
-  - /uploads/flatware-portuguese-silver.webp
-  - /uploads/flatware-portuguese-gold.webp
-  - /uploads/flatware-portuguese-black.webp
-material: 410 / 430 / 304 不锈钢
-finish: 镜面抛光；金色/黑色表面方案可选
-specs:
-  - label: 产品组合
-    value: 主餐刀 / 主餐叉 / 主餐勺 / 沙拉甜品叉 / 甜品勺
-  - label: 主餐刀
-    value: 22.1 × 1.4 cm（8.70 × 0.55 in）
-  - label: 主餐叉
-    value: 21.2 × 2.6 cm（8.35 × 1.02 in）
-  - label: 主餐勺
-    value: 20.7 × 4.7 cm（8.15 × 1.85 in）
-  - label: 沙拉/甜品叉
-    value: 15.4 × 2.2 cm（6.06 × 0.87 in）
-  - label: 甜品勺
-    value: 14.8 × 4.7 cm（5.83 × 1.85 in）
-  - label: 餐叉齿数
-    value: 4 齿
-  - label: 适用场景
-    value: 酒店 / 餐厅 / 家庭餐桌 / 零售 / 礼品
-  - label: 定制服务
-    value: 支持激光 LOGO 与包装定制
 featured: true
-order: 1
+order: 12
+title: YMX-1016-5 葡式镜光410不锈钢餐具
+summary: 葡式镜光410不锈钢餐具，可按所列组件配置餐桌及餐饮采购组合。
+images:
+  - /uploads/catalogue-20261016/c410-01.webp
+material: 410 不锈钢
+moq: 1,000件，组件配比按订单确认
+specs:
+  - label: 目录编号
+    value: C410-01
+  - label: 可选组件
+    value: 5种
+finish: 镜面抛光
 ---
 
-## 产品概述
+## 组件选择
 
-这款不锈钢西餐餐具系列采用简洁流畅的现代造型，主餐刀、主餐叉、主餐勺、沙拉/甜品叉与甜品勺保持统一的设计语言。纤细手柄与清晰的尺寸层级便于组成不同人数和渠道需求的套装方案。
+图片为系列展示，询价时可按组件选择数量与组合。
 
-## 适合采购场景
+| 组件 | 不锈钢牌号 | 单件重量（g） |
+| --- | --- | --- |
+| 主餐刀 | 410 | 41 |
+| 主餐勺 | 410 | 35 |
+| 主餐叉 | 410 | 26 |
+| 3号勺 | 410 | 19 |
+| 3号叉 | 410 | 15 |
 
-- 酒店、度假村及餐饮连锁
-- 西餐厅、咖啡厅与甜品店
-- 家居、厨具零售及电商销售
-- 商务礼品与品牌定制项目
+尺寸与重量为参考值，订货前请按所选组件确认规格及样品。
 
 ## 定制与询价
-
-可根据项目需求沟通材质、表面颜色、激光 LOGO、套装组合与包装方式。请通过 WhatsApp 告知采购数量、销售市场及定制要求，我们会根据具体项目确认报价与交期。
+支持OEM定制。请提供目录编号 **C410-01**、所选组件、数量及目的地，以获取EXW报价。包装、样品及生产交期按订单确认。

@@ -1,46 +1,48 @@
 ---
-locale: en
-translationKey: ymx-2041-golden-wood-kitchenware-set
-slug: ymx-2041-golden-wood-kitchenware-set
-status: published
 draft: false
-title: YMX-2041 Golden Wood-Pattern Kitchen Utensil Set
-h1: YMX-2041 Golden Wood-Pattern Kitchen Utensil Set
-model: YMX-2041
-summary: >-
-  YMX-2041 Golden Wood-Pattern Kitchen Utensil Set for wholesale, retail and project sourcing. Confirm the component
-  specification, set configuration and packaging before ordering.
+status: published
+translationKey: ymx-2041-golden-wood-kitchenware-set
+dateModified: '2026-10-16'
 category: kitchenware-sets
-images:
-  - file: /uploads/kitchenware-ymx-2041.webp
-    alt: YMX-2041 Golden Wood-Pattern Kitchen Utensil Set
-    caption: Catalogue product image
-    originalVerified: false
-material: Stainless steel; confirm grade and handle construction
-finish: Mirror finish with golden wood-pattern handle decoration
-setComposition:
-  - Turner, ladle, skimmer and cooking spoon options; confirm the set
-buyerSegments:
-  - Wholesale
-  - Retail
-  - Hospitality
-  - Private label
-specs: []
 featured: false
-order: 10
-countryOfOrigin: China
-faq:
-  - q: How do I obtain a quotation?
-    a: >-
-      Send the model, quantity, destination, material, finish and packaging requirements. Request written confirmation
-      of MOQ, sample costs and production timing.
-relatedProducts: []
+order: 4
+locale: en
+slug: ymx-2041-golden-wood-kitchenware-set
+title: YHX-2041 Golden Peachwood Kitchen Utensils
+summary: Warm wood-tone handle inserts with full-size cooking tools and smaller ladles and spatulas.
+images:
+  - file: /uploads/catalogue-20261016/kw-04.webp
+    alt: YHX-2041 Golden Peachwood Kitchen Utensils complete range
+    originalVerified: true
+model: YHX-2041
+material: 201 stainless steel
+moq: 1,000 pcs; confirm the component mix
+incoterms:
+  - EXW
+specs:
+  - label: Catalogue reference
+    value: KW-04
+  - label: Available components
+    value: '8'
+lastReviewed: '2026-10-16'
 ---
 
-## Procurement notes
+## Component selection
 
-Specify the tools in each set and confirm the material of both the head and handle. A wood-pattern finish describes appearance and should not be read as a claim of solid wood construction.
+The photograph shows the range. Select individual components and quantities when requesting a quotation.
 
-## Sample and packaging brief
+| Component | Steel grade | Length × width (cm) | Weight (g/pc) |
+| --- | --- | --- | --- |
+| Wok Spatula | 201 | 35.4 × 9.7 | 130 |
+| Slotted Wok Spatula | 201 | 36.2 × 7.8 | 121.5 |
+| Soup Ladle | 201 | 33 × 9.5 | 144 |
+| Large Skimmer | 201 | 35.6 × 12 | 168 |
+| 7cm Soup Ladle | 201 | 26.5 × 7.4 | 80 |
+| 7cm Perforated Soup Ladle | 201 | 26.5 × 7.4 | 74 |
+| 7cm Wok Spatula | 201 | 29.4 × 6.3 | 64 |
+| 7cm Slotted Wok Spatula | 201 | 29.4 × 6.3 | 57 |
 
-Ask for sample availability, fees and delivery timing for this model. Include your destination, quantity per item, desired packaging and logo reference. Agree the approved sample, inspection criteria and delivery terms in the quotation.
+Measurements and weights are reference values. Confirm the selected specification and sample before ordering.
+
+## OEM and quotation
+OEM customization is available. Send reference **KW-04**, selected components, quantity and destination for an EXW quotation. Confirm packaging, samples and production lead time with the order.
