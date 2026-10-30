@@ -1,14 +1,33 @@
 {
-  "at": "2026-09-27T05:57:19.480Z",
-  "pages": 34,
-  "englishPages": 19,
-  "sitemapUrls": 34,
+  "at": "2026-10-30T01:47:51.456Z",
+  "pages": 229,
+  "englishPages": 115,
+  "chinesePages": 114,
+  "staticRedirects": 120,
+  "sitemapUrls": 229,
   "errors": [],
   "warnings": [],
+  "migration": {
+    "historicalUrlsChecked": 226,
+    "historicalChineseUrlsReused": 108,
+    "productPairsChecked": 38,
+    "featuredModels": [
+      "/products/ymx-2011-black-handle-kitchenware-set/",
+      "/products/portuguese-five-piece-flatware-set/",
+      "/products/ymx-2032-square-wood-handle-kitchenware-set/",
+      "/products/c304-00-304-flatware/",
+      "/products/ymx-2142-201-stainless-kitchenware-set/",
+      "/products/ymx-1016-4-410-flatware/",
+      "/products/yhx-2013-kitchenware-set/",
+      "/products/ymx-1050-410-flatware/"
+    ],
+    "redirectMethod": "static meta refresh; files do not implement HTTP 301/308"
+  },
   "details": [
     {
       "route": "/about/",
-      "title": "关于我们 | Yumingxing 裕明兴",
+      "title": "Company & Manufacturing Information | Yumingxing",
+      "language": "en",
       "jsonLd": [
         "Organization",
         "WebPage",
@@ -17,19 +36,705 @@
       "alternates": 3
     },
     {
-      "route": "/blog/how-to-choose-stainless-steel-flatware/",
-      "title": "如何选择不锈钢餐具：304、18-10 与 201 有什么区别？ | Yumingxing 裕明兴",
+      "route": "/blog/approve-colored-cutlery-finish-across-a-set/",
+      "title": "Gold or Black Cutlery: Approve the Finish Across Every Piece | Yumingxing",
+      "language": "en",
       "jsonLd": [
         "Organization",
         "WebPage",
         "BreadcrumbList",
         "Article"
       ],
-      "alternates": 0
+      "alternates": 3
+    },
+    {
+      "route": "/blog/bilingual-cutlery-pack-artwork-proof/",
+      "title": "Two Languages on One Cutlery Pack: Approve the Meaning Before Print | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/can-a-magnet-confirm-cutlery-steel-grade/",
+      "title": "Can a Magnet Confirm the Steel Grade of a Cutlery Set? | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/colored-cutlery-finish-test-scope-buyer-brief/",
+      "title": "Gold or Black Cutlery Finish: What Would a Durability Claim Need? | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/compare-cutlery-quotes-same-specification/",
+      "title": "How to Compare Cutlery Quotes on the Same Specification | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/custom-cutlery-tooling-custody-handoff-checklist/",
+      "title": "Who Controls Custom Cutlery Tooling After the First Order? | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/custom-cutlery-tooling-first-sample-release-check/",
+      "title": "New Cutlery Tooling: Which Sample Releases Production? | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/cutlery-18-10-18-8-18-0-grade-label-rfq/",
+      "title": "18/10, 18/8 or 18/0 on Cutlery? Turn the Label into a Specification | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/cutlery-arrival-receiving-discrepancy-record/",
+      "title": "Cutlery Has Arrived: A Buyer Record for Carton and SKU Differences | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/cutlery-brown-mark-receiving-evidence-triage/",
+      "title": "A Brown Mark on New Cutlery: What Should Receiving Record? | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/cutlery-care-claim-packaging-approval/",
+      "title": "Before Printing Cutlery Care Claims: A Private-Label Approval Card | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/cutlery-carton-pallet-plan-check/",
+      "title": "How Will Cutlery Cartons Fit on a Pallet? A Buyer Handoff Sheet | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/cutlery-cleaning-exposure-buyer-brief/",
+      "title": "What Will Touch the Cutlery During Cleaning? Send an Exposure Brief | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/cutlery-complaint-physical-sample-handoff/",
+      "title": "A Cutlery Complaint Arrived: Which Physical Sample Should You Keep? | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/cutlery-component-lot-carton-traceability-handoff/",
+      "title": "Can You Trace Each Cutlery Component Back from the Carton? | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/cutlery-component-readiness-set-assembly-schedule/",
+      "title": "Can Every Piece Be Ready for Cutlery Set Assembly on Time? | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/cutlery-component-specification-card/",
+      "title": "One Set, Several Specifications: A Cutlery Component Card for Buyers | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/cutlery-customization-route-existing-model-private-label-new-tooling/",
+      "title": "Existing Model, Private Label or New Tooling? A Cutlery Sourcing Decision Sheet | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/cutlery-dishwasher-claim-evidence-scope/",
+      "title": "What Does 'Dishwasher Safe' Cover in a Cutlery Set? | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/cutlery-dishwashing-basket-loading-sample-check/",
+      "title": "Will the Cutlery Fit the Wash Basket? Check Loading Before Ordering | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/cutlery-finish-sample-comparison-card/",
+      "title": "Mirror or Brushed Cutlery? A Finish Sample Comparison Card | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/cutlery-finish-visual-review-lighting-reference/",
+      "title": "Approve a Cutlery Finish Under Agreed Lighting, Not One Photo | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/cutlery-inspection-unit-piece-set-carton/",
+      "title": "Inspect a Piece, a Set or a Carton? Define the Cutlery Unit First | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/cutlery-logo-artwork-placement-handoff/",
+      "title": "Cutlery Logo Artwork: A Placement Handoff for Private-Label Buyers | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/cutlery-logo-physical-mark-sample-approval/",
+      "title": "Approve the Logo on the Cutlery Handle, Not Only on Artwork | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/cutlery-model-production-route-factory-review/",
+      "title": "Who Makes Each Stage of This Cutlery Model? A Factory-Review Map | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/cutlery-moq-by-variant-enquiry-matrix/",
+      "title": "One Cutlery Order, Several Variants: Ask for MOQ by Configuration | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/cutlery-multi-destination-allocation-sheet/",
+      "title": "One Cutlery Order, Several Destinations: An Allocation Sheet | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/cutlery-napkin-roll-pouch-service-fit-check/",
+      "title": "Will the Cutlery Fit the Venue’s Napkin Roll or Pouch? | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/cutlery-pack-count-change-case-identity-brief/",
+      "title": "Changing a Cutlery Pack Count? Check the Case Identity | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/cutlery-pack-transport-test-scope/",
+      "title": "Transport-Test a Cutlery Pack? Freeze the Configuration First | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/cutlery-packaging-material-claim-evidence-brief/",
+      "title": "Changing Cutlery Packaging? Separate Material Choices from Green Claims | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/cutlery-packing-contact-mark-prevention-sample-check/",
+      "title": "Where Can Cutlery Rub in the Pack? Check the Contact Points | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/cutlery-piece-set-carton-weight-handoff/",
+      "title": "Which Cutlery Weight Is on the Quote: Piece, Box or Carton? | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/cutlery-post-order-change-request-record/",
+      "title": "A Cutlery Spec Changes After the Order: Record the Decision Before Production | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/cutlery-pre-shipment-inspection-brief/",
+      "title": "Before Cutlery Ships: A Buyer Brief for Product and Packing Checks | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/cutlery-product-document-request-matrix/",
+      "title": "Which Document Matches This Cutlery? A Buyer Request Matrix | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/cutlery-project-milestone-plan/",
+      "title": "Planning a Cutlery Order Backward from the Required Date | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/cutlery-repeat-order-version-control-card/",
+      "title": "Repeat the Same Cutlery Order? Check the Approved Version First | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/cutlery-retail-box-barcode-variant-check/",
+      "title": "Before Printing Cutlery Box Barcodes: Match Each Code to the Pack | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/cutlery-retail-box-shelf-fit-check/",
+      "title": "Will a Boxed Cutlery Set Fit the Shelf? Check the Display Orientation | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/cutlery-retail-insert-unboxing-approval-card/",
+      "title": "Approve the Cutlery Box Insert Before the Artwork Is Locked | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/cutlery-retail-listing-specification-proof/",
+      "title": "Before a Cutlery Listing Goes Live: Match the Page to the Approved Set | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/cutlery-retail-packaging-shipping-carton-brief/",
+      "title": "Cutlery Packaging Brief: Retail Box and Carton | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/cutlery-sample-approval-before-bulk-production/",
+      "title": "Cutlery Sample Approval Checklist | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/cutlery-sample-quotation-cost-scope-sheet/",
+      "title": "Before Paying for Cutlery Samples: Separate the Charges and Terms | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/cutlery-sample-request-scope-sheet/",
+      "title": "Which Cutlery Samples Should a Buyer Request? A Scope Sheet | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/cutlery-service-issue-buyer-record/",
+      "title": "A Cutlery Service Issue Is Reported: Record the Facts Before Assigning a Cause | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/cutlery-shipping-carton-identity-check/",
+      "title": "Can the Warehouse Tell Cutlery Cartons Apart? A Shipping-Mark Check | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/cutlery-spare-piece-reorder-match-card/",
+      "title": "Ordering Spare Cutlery Pieces? Match the Existing Set First | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/cutlery-spoon-bowl-service-sample-check/",
+      "title": "Dinner Spoon or Dessert Spoon? Check the Bowl Against the Service | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/cutlery-storage-tray-fit-measurement-sheet/",
+      "title": "Will This Cutlery Fit the Existing Tray? A Buyer Measurement Sheet | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/cutlery-tooling-unit-cost-quote-worksheet/",
+      "title": "Tooling Charge or Unit Price? A Cutlery Quote Cost Worksheet | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/cutlery-unintended-sharp-edge-inspection-zones/",
+      "title": "Where Should a Cutlery Edge Check Look? Map the Contact Zones | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/dinner-fork-sample-menu-plate-check/",
+      "title": "Will This Dinner Fork Work on the Menu? A Sample Check for Buyers | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/dinner-knife-sample-service-check/",
+      "title": "Approve a Dinner Knife for the Meal, Not Just the Set Photo | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/flatware-pieces-sets-cartons-order-check/",
+      "title": "Pieces, Sets and Cartons: A Flatware Order Check for Mixed SKUs | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/hotel-cutlery-replacement-pattern-match/",
+      "title": "Can New Cutlery Match an Existing Hotel Pattern? A Replacement Decision Record | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
     },
     {
       "route": "/blog/",
-      "title": "博客与采购指南 | Yumingxing 裕明兴",
+      "title": "Cutlery Sourcing Guides for Importers | Yumingxing",
+      "language": "en",
       "jsonLd": [
         "Organization",
         "WebPage",
@@ -38,61 +743,105 @@
       "alternates": 3
     },
     {
-      "route": "/blog/oem-odm-cutlery-customization/",
-      "title": "不锈钢餐具 OEM/ODM 定制流程详解 | Yumingxing 裕明兴",
+      "route": "/blog/one-piece-two-piece-table-knife-construction-rfq/",
+      "title": "One-Piece or Two-Piece Table Knife? Specify the Construction Before Ordering | Yumingxing",
+      "language": "en",
       "jsonLd": [
         "Organization",
         "WebPage",
         "BreadcrumbList",
         "Article"
       ],
-      "alternates": 0
+      "alternates": 3
     },
     {
-      "route": "/blog/stainless-flatware-wholesale-faq/",
-      "title": "不锈钢餐具批发常见问题（MOQ、交期与定制） | Yumingxing 裕明兴",
+      "route": "/blog/restaurant-cutlery-service-assortment-worksheet/",
+      "title": "Restaurant Cutlery Assortment: Build the Service List Before the RFQ | Yumingxing",
+      "language": "en",
       "jsonLd": [
         "Organization",
         "WebPage",
         "BreadcrumbList",
         "Article"
       ],
-      "alternates": 0
+      "alternates": 3
     },
     {
-      "route": "/contact/",
-      "title": "联系我们 | Yumingxing 裕明兴",
+      "route": "/blog/restaurant-cutlery-service-trial-scorecard/",
+      "title": "Trial Cutlery in Service Before a Bulk Order: A Restaurant Scorecard | Yumingxing",
+      "language": "en",
       "jsonLd": [
         "Organization",
         "WebPage",
         "BreadcrumbList",
-        "Organization"
+        "Article"
       ],
       "alternates": 3
     },
     {
-      "route": "/en/about/",
-      "title": "About Yumingxing Hardware Products Factory | Yumingxing",
+      "route": "/blog/restaurant-flatware-replenishment-count-sheet/",
+      "title": "Restaurant Flatware Replenishment: Count Each Piece Before Reordering | Yumingxing",
+      "language": "en",
       "jsonLd": [
         "Organization",
         "WebPage",
-        "BreadcrumbList"
+        "BreadcrumbList",
+        "Article"
       ],
       "alternates": 3
     },
     {
-      "route": "/en/blog/",
-      "title": "Cutlery & Kitchenware Sourcing Guides | Yumingxing",
+      "route": "/blog/stainless-cutlery-drying-storage-service-brief/",
+      "title": "After Washing Cutlery, What Happens Before Storage? | Yumingxing",
+      "language": "en",
       "jsonLd": [
         "Organization",
         "WebPage",
-        "BreadcrumbList"
+        "BreadcrumbList",
+        "Article"
       ],
       "alternates": 3
     },
     {
-      "route": "/en/blog/what-to-include-in-a-cutlery-rfq/",
+      "route": "/blog/stainless-cutlery-iron-contact-prevention-handoff/",
+      "title": "Before Rust-Colored Marks: Ask How Cutlery Avoids Iron Contact | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/table-knife-bend-strength-evidence-brief/",
+      "title": "Does a Table Knife Need a Bend Test? Define the Evidence First | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/us-flatware-procurement-market-research/",
+      "title": "US Flatware Procurement: A Market Study for Supermarkets and E-commerce Buyers | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/blog/what-to-include-in-a-cutlery-rfq/",
       "title": "What to Include in a Cutlery RFQ | Yumingxing",
+      "language": "en",
       "jsonLd": [
         "Organization",
         "WebPage",
@@ -102,8 +851,9 @@
       "alternates": 0
     },
     {
-      "route": "/en/contact/",
-      "title": "Request a Cutlery Quote | Yumingxing",
+      "route": "/cn/about/",
+      "title": "关于裕明兴：企业与制造能力 | 裕明兴",
+      "language": "zh-CN",
       "jsonLd": [
         "Organization",
         "WebPage",
@@ -112,28 +862,859 @@
       "alternates": 3
     },
     {
-      "route": "/en/factory/",
-      "title": "Cutlery Factory in Jieyang, China | Yumingxing",
+      "route": "/cn/blog/approve-colored-cutlery-finish-across-a-set/",
+      "title": "金色或黑色餐具：整套餐具的表面效果如何确认 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/bilingual-cutlery-pack-artwork-proof/",
+      "title": "餐具包装有两种语言：印刷前先核对意思 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/can-a-magnet-confirm-cutlery-steel-grade/",
+      "title": "磁铁能确认整套餐具的不锈钢材质牌号吗？ | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/colored-cutlery-finish-test-scope-buyer-brief/",
+      "title": "金色或黑色餐具：耐用性声明需要哪些证据？ | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/compare-cutlery-quotes-same-specification/",
+      "title": "不锈钢餐具报价怎么比：先统一规格与交付边界 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/custom-cutlery-tooling-custody-handoff-checklist/",
+      "title": "定制餐具首单之后，模具由谁控制？ | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/custom-cutlery-tooling-first-sample-release-check/",
+      "title": "新餐具模具完成后，哪一版样品才能放行生产？ | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/cutlery-18-10-18-8-18-0-grade-label-rfq/",
+      "title": "餐具标注 18/10、18/8 或 18/0？先把称呼变成规格 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/cutlery-arrival-receiving-discrepancy-record/",
+      "title": "餐具到货后怎么记录差异：外箱与 SKU 收货核对表 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/cutlery-brown-mark-receiving-evidence-triage/",
+      "title": "新餐具出现褐色斑点：收货时应记录什么？ | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/cutlery-care-claim-packaging-approval/",
+      "title": "餐具护理声明印上包装前：贴牌采购核对卡 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/cutlery-carton-pallet-plan-check/",
+      "title": "餐具外箱怎么上托盘？采购交接先写清这些数据 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/cutlery-cleaning-exposure-buyer-brief/",
+      "title": "清洗时餐具会接触什么？采购前提交使用环境表 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/cutlery-complaint-physical-sample-handoff/",
+      "title": "收到餐具投诉后，应该保留哪件实物样品？ | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/cutlery-component-lot-carton-traceability-handoff/",
+      "title": "从外箱能追到每件餐具的批次吗？ | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/cutlery-component-readiness-set-assembly-schedule/",
+      "title": "整套餐具要按期装配，刀叉勺都准备好了吗？ | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/cutlery-component-specification-card/",
+      "title": "一套餐具不等于一条规格：刀叉勺逐件确认卡 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/cutlery-customization-route-existing-model-private-label-new-tooling/",
+      "title": "现有款、贴牌还是新开模？不锈钢餐具采购路径判断表 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/cutlery-dishwasher-claim-evidence-scope/",
+      "title": "“可用洗碗机清洗”覆盖整套餐具的哪些组件？ | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/cutlery-dishwashing-basket-loading-sample-check/",
+      "title": "餐具能放进清洗篮吗？下单前先做装取试用 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/cutlery-finish-sample-comparison-card/",
+      "title": "镜面还是拉丝？不锈钢餐具表面样品对照卡 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/cutlery-finish-visual-review-lighting-reference/",
+      "title": "餐具表面效果怎么验？先统一照明与对照样 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/cutlery-inspection-unit-piece-set-carton/",
+      "title": "抽检的是单件、整套还是外箱？先定义餐具检验单位 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/cutlery-logo-artwork-placement-handoff/",
+      "title": "餐具 Logo 图稿怎么交接：贴牌采购的逐件位置确认表 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/cutlery-logo-physical-mark-sample-approval/",
+      "title": "餐具手柄标识：别只批准设计稿，还要核对实物样 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/cutlery-model-production-route-factory-review/",
+      "title": "这款餐具的每道工序由谁负责？工厂核查路线表 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/cutlery-moq-by-variant-enquiry-matrix/",
+      "title": "一张餐具订单有多种配置：MOQ 要逐款询问 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/cutlery-multi-destination-allocation-sheet/",
+      "title": "一张餐具订单发往多处：分货分箱安排表 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/cutlery-napkin-roll-pouch-service-fit-check/",
+      "title": "餐具能装进门店的卷巾或餐具袋吗？ | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/cutlery-pack-count-change-case-identity-brief/",
+      "title": "餐具每盒数量变了？先核对外箱身份与订单单位 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/cutlery-pack-transport-test-scope/",
+      "title": "餐具包装要做运输测试？先锁定受测配置 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/cutlery-packaging-material-claim-evidence-brief/",
+      "title": "换餐具包装材料时，把材料选择与环保宣称分开确认 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/cutlery-packing-contact-mark-prevention-sample-check/",
+      "title": "餐具在包装里会擦到哪里？先做接触点核对 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/cutlery-piece-set-carton-weight-handoff/",
+      "title": "餐具报价的重量指单件、零售盒还是外箱？ | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/cutlery-post-order-change-request-record/",
+      "title": "餐具订单确认后要改规格：生产前先留变更决定 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/cutlery-pre-shipment-inspection-brief/",
+      "title": "餐具出货前怎么核查：采购方的产品与包装检查简表 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/cutlery-product-document-request-matrix/",
+      "title": "这份文件对应哪款餐具？采购资料索取矩阵 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/cutlery-project-milestone-plan/",
+      "title": "按需求日期倒排餐具订单：采购里程碑表 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/cutlery-repeat-order-version-control-card/",
+      "title": "餐具复购说“和上次一样”？先核对已批准版本 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/cutlery-retail-box-barcode-variant-check/",
+      "title": "餐具零售盒条码印刷前：让每个代码对应正确件套 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/cutlery-retail-box-shelf-fit-check/",
+      "title": "盒装餐具能放上货架吗？先核对陈列方向 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/cutlery-retail-insert-unboxing-approval-card/",
+      "title": "餐具零售盒的内托，应该在定稿印刷前确认 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/cutlery-retail-listing-specification-proof/",
+      "title": "餐具商品页上线前：让页面信息对应已批准套装 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/cutlery-retail-packaging-shipping-carton-brief/",
+      "title": "餐具零售盒与运输外箱：采购包装资料怎么写清楚？ | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/cutlery-sample-approval-before-bulk-production/",
+      "title": "餐具大货生产前，封样批准需要记录哪些内容？ | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/cutlery-sample-quotation-cost-scope-sheet/",
+      "title": "餐具样品付款前：把费用项目和条件分开确认 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/cutlery-sample-request-scope-sheet/",
+      "title": "餐具样品该索取哪些？先写清试样范围 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/cutlery-service-issue-buyer-record/",
+      "title": "餐具使用中出现问题反馈：先记录事实，再判断原因 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/cutlery-shipping-carton-identity-check/",
+      "title": "仓库能分清餐具外箱吗？发货前核对箱唛 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/cutlery-spare-piece-reorder-match-card/",
+      "title": "单独补购餐具部件前，怎样核对与原套装匹配？ | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/cutlery-spoon-bowl-service-sample-check/",
+      "title": "主餐勺还是甜品勺？拿真实餐碗核对勺头 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/cutlery-storage-tray-fit-measurement-sheet/",
+      "title": "新餐具能放进现有收纳格吗？采购尺寸核对表 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/cutlery-tooling-unit-cost-quote-worksheet/",
+      "title": "模具费还是单价？餐具报价的项目成本核对表 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/cutlery-unintended-sharp-edge-inspection-zones/",
+      "title": "餐具边缘应检查哪里？先标出实际接触区域 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/dinner-fork-sample-menu-plate-check/",
+      "title": "这把餐叉适合菜单吗？采购前用实物样品核对 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/dinner-knife-sample-service-check/",
+      "title": "确认餐刀时，别只看整套照片：用真实用餐场景试样 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/flatware-pieces-sets-cartons-order-check/",
+      "title": "餐具订单的件、套、箱怎么对：多 SKU 数量核对表 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/hotel-cutlery-replacement-pattern-match/",
+      "title": "酒店餐具补货能配上旧花型吗？替换方案确认表 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/how-to-choose-stainless-steel-flatware/",
+      "title": "如何选择不锈钢餐具：304、18-10 与 201 有什么区别？ | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 0
+    },
+    {
+      "route": "/cn/blog/",
+      "title": "博客与采购指南 | 裕明兴",
+      "language": "zh-CN",
       "jsonLd": [
         "Organization",
         "WebPage",
         "BreadcrumbList"
       ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/oem-odm-cutlery-customization/",
+      "title": "不锈钢餐具 OEM/ODM 定制流程详解 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
       "alternates": 0
     },
     {
-      "route": "/en/hotel-restaurant-cutlery/",
-      "title": "Hotel & Restaurant Cutlery Supplier in China | Yumingxing",
+      "route": "/cn/blog/one-piece-two-piece-table-knife-construction-rfq/",
+      "title": "一体式还是拼接式餐刀？下单前先确认结构 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/restaurant-cutlery-service-assortment-worksheet/",
+      "title": "餐厅餐具怎么配：询价前先列服务场景与刀叉勺清单 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/restaurant-cutlery-service-trial-scorecard/",
+      "title": "餐厅大货采购前先试用餐具：服务场景记录卡 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/restaurant-flatware-replenishment-count-sheet/",
+      "title": "餐厅餐具补货怎么算：先逐件盘点刀叉勺 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/stainless-cutlery-drying-storage-service-brief/",
+      "title": "餐具洗后入库前，干燥与存放步骤核对什么？ | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/stainless-cutlery-iron-contact-prevention-handoff/",
+      "title": "褐色斑点出现之前：如何询问餐具的铁污染防护？ | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/stainless-flatware-wholesale-faq/",
+      "title": "不锈钢餐具批发常见问题（MOQ、交期与定制） | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 0
+    },
+    {
+      "route": "/cn/blog/table-knife-bend-strength-evidence-brief/",
+      "title": "餐刀需要弯曲强度测试吗？先定义证据范围 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/blog/us-flatware-procurement-market-research/",
+      "title": "美国餐具采购市场研究：大型商超与电商应怎样选品、包装和补货？ | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/contact/",
+      "title": "餐具与厨具批发询价 | 裕明兴",
+      "language": "zh-CN",
       "jsonLd": [
         "Organization",
         "WebPage",
         "BreadcrumbList"
       ],
-      "alternates": 0
+      "alternates": 3
     },
     {
-      "route": "/en/",
-      "title": "Stainless Steel Cutlery Manufacturer in China | Yumingxing",
+      "route": "/cn/",
+      "title": "不锈钢餐具与厨具制造商 | 裕明兴",
+      "language": "zh-CN",
       "jsonLd": [
         "Organization",
         "WebPage",
@@ -143,28 +1724,9 @@
       "alternates": 3
     },
     {
-      "route": "/en/oem-odm-cutlery/",
-      "title": "OEM/ODM Cutlery & Private Label Manufacturer | Yumingxing",
-      "jsonLd": [
-        "Organization",
-        "WebPage",
-        "BreadcrumbList"
-      ],
-      "alternates": 0
-    },
-    {
-      "route": "/en/products/",
-      "title": "Stainless Steel Cutlery & Kitchenware Catalog | Yumingxing",
-      "jsonLd": [
-        "Organization",
-        "WebPage",
-        "BreadcrumbList"
-      ],
-      "alternates": 3
-    },
-    {
-      "route": "/en/products/portuguese-five-piece-flatware-set/",
-      "title": "Portuguese-Style Five-Piece Stainless Steel Flatware Set | Yumingxing",
+      "route": "/cn/products/c304-00-304-flatware/",
+      "title": "葡式哑光304不锈钢餐具（C304-00） | 裕明兴",
+      "language": "zh-CN",
       "jsonLd": [
         "Organization",
         "WebPage",
@@ -174,8 +1736,9 @@
       "alternates": 3
     },
     {
-      "route": "/en/products/ymx-2011-black-handle-kitchenware-set/",
-      "title": "YMX-2011 Black Riveted-Handle Kitchen Utensil Set | Yumingxing",
+      "route": "/cn/products/c304-01a-304-flatware/",
+      "title": "典雅光柄304不锈钢餐具（C304-01A） | 裕明兴",
+      "language": "zh-CN",
       "jsonLd": [
         "Organization",
         "WebPage",
@@ -185,8 +1748,9 @@
       "alternates": 3
     },
     {
-      "route": "/en/products/ymx-2021-flat-handle-kitchenware-set/",
-      "title": "YMX-2021 Flat-Handle Stainless Steel Kitchen Utensil Set | Yumingxing",
+      "route": "/cn/products/c304-01b-304-flatware/",
+      "title": "典雅钻石纹柄304不锈钢餐具（C304-01B） | 裕明兴",
+      "language": "zh-CN",
       "jsonLd": [
         "Organization",
         "WebPage",
@@ -196,8 +1760,9 @@
       "alternates": 3
     },
     {
-      "route": "/en/products/ymx-2024-yellow-accent-kitchenware-set/",
-      "title": "YMX-2024 Yellow-Accent Kitchen Utensil Set | Yumingxing",
+      "route": "/cn/products/c304-02a-304-flatware/",
+      "title": "1010镜光304不锈钢餐具（C304-02A） | 裕明兴",
+      "language": "zh-CN",
       "jsonLd": [
         "Organization",
         "WebPage",
@@ -207,8 +1772,9 @@
       "alternates": 3
     },
     {
-      "route": "/en/products/ymx-2032-square-wood-handle-kitchenware-set/",
-      "title": "YMX-2032 Square Wood-Pattern Handle Kitchen Utensil Set | Yumingxing",
+      "route": "/cn/products/c304-02b-304-flatware/",
+      "title": "02B经典款304不锈钢餐具（C304-02B） | 裕明兴",
+      "language": "zh-CN",
       "jsonLd": [
         "Organization",
         "WebPage",
@@ -218,8 +1784,9 @@
       "alternates": 3
     },
     {
-      "route": "/en/products/ymx-2041-golden-wood-kitchenware-set/",
-      "title": "YMX-2041 Golden Wood-Pattern Kitchen Utensil Set | Yumingxing",
+      "route": "/cn/products/c304-03-304-flatware/",
+      "title": "月光系列304不锈钢餐具（C304-03） | 裕明兴",
+      "language": "zh-CN",
       "jsonLd": [
         "Organization",
         "WebPage",
@@ -229,8 +1796,9 @@
       "alternates": 3
     },
     {
-      "route": "/en/products/ymx-2142-201-stainless-kitchenware-set/",
-      "title": "YMX-2142 201 Stainless Steel Kitchen Utensil Set | Yumingxing",
+      "route": "/cn/products/c304-04-304-flatware/",
+      "title": "锤纹系列304不锈钢餐具（C304-04） | 裕明兴",
+      "language": "zh-CN",
       "jsonLd": [
         "Organization",
         "WebPage",
@@ -240,28 +1808,428 @@
       "alternates": 3
     },
     {
-      "route": "/en/quality-compliance/",
-      "title": "Cutlery Quality Control & Compliance | Yumingxing",
+      "route": "/cn/products/c304-05-304-flatware/",
+      "title": "骑士系列304不锈钢餐具（C304-05） | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/products/c304-06-304-flatware/",
+      "title": "尖头细腰哑光304不锈钢餐具（C304-06） | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/products/c304-07-304-flatware/",
+      "title": "平头细腰哑光304不锈钢餐具（C304-07） | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/products/",
+      "title": "餐具与厨具批发目录 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "ItemList",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/products/portuguese-five-piece-flatware-set/",
+      "title": "YMX-1016-5 葡式镜光410不锈钢餐具 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/products/s410-serving-utensils/",
+      "title": "410不锈钢餐桌及分餐用具系列 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/products/s430-serving-utensils/",
+      "title": "430不锈钢圆柄餐桌及分餐用具系列 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/products/yhx-2013-kitchenware-set/",
+      "title": "YHX-2013 双铆钉木柄厨具系列 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/products/yhx-2028-kitchenware-set/",
+      "title": "YHX-2028 小圆管柄厨具系列 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/products/yhx-2042-kitchenware-set/",
+      "title": "YHX-2042 斜口木纹柄厨具系列 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/products/ymx-1010-4-410-flatware/",
+      "title": "YMX-1010-4 1010系列410不锈钢餐具 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/products/ymx-1010-5-410-flatware/",
+      "title": "YMX-1010-5 葡式1010系列410不锈钢餐具 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/products/ymx-1011-410-flatware/",
+      "title": "YMX-1011 方柄系列410不锈钢餐具 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/products/ymx-1012-410-flatware/",
+      "title": "YMX-1012 1012系列410不锈钢餐具 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/products/ymx-1013-410-flatware/",
+      "title": "YMX-1013 菠萝纹柄410不锈钢餐具 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/products/ymx-1014-410-flatware/",
+      "title": "YMX-1014 镜光花纹柄410不锈钢餐具 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/products/ymx-1015-410-flatware/",
+      "title": "YMX-1015 S形装饰柄410不锈钢餐具 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/products/ymx-1016-4-410-flatware/",
+      "title": "YMX-1016-4 葡式光柄410不锈钢餐具 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/products/ymx-1017-410-flatware/",
+      "title": "YMX-1017 骑士系列410不锈钢餐具 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/products/ymx-1035-410-flatware/",
+      "title": "YMX-1035 典雅系列410不锈钢餐具 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/products/ymx-1044-410-flatware/",
+      "title": "YMX-1044 星钻系列410不锈钢餐具 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/products/ymx-1050-410-flatware/",
+      "title": "YMX-1050 葡式木纹柄410不锈钢餐具 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/products/ymx-1084-1-410-flatware/",
+      "title": "YMX-1084-1 细腰光柄410不锈钢餐具 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/products/ymx-1084-2-410-flatware/",
+      "title": "YMX-1084-2 细腰锤纹柄410不锈钢餐具 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/products/ymx-2011-black-handle-kitchenware-set/",
+      "title": "YHX-2011 黑珍珠黑柄厨具系列 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/products/ymx-2014-kitchenware-set/",
+      "title": "YMX-2014 红木空心柄厨具系列 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/products/ymx-2015-kitchenware-set/",
+      "title": "YMX-2015 2015空心柄厨具系列 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/products/ymx-2023-kitchenware-set/",
+      "title": "YMX-2023 乌木空心柄厨具系列 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/products/ymx-2032-square-wood-handle-kitchenware-set/",
+      "title": "YHX-2032 方木柄厨具系列 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/products/ymx-2041-golden-wood-kitchenware-set/",
+      "title": "YHX-2041 金桃木柄厨具系列 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/products/ymx-2068-kitchenware-set/",
+      "title": "YMX-2068 白木空心柄厨具系列 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/products/ymx-2142-201-stainless-kitchenware-set/",
+      "title": "YHX-2142 尖柄厨具系列 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/stainless-steel-cutlery/",
+      "title": "不锈钢餐具批发与选型 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "ItemList",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/cn/stainless-steel-kitchen-utensils/",
+      "title": "不锈钢厨具制造与批发 | 裕明兴",
+      "language": "zh-CN",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "ItemList",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/contact/",
+      "title": "Request a Wholesale Cutlery Quote | Yumingxing",
+      "language": "en",
       "jsonLd": [
         "Organization",
         "WebPage",
         "BreadcrumbList"
       ],
-      "alternates": 0
+      "alternates": 3
     },
     {
-      "route": "/en/stainless-steel-cutlery/",
-      "title": "Wholesale Stainless Steel Cutlery & Flatware | Yumingxing",
-      "jsonLd": [
-        "Organization",
-        "WebPage",
-        "BreadcrumbList"
-      ],
-      "alternates": 0
-    },
-    {
-      "route": "/en/stainless-steel-kitchen-utensils/",
-      "title": "Stainless Steel Kitchen Utensils Manufacturer | Yumingxing",
+      "route": "/hotel-restaurant-cutlery/",
+      "title": "Hotel & Restaurant Cutlery Supplier in China | Yumingxing",
+      "language": "en",
       "jsonLd": [
         "Organization",
         "WebPage",
@@ -271,7 +2239,8 @@
     },
     {
       "route": "/",
-      "title": "裕明兴 | 不锈钢餐具与厨具源头工厂",
+      "title": "Stainless Steel Cutlery Manufacturer in China | Yumingxing",
+      "language": "en",
       "jsonLd": [
         "Organization",
         "WebPage",
@@ -281,18 +2250,380 @@
       "alternates": 3
     },
     {
-      "route": "/products/",
-      "title": "不锈钢餐具与厨具产品中心 · 全球市场选品与外贸出口 | Yumingxing 裕明兴",
+      "route": "/oem-odm-cutlery/",
+      "title": "OEM & Private Label Cutlery | Yumingxing",
+      "language": "en",
       "jsonLd": [
         "Organization",
         "WebPage",
+        "BreadcrumbList"
+      ],
+      "alternates": 0
+    },
+    {
+      "route": "/products/c304-00-304-flatware/",
+      "title": "Matte Stainless Steel Flatware C304-00 | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/products/c304-01a-304-flatware/",
+      "title": "Elegance Smooth Handle 304 Flatware (C304-01A) | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/products/c304-01b-304-flatware/",
+      "title": "Elegance Diamond Pattern 304 Flatware (C304-01B) | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/products/c304-02a-304-flatware/",
+      "title": "1010 Mirror Polished 304 Flatware (C304-02A) | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/products/c304-02b-304-flatware/",
+      "title": "Classic 02B 304 Flatware (C304-02B) | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/products/c304-03-304-flatware/",
+      "title": "Moonlight 304 Flatware (C304-03) | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/products/c304-04-304-flatware/",
+      "title": "Hammered Pattern 304 Flatware (C304-04) | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/products/c304-05-304-flatware/",
+      "title": "Knight 304 Flatware (C304-05) | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/products/c304-06-304-flatware/",
+      "title": "Pointed Slim Waist Matte 304 Flatware (C304-06) | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/products/c304-07-304-flatware/",
+      "title": "Flat-Head Slim Waist Matte 304 Flatware (C304-07) | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/products/",
+      "title": "Cutlery & Kitchen Utensil Catalogue | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "ItemList",
         "BreadcrumbList"
       ],
       "alternates": 3
     },
     {
       "route": "/products/portuguese-five-piece-flatware-set/",
-      "title": "葡萄牙五主件 | Yumingxing 裕明兴",
+      "title": "YMX-1016-5 Portuguese Style Mirror Polished 410 Flatware | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/products/s410-serving-utensils/",
+      "title": "410 Serving Utensils | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/products/s430-serving-utensils/",
+      "title": "430 Premium Serving Utensils | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/products/yhx-2013-kitchenware-set/",
+      "title": "YHX-2013 Two-Rivet Kitchen Utensils | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/products/yhx-2028-kitchenware-set/",
+      "title": "YHX-2028 Small Round-Tube Kitchen Utensils | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/products/yhx-2042-kitchenware-set/",
+      "title": "YHX-2042 Angled Woodgrain Handle Kitchen Utensils | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/products/ymx-1010-4-410-flatware/",
+      "title": "YMX-1010-4 1010 Series 410 Flatware | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/products/ymx-1010-5-410-flatware/",
+      "title": "YMX-1010-5 Portuguese Style 1010 410 Flatware | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/products/ymx-1011-410-flatware/",
+      "title": "YMX-1011 Square Handle 410 Flatware | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/products/ymx-1012-410-flatware/",
+      "title": "YMX-1012 1012 Series 410 Flatware | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/products/ymx-1013-410-flatware/",
+      "title": "YMX-1013 Pineapple-Pattern Handle 410 Flatware | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/products/ymx-1014-410-flatware/",
+      "title": "YMX-1014 Mirror Floral Pattern 410 Flatware | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/products/ymx-1015-410-flatware/",
+      "title": "YMX-1015 S-Shaped Handle 410 Flatware | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/products/ymx-1016-4-410-flatware/",
+      "title": "YMX-1016-4 Portuguese Style Smooth Handle 410 Flatware | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/products/ymx-1017-410-flatware/",
+      "title": "YMX-1017 Knight Series 410 Flatware | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/products/ymx-1035-410-flatware/",
+      "title": "YMX-1035 Elegance Series 410 Flatware | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/products/ymx-1044-410-flatware/",
+      "title": "YMX-1044 Star Diamond 410 Flatware | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/products/ymx-1050-410-flatware/",
+      "title": "YMX-1050 Portuguese Style Woodgrain Pattern 410 Flatware | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/products/ymx-1084-1-410-flatware/",
+      "title": "YMX-1084-1 Slim Waist Smooth Handle 410 Flatware | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/products/ymx-1084-2-410-flatware/",
+      "title": "YMX-1084-2 Slim Waist Hammered Pattern 410 Flatware | Yumingxing",
+      "language": "en",
       "jsonLd": [
         "Organization",
         "WebPage",
@@ -303,7 +2634,8 @@
     },
     {
       "route": "/products/ymx-2011-black-handle-kitchenware-set/",
-      "title": "YMX-2011 黑珍珠柄不锈钢厨具套装 | Yumingxing 裕明兴",
+      "title": "YHX-2011 Black Pearl Kitchen Utensils | Yumingxing",
+      "language": "en",
       "jsonLd": [
         "Organization",
         "WebPage",
@@ -313,8 +2645,9 @@
       "alternates": 3
     },
     {
-      "route": "/products/ymx-2021-flat-handle-kitchenware-set/",
-      "title": "YMX-2021 扁柄一体式不锈钢厨具套装 | Yumingxing 裕明兴",
+      "route": "/products/ymx-2014-kitchenware-set/",
+      "title": "YMX-2014 Rosewood Hollow-Handle Kitchen Utensils | Yumingxing",
+      "language": "en",
       "jsonLd": [
         "Organization",
         "WebPage",
@@ -324,8 +2657,21 @@
       "alternates": 3
     },
     {
-      "route": "/products/ymx-2024-yellow-accent-kitchenware-set/",
-      "title": "YMX-2024 黄心点缀柄不锈钢厨具套装 | Yumingxing 裕明兴",
+      "route": "/products/ymx-2015-kitchenware-set/",
+      "title": "YMX-2015 2015 Hollow-Handle Kitchen Utensils | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/products/ymx-2023-kitchenware-set/",
+      "title": "YMX-2023 Ebony Wood Hollow-Handle Kitchen Utensils | Yumingxing",
+      "language": "en",
       "jsonLd": [
         "Organization",
         "WebPage",
@@ -336,7 +2682,8 @@
     },
     {
       "route": "/products/ymx-2032-square-wood-handle-kitchenware-set/",
-      "title": "YMX-2032 方木纹柄不锈钢厨具套装 | Yumingxing 裕明兴",
+      "title": "YHX-2032 Square Wooden Handle Kitchen Utensils | Yumingxing",
+      "language": "en",
       "jsonLd": [
         "Organization",
         "WebPage",
@@ -347,7 +2694,20 @@
     },
     {
       "route": "/products/ymx-2041-golden-wood-kitchenware-set/",
-      "title": "YMX-2041 金桃木纹连体柄不锈钢厨具套装 | Yumingxing 裕明兴",
+      "title": "YHX-2041 Golden Peachwood Kitchen Utensils | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/products/ymx-2068-kitchenware-set/",
+      "title": "YMX-2068 White Wood Hollow-Handle Kitchen Utensils | Yumingxing",
+      "language": "en",
       "jsonLd": [
         "Organization",
         "WebPage",
@@ -358,11 +2718,47 @@
     },
     {
       "route": "/products/ymx-2142-201-stainless-kitchenware-set/",
-      "title": "YMX-2142 201不锈钢三厘尖柄厨具套装 | Yumingxing 裕明兴",
+      "title": "YHX-2142 Pointed-Handle Kitchen Utensils | Yumingxing",
+      "language": "en",
       "jsonLd": [
         "Organization",
         "WebPage",
         "Product",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/quality-compliance/",
+      "title": "Cutlery Specifications & Documents | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "BreadcrumbList"
+      ],
+      "alternates": 0
+    },
+    {
+      "route": "/stainless-steel-cutlery/",
+      "title": "Wholesale Stainless Steel Cutlery | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "ItemList",
+        "BreadcrumbList"
+      ],
+      "alternates": 3
+    },
+    {
+      "route": "/stainless-steel-kitchen-utensils/",
+      "title": "Stainless Steel Kitchen Utensils Manufacturer | Yumingxing",
+      "language": "en",
+      "jsonLd": [
+        "Organization",
+        "WebPage",
+        "ItemList",
         "BreadcrumbList"
       ],
       "alternates": 3

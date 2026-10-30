@@ -1,0 +1,11 @@
+---
+import LandingView from '../views/en/[page].astro';
+import data from '../data/en/pages.json';
+import {isMigrationEntryPublished} from '../lib/legacy-links.mjs';
+export function getStaticPaths(){
+  const reserved=new Set(['about','contact','factory','products','blog','cn','en','404','stainless-steel-cutlery','stainless-steel-kitchen-utensils']);
+  return data.pages.filter(page=>isMigrationEntryPublished(page,'en')&&!reserved.has(page.slug)).map(page=>({params:{page:page.slug},props:{page}}));
+}
+const {page}=Astro.props;
+---
+<LandingView page={page} />

@@ -1,0 +1,13 @@
+---
+import ProductView from '../../views/en/products/[slug].astro';
+import StaticRedirect from '../../components/StaticRedirect.astro';
+import {getCollection} from 'astro:content';
+import {isPublished,entrySlug} from '../../lib/publishing';
+export async function getStaticPaths(){
+  const [products,chinese]=await Promise.all([getCollection('productsEn',isPublished),getCollection('products',isPublished)]);
+  const slugs=new Set(products.map(entrySlug));
+  return [...products.map(product=>({params:{slug:entrySlug(product)},props:{product}})),...chinese.filter(product=>!slugs.has(entrySlug(product))).map(product=>({params:{slug:entrySlug(product)},props:{redirectTo:`/cn/products/${entrySlug(product)}/`}}))];
+}
+const {product,redirectTo}=Astro.props;
+---
+{redirectTo ? <StaticRedirect to={redirectTo} /> : <ProductView product={product} />}

@@ -1,0 +1,79 @@
+---
+import BlogImage from '../../components/BlogImage.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { isPublished, entrySlug, absolute , safeJson} from '../../lib/publishing';
+import { getCollection, render } from 'astro:content';
+import {getSite} from '../../lib/locale';
+const site=getSite('zh-CN');
+
+const { post } = Astro.props;
+const d = post.data;
+const { Content } = await render(post);
+
+const waText = encodeURIComponent('您好，我看了你们的博客，想进一步咨询不锈钢餐具采购。');
+const waLink = `https://wa.me/${site.contact.whatsappDigits}?text=${waText}`;
+const iso = d.date.toISOString().slice(0, 10);
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: d.title,
+  description: d.description,
+  datePublished: iso,
+  ...(d.dateModified ? {dateModified:d.dateModified.toISOString()} : {}),
+  image: d.cover ? [absolute(d.cover)] : undefined,
+  author: { '@id': absolute('/#organization') },
+  publisher: { '@id': absolute('/#organization') },
+  mainEntityOfPage: absolute(`/cn/blog/${entrySlug(post)}/`),
+  inLanguage: 'zh-CN',
+};
+---
+<BaseLayout locale="zh-CN" title={d.title} description={d.description} image={d.cover}>
+  <script type="application/ld+json" slot="head" set:html={safeJson(articleSchema)} />
+
+  <article class="max-w-3xl mx-auto px-4 sm:px-6 py-12">
+    <nav class="text-sm text-ink-muted mb-8">
+      <a href="/cn/" class="hover:text-ocean">首页</a> <span class="mx-1">/</span>
+      <a href="/cn/blog/" class="hover:text-ocean">博客</a> <span class="mx-1">/</span>
+      <span class="text-ink line-clamp-1">{d.title}</span>
+    </nav>
+
+    <header class="reveal mb-8">
+      {d.tags?.length > 0 && (
+        <div class="flex flex-wrap gap-1.5 mb-4">
+          {d.tags.map((t) => (
+            <span class="text-[11px] px-2 py-0.5 rounded-full bg-steel-50 text-ocean font-medium">{t}</span>
+          ))}
+        </div>
+      )}
+      <h1 class="font-display font-extrabold text-3xl md:text-4xl text-ink leading-tight">{d.title}</h1>
+      <div class="mt-4 flex items-center gap-3 text-sm text-ink-muted">
+        <time datetime={iso}>{iso}</time>
+        <span>·</span>
+        <span>{d.author}</span>
+      </div>
+    </header>
+
+    {d.cover && (
+      <div class="reveal aspect-[16/9] rounded-2xl overflow-hidden bg-sand border border-line ring-1 ring-line mb-10">
+        <BlogImage detail loading="eager" fetchpriority="high" sizes="(max-width: 768px) 100vw, 720px" src={d.cover} alt={d.title} class="w-full h-full object-cover" />
+      </div>
+    )}
+
+    <div class="prose prose-lg max-w-none">
+      <Content />
+    </div>
+
+    <!-- CTA -->
+    <div class="reveal mt-14 brand-hero text-white rounded-2xl px-6 py-8 text-center ring-1 ring-white/10">
+      <p class="eyebrow eyebrow-amber eyebrow-center justify-center mb-3">开启合作</p>
+      <h2 class="font-display font-bold text-xl">需要进一步咨询？</h2>
+      <p class="text-white/75 text-sm mt-2 max-w-md mx-auto">告诉我们你的产品与数量需求，我们将尽快回复报价。</p>
+      <a href={waLink} target="_blank" rel="noopener" data-wa data-wa-product="blog_cta" class="btn btn-primary mt-5 px-7 py-3">WhatsApp 咨询</a>
+    </div>
+
+    <div class="mt-10 text-center">
+      <a href="/cn/blog/" class="text-ocean font-semibold hover:underline underline-offset-4">← 返回博客列表</a>
+    </div>
+  </article>
+</BaseLayout>

@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "heroImage": {
+    "src": "/uploads/yumingxing-contact-factory.webp",
+    "width": 1600,
+    "height": 1000
+  },
+  "map": {
+    "query": "广东省揭阳市榕城区"
+  },
+  "locales": {
+    "en": {
+      "home": "Home",
+      "breadcrumb": "Contact",
+      "breadcrumbLabel": "Breadcrumb",
+      "hero": {
+        "eyebrow": "Contact",
+        "title": "Contact Yumingxing, Start a Partnership",
+        "description": "For quotations, product selection, customization or sample enquiries, contact us through any of the channels below.",
+        "imageAlt": "Yumingxing factory and production environment"
+      },
+      "methods": {
+        "whatsapp": { "label": "WhatsApp", "note": "Click to start a conversation" },
+        "email": { "label": "Email", "note": "Business cooperation and enquiries" },
+        "phone": { "label": "Phone", "note": "Available during business hours" },
+        "wechat": { "label": "WeChat", "note": "Please include your purchasing requirements when adding us" },
+        "address": { "label": "Address" },
+        "hours": { "label": "Business Hours", "note": "You are welcome to leave a message anytime" }
+      },
+      "form": {
+        "eyebrow": "ONLINE ENQUIRY",
+        "title": "Send an Enquiry",
+        "description": "Complete the details below to prepare a WhatsApp message. Review it in WhatsApp and send it yourself.",
+        "fields": {
+          "name": { "label": "Name *", "placeholder": "Your name" },
+          "company": { "label": "Company", "placeholder": "Company name (optional)" },
+          "product": { "label": "Product of Interest", "placeholder": "e.g. 24-piece cutlery set" },
+          "qty": { "label": "Expected Quantity", "placeholder": "e.g. 1,000 sets" },
+          "message": { "label": "Message", "placeholder": "Customization requirements, destination port, other details…" }
+        },
+        "button": "Prepare Enquiry in WhatsApp",
+        "privacy": "This opens WhatsApp with your details prefilled. The message is only sent when you choose Send in WhatsApp.",
+        "noScript": "Enable JavaScript to prepare the message here, or contact us directly using the WhatsApp link.",
+        "ready": "Your enquiry is ready. Review and send it in WhatsApp.",
+        "continue": "Open prepared message in WhatsApp",
+        "nameRequired": "Please enter your name.",
+        "messageHeading": "[Website Enquiry]",
+        "messageLabels": { "name": "Name: ", "company": "Company: ", "product": "Product: ", "qty": "Quantity: ", "message": "Message: " }
+      },
+      "map": {
+        "title": "Factory area: Rongcheng, Jieyang",
+        "note": "The map shows the Rongcheng area. Contact us for directions before a factory visit."
+      },
+      "quick": {
+        "eyebrow": "INSTANT CONTACT",
+        "title": "Contact Us on WhatsApp",
+        "description": "Send your product requirements or sample enquiry on WhatsApp. We respond during business hours.",
+        "button": "Start a WhatsApp Conversation"
+      }
+    },
+    "zh": {
+      "home": "首页",
+      "breadcrumb": "联系我们",
+      "breadcrumbLabel": "面包屑导航",
+      "hero": {
+        "eyebrow": "联系我们",
+        "title": "联系裕明兴，开启合作",
+        "description": "无论是询价、选品、定制还是样品需求，欢迎通过以下任一方式联系我们。",
+        "imageAlt": "裕明兴工厂与生产环境"
+      },
+      "methods": {
+        "whatsapp": { "label": "WhatsApp", "note": "点击直接对话" },
+        "email": { "label": "邮箱 Email", "note": "商务合作与询价" },
+        "phone": { "label": "电话 Phone", "note": "工作时间内接听" },
+        "wechat": { "label": "微信 WeChat", "note": "添加时请备注采购需求" },
+        "address": { "label": "地址 Address" },
+        "hours": { "label": "营业时间", "note": "欢迎随时留言" }
+      },
+      "form": {
+        "eyebrow": "在线询价",
+        "title": "发送询价",
+        "description": "填写下方信息后，可在 WhatsApp 中打开预填询价。请检查内容，并在 WhatsApp 中手动发送。",
+        "fields": {
+          "name": { "label": "姓名 *", "placeholder": "您的称呼" },
+          "company": { "label": "公司", "placeholder": "公司名称（选填）" },
+          "product": { "label": "感兴趣的产品", "placeholder": "如：24件套餐具" },
+          "qty": { "label": "预计数量", "placeholder": "如：1000 套" },
+          "message": { "label": "留言", "placeholder": "定制需求、目的港、其他说明…" }
+        },
+        "button": "在 WhatsApp 中打开询价",
+        "privacy": "此操作会打开 WhatsApp 并预填您填写的内容，只有您在 WhatsApp 中点击发送后，消息才会发出。",
+        "noScript": "请启用 JavaScript 以生成预填询价，或使用 WhatsApp 链接直接联系我们。",
+        "ready": "询价内容已准备好，请在 WhatsApp 中检查并手动发送。",
+        "continue": "打开 WhatsApp 预填询价",
+        "nameRequired": "请填写您的称呼。",
+        "messageHeading": "【网站询价】",
+        "messageLabels": { "name": "姓名：", "company": "公司：", "product": "产品：", "qty": "数量：", "message": "留言：" }
+      },
+      "map": {
+        "title": "工厂所在地区：揭阳榕城区",
+        "note": "地图展示榕城区范围。到访工厂前，请联系我们确认具体路线。"
+      },
+      "quick": {
+        "eyebrow": "即时沟通",
+        "title": "通过 WhatsApp 联系我们",
+        "description": "您可以通过 WhatsApp 发送产品要求或样品需求，我们会在营业时间内回复。",
+        "button": "直接发起 WhatsApp 对话"
+      }
+    }
+  }
+}

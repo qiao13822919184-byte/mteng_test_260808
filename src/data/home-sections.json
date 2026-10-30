@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "intro": {
+    "image": "/brand/factory-gate-960.webp",
+    "imageLarge": "/brand/factory-gate-1440.webp",
+    "imageWidth": 1448,
+    "imageHeight": 1086,
+    "en": {
+      "eyebrow": "MANUFACTURING SINCE {businessStartYear}",
+      "title": "Stainless Steel Cutlery & Kitchen Utensils for Wholesale",
+      "lead": "{companyNameEn} manufactures stainless steel knives, forks, spoons and kitchen utensils for importers, wholesalers and private-label buyers.",
+      "body": "Choose catalogue models and discuss materials, finishes, branding and packaging for OEM and bulk orders. Our brand and factory operations began in {businessStartYear}.",
+      "contactLabel": "Discuss Your Order",
+      "aboutLabel": "About Yumingxing",
+      "imageAlt": "Yumingxing factory entrance in Jieyang, Guangdong"
+    },
+    "zh": {
+      "eyebrow": "制造业务始于{businessStartYear}年",
+      "title": "面向批发与进口采购的不锈钢餐具、厨具制造商",
+      "lead": "{legalNameZh}，专注不锈钢刀、叉、勺及厨房工具，服务进口商、批发商与自有品牌采购。",
+      "body": "从现有款式选型，到材质、表面处理、标识与包装确认，我们围绕您的采购要求开展OEM与批量供货。品牌与工厂业务始于{businessStartYear}年。",
+      "contactLabel": "咨询采购需求",
+      "aboutLabel": "了解裕明兴",
+      "imageAlt": "裕明兴工厂大门，广东揭阳"
+    }
+  },
+  "collections": [
+    {
+      "categorySlug": "flatware-sets",
+      "path": "stainless-steel-cutlery",
+      "en": {
+        "title": "Stainless Steel Cutlery",
+        "summary": "Knives, forks and spoons for wholesale, hospitality and private-label ranges.",
+        "linkLabel": "Explore the Collection"
+      },
+      "zh": {
+        "title": "不锈钢餐具",
+        "summary": "刀、叉、勺及餐具组合，适用于批发、餐饮及自有品牌采购。",
+        "linkLabel": "浏览系列"
+      }
+    },
+    {
+      "categorySlug": "kitchenware-sets",
+      "path": "stainless-steel-kitchen-utensils",
+      "en": {
+        "title": "Stainless Steel Kitchen Utensils",
+        "summary": "Turners, ladles, skimmers and cooking-tool sets, organised by range and use.",
+        "linkLabel": "Explore the Collection"
+      },
+      "zh": {
+        "title": "不锈钢厨具",
+        "summary": "锅铲、汤勺、漏勺及厨具组合，按用途与系列选型。",
+        "linkLabel": "浏览系列"
+      }
+    }
+  ],
+  "featuredProductKeys": [
+    "ymx-2011-black-handle-kitchenware-set",
+    "portuguese-five-piece-flatware-set",
+    "ymx-2032-square-wood-handle-kitchenware-set",
+    "c304-00-304-flatware",
+    "ymx-2142-201-stainless-kitchenware-set",
+    "ymx-1016-4-410-flatware",
+    "yhx-2013-kitchenware-set",
+    "ymx-1050-410-flatware"
+  ]
+}

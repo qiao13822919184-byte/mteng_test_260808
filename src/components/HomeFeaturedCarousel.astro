@@ -1,0 +1,51 @@
+---
+import ProductCard from './ProductCard.astro';
+import { entrySlug } from '../lib/publishing';
+import { prefix } from '../lib/locale';
+const { products, locale = 'zh-CN' } = Astro.props;
+const en = locale === 'en';
+const text = (zh: string, english: string) => en ? english : zh;
+---
+<section
+  id="featured-products"
+  class="bg-sand/50 border-y border-line"
+  data-ymx-carousel
+  data-language={en ? 'en' : 'zh'}
+  role="region"
+  aria-roledescription={text('产品轮播', 'carousel')}
+  aria-labelledby="featured-products-heading"
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-20 sm:py-28">
+    <div class="reveal flex flex-wrap items-end justify-between gap-4 mb-12">
+      <div class="max-w-2xl">
+        <p class="eyebrow mb-4">{text('精选产品', 'FEATURED PRODUCTS')}</p>
+        <h2 id="featured-products-heading" class="statement text-3xl sm:text-4xl md:text-5xl">{text('从这些热门款式开始了解。', 'Start with These Catalogue Models')}</h2>
+      </div>
+      <a href={`${prefix(locale)}/products/`} data-event={en ? 'click_catalog_en' : undefined} class="group inline-flex items-center gap-1.5 text-ocean font-semibold">{text('全部产品', 'All products')} <span class="transition-transform group-hover:translate-x-1" aria-hidden="true">→</span></a>
+    </div>
+    <ul
+      id="featured-product-track"
+      class="ymx-product-track"
+      tabindex="0"
+      aria-label={text('精选产品；左右方向键切换，Home和End键跳转', 'Featured products; use Left and Right arrow keys, Home and End to navigate')}
+    >
+      {products.map((product) => (
+        <li class="ymx-product-slide" data-product-slug={entrySlug(product)}>
+          <ProductCard product={product} locale={locale} />
+        </li>
+      ))}
+    </ul>
+    <div class="ymx-carousel-controls" hidden>
+      <p class="ymx-carousel-position text-ink-muted" aria-hidden="true"></p>
+      <div class="ymx-carousel-buttons">
+        <button type="button" class="ymx-carousel-button" data-carousel-prev aria-controls="featured-product-track" aria-label={text('上一个产品', 'Previous product')}><span aria-hidden="true">←</span></button>
+        <button type="button" class="ymx-carousel-button ymx-carousel-pause" data-carousel-pause aria-controls="featured-product-track" aria-label={text('暂停自动轮播', 'Pause autoplay')} aria-pressed="false">{text('暂停', 'Pause')}</button>
+        <button type="button" class="ymx-carousel-button" data-carousel-next aria-controls="featured-product-track" aria-label={text('下一个产品', 'Next product')}><span aria-hidden="true">→</span></button>
+      </div>
+      <p class="ymx-sr-only" data-carousel-announcement aria-live="polite" aria-atomic="true"></p>
+    </div>
+  </div>
+</section>
+<script>
+  import '../scripts/home-carousel.js';
+</script>

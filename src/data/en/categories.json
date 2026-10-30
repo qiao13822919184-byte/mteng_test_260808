@@ -2,11 +2,11 @@
   "categories": [
     {
       "slug": "flatware-sets",
-      "name": "Stainless Steel Cutlery Sets",
+      "name": "Stainless Steel Cutlery",
       "nameEn": "Flatware",
       "summary": "Knives, forks and spoons for hospitality, retail and private-label programmes.",
       "image": "/uploads/catalogue-20261016/c410-01.webp",
-      "href": "/en/stainless-steel-cutlery/"
+      "href": "/stainless-steel-cutlery/"
     },
     {
       "slug": "kitchenware-sets",
@@ -14,7 +14,7 @@
       "nameEn": "Kitchen utensils",
       "summary": "Turners, ladles, skimmers and cooking-tool sets for wholesale, foodservice and retail.",
       "image": "/uploads/catalogue-20261016/kw-07.webp",
-      "href": "/en/stainless-steel-kitchen-utensils/"
+      "href": "/stainless-steel-kitchen-utensils/"
     }
   ]
 }

@@ -1,17 +1,19 @@
 ---
 import {getSite,labels} from '../lib/locale';
+import {localizeLink} from '../lib/legacy-links.mjs';
+import identity from '../data/identity.json';
 const {locale='zh-CN'}=Astro.props;
 const site=getSite(locale),ui=labels(locale);
 
 const year = new Date().getFullYear();
 const waLink = `https://wa.me/${site.contact.whatsappDigits}`;
 
-const cols = locale==='en' ? [{title:'Products',links:[{label:'Cutlery & Flatware',href:'/en/stainless-steel-cutlery/'},{label:'Kitchen Utensils',href:'/en/stainless-steel-kitchen-utensils/'},{label:'Product Catalogue',href:'/en/products/'}]},{title:'Company',links:[{label:'About',href:'/en/about/'},{label:'Factory',href:'/en/factory/'},{label:'Quality & Documents',href:'/en/quality-compliance/'},{label:'OEM/ODM',href:'/en/oem-odm-cutlery/'},{label:'Hotel & Restaurant',href:'/en/hotel-restaurant-cutlery/'},{label:'Buyer Guides',href:'/en/blog/'},{label:'Request a Quote',href:'/en/contact/'}]}] : [
+const cols = locale==='en' ? [{title:'Products',links:[{label:'Stainless Steel Cutlery',href:'/en/stainless-steel-cutlery/'},{label:'Stainless Steel Kitchen Utensils',href:'/en/stainless-steel-kitchen-utensils/'},{label:'Product Catalogue',href:'/en/products/'}]},{title:'Company',links:[{label:'About',href:'/en/about/'},{label:'Quality & Documents',href:'/en/quality-compliance/'},{label:'OEM/ODM',href:'/en/oem-odm-cutlery/'},{label:'Hotel & Restaurant',href:'/en/hotel-restaurant-cutlery/'},{label:'Buyer Guides',href:'/en/blog/'},{label:'Request a Quote',href:'/en/contact/'}]}] : [
   {
     title: '产品',
     links: [
-      { label: '不锈钢餐具套装', href: '/products?cat=flatware-sets' },
-      { label: '不锈钢厨具套装', href: '/products?cat=kitchenware-sets' },
+      { label: '不锈钢餐具', href: '/products?cat=flatware-sets' },
+      { label: '不锈钢厨具', href: '/products?cat=kitchenware-sets' },
     ],
   },
   {
@@ -29,14 +31,7 @@ const cols = locale==='en' ? [{title:'Products',links:[{label:'Cutlery & Flatwar
   <div class="max-w-7xl mx-auto px-4 sm:px-6 py-16 grid gap-12 md:grid-cols-[1.4fr_1fr_1fr_1.2fr] reveal">
     <!-- Brand -->
     <div>
-      <div class="flex items-center gap-3 mb-4">
-        <span class="brand-gradient w-10 h-10 rounded-xl grid place-items-center shadow-[0_8px_24px_-12px_rgba(0,0,0,0.6)]">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M6 3v7a2 2 0 0 0 4 0V3M8 11v10M16 3c-1.5 0-2.5 1.8-2.5 4.5S14.5 12 16 12v9" />
-          </svg>
-        </span>
-        <span class="font-display font-extrabold text-xl">{site.logoText}</span>
-      </div>
+      <div class="mb-4"><img class="ymx-footer-logo" src={identity.logo} alt="Yumingxing 裕明兴" width="150" height="70" loading="lazy" /></div>
       <p class="text-white/70 text-sm leading-relaxed max-w-xs">{site.description}</p>
     </div>
 
@@ -45,7 +40,7 @@ const cols = locale==='en' ? [{title:'Products',links:[{label:'Cutlery & Flatwar
         <h3 class="font-display font-semibold text-white/90 mb-4 tracking-wide">{col.title}</h3>
         <ul class="space-y-2.5 text-sm">
           {col.links.map((l) => (
-            <li><a href={l.href} class="inline-flex items-center text-white/65 hover:text-white transition-colors duration-200 hover:translate-x-0.5 will-change-transform">{l.label}</a></li>
+            <li><a href={localizeLink(l.href,locale)} class="inline-flex items-center text-white/65 hover:text-white transition-colors duration-200 hover:translate-x-0.5 will-change-transform">{l.label}</a></li>
           ))}
         </ul>
       </div>
@@ -81,8 +76,13 @@ const cols = locale==='en' ? [{title:'Products',links:[{label:'Cutlery & Flatwar
 
   <div class="border-t border-white/10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-white/55 text-xs">
-      <p>© {year} {site.companyName}. {ui.rights}</p>
+      <p>© {year} {site.brand}. {ui.rights}</p>
       <p>{site.tagline} · {site.contact.businessHours}</p>
     </div>
+  </div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 ymx-footer-identity">
+    <span>{locale==='en'?'Operating company: '+identity.companyNameEn:'经营主体：'+identity.legalNameZh}</span>
+    {locale==='en'&&<span>Chinese legal name: {identity.legalNameZh}</span>}
+    <span>{locale==='en'?'Unified Social Credit Code: ':'统一社会信用代码：'}{identity.creditCode}</span>
   </div>
 </footer>

@@ -5,6 +5,11 @@
   "engines": {
     "node": ">=22.12.0"
   },
+  "overrides": {
+    "@tailwindcss/typography": {
+      "postcss-selector-parser": "6.1.5"
+    }
+  },
   "scripts": {
     "predev": "npm run optimize:blog-images",
     "dev": "astro dev",
@@ -21,6 +26,7 @@
     "verify": "npm run test:publishing && npm run test:blog-images && npm run build && npm run test:site"
   },
   "dependencies": {
+    "@astrojs/markdown-remark": "^7.3.5",
     "@astrojs/sitemap": "^3.7.3",
     "@paper-design/shaders": "^0.0.79",
     "@tailwindcss/vite": "^4.3.3",

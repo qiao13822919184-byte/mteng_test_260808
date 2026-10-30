@@ -1,0 +1,103 @@
+---
+import { getSite, prefix } from '../lib/locale';
+import identity from '../data/identity.json';
+import aboutPage from '../data/about-page.json';
+import '../styles/about-page.css';
+
+interface Props { locale?: string; }
+const { locale = 'en' } = Astro.props;
+const language = locale === 'en' ? 'en' : 'zh';
+const site = getSite(locale);
+const copy = aboutPage.locales[language];
+const base = prefix(locale);
+const text = (value: string) => value.replaceAll('{businessStartYear}', String(identity.businessStartYear));
+const waLink = `https://wa.me/${site.contact.whatsappDigits}?text=${encodeURIComponent(copy.cta.whatsappMessage)}`;
+const identityRows = [
+  { label: copy.identity.brand, value: language === 'en' ? `${identity.brandEn} / ${identity.brandZh}` : `${identity.brandZh} / ${identity.brandEn}` },
+  { label: copy.identity.companyName, value: language === 'en' ? identity.companyNameEn : identity.legalNameZh },
+  { label: copy.identity.alternateCompanyName, value: language === 'en' ? identity.legalNameZh : identity.companyNameEn },
+  { label: copy.identity.creditCode, value: identity.creditCode },
+];
+---
+<div class="about-page">
+  <section class="brand-hero text-white" id="about-intro">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-20 md:py-24">
+      <nav class="text-sm text-white/60 mb-5" aria-label={copy.breadcrumbLabel}>
+        <a class="hover:text-white" href={`${base}/`}>{copy.home}</a>
+        <span class="mx-1" aria-hidden="true">/</span>
+        <span class="text-white" aria-current="page">{copy.breadcrumb}</span>
+      </nav>
+      <p class="reveal eyebrow eyebrow-amber">{copy.hero.eyebrow}</p>
+      <h1 class="reveal reveal-d1 steel-text font-display font-extrabold text-4xl md:text-5xl mt-2 max-w-3xl leading-tight">{copy.hero.title}</h1>
+      <p class="reveal reveal-d2 mt-5 text-lg text-white/75 max-w-2xl leading-relaxed">{copy.hero.description}</p>
+    </div>
+  </section>
+
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 -mt-10 relative z-10 about-facts">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-px bg-line rounded-2xl overflow-hidden border border-line shadow-[var(--shadow-soft)]">
+      {copy.stats.map((fact, index) => (
+        <div class={`reveal reveal-d${index + 1} card-hover bg-white px-6 py-7 text-center`}>
+          <div class="font-display font-extrabold text-3xl brand-gradient-text">{text(fact.value)}</div>
+          <div class="text-ink-muted text-sm mt-1">{fact.label}</div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20 grid lg:grid-cols-2 gap-12 items-center about-story" id="about-story">
+    <div class="reveal rounded-3xl overflow-hidden aspect-[4/3] border border-line ring-1 ring-line about-story-photo">
+      <div class="sheen group w-full h-full">
+        <img src={aboutPage.images.factory.src} srcset={`${aboutPage.images.factory.src} 960w, ${aboutPage.images.factory.largeSrc} 1440w`} sizes="(min-width: 1024px) 46vw, 100vw" width={aboutPage.images.factory.width} height={aboutPage.images.factory.height} alt={copy.story.imageAlt} loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+      </div>
+    </div>
+    <div class="reveal reveal-d1">
+      <p class="eyebrow">{copy.story.eyebrow}</p>
+      <h2 class="font-display font-extrabold text-3xl md:text-4xl text-ink mt-2">{text(copy.story.title)}</h2>
+      <div class="mt-6 space-y-4 text-ink-soft leading-relaxed">
+        {copy.story.paragraphs.map((paragraph) => <p>{text(paragraph)}</p>)}
+      </div>
+      <aside class="about-identity" aria-labelledby="company-identity-title">
+        <h3 id="company-identity-title" class="font-display font-bold text-ink">{copy.identity.title}</h3>
+        <dl>{identityRows.map((row) => <div><dt>{row.label}</dt><dd>{row.value}</dd></div>)}</dl>
+      </aside>
+    </div>
+  </section>
+
+  <section class="bg-sand/60 border-y border-line" id="manufacturing-capabilities">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
+      <div class="reveal text-center max-w-2xl mx-auto mb-12">
+        <p class="eyebrow eyebrow-center justify-center">{copy.capabilities.eyebrow}</p>
+        <h2 class="font-display font-extrabold text-3xl md:text-4xl text-ink mt-1">{copy.capabilities.title}</h2>
+        <p class="about-capabilities-intro text-ink-muted leading-relaxed">{copy.capabilities.description}</p>
+      </div>
+      <div class="about-capability-grid">
+        {aboutPage.capabilities.map((capability, index) => (
+          <article class={`reveal reveal-d${index + 1} card-hover group bg-white rounded-2xl border border-line about-capability-card`}>
+            <div class="sheen about-capability-image">
+              <img src={capability.image.src} srcset={`${capability.image.src} 640w, ${capability.image.largeSrc} 960w`} sizes="(min-width: 1024px) 31vw, (min-width: 640px) 48vw, 100vw" width={capability.image.width} height={capability.image.height} alt={capability[language].alt} loading="lazy" decoding="async" class="group-hover:scale-105 transition-transform duration-700" />
+            </div>
+            <div class="about-capability-copy">
+              <div class="about-capability-heading">
+                <span class="font-display font-extrabold text-2xl brand-gradient-text" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+                <h3 class="font-display font-bold text-ink text-lg">{capability[language].title}</h3>
+              </div>
+              <p class="text-ink-muted text-sm leading-relaxed">{capability[language].description}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-16" id="about-contact">
+    <div class="reveal brand-hero rounded-3xl px-6 sm:px-12 py-14 text-center text-white ring-1 ring-white/10">
+      <p class="eyebrow eyebrow-amber eyebrow-center justify-center mb-4">{copy.cta.eyebrow}</p>
+      <h2 class="font-display font-extrabold text-3xl md:text-4xl">{copy.cta.title}</h2>
+      <p class="mt-4 text-white/75 max-w-xl mx-auto">{copy.cta.description}</p>
+      <div class="mt-8 flex flex-wrap justify-center gap-3">
+        <a href={waLink} target="_blank" rel="noopener noreferrer" data-wa data-wa-product="about_cta" class="btn btn-primary px-7 py-3.5">{copy.cta.whatsappLabel}</a>
+        <a href={`${base}/contact/`} class="btn btn-outline px-7 py-3.5">{copy.cta.contactLabel}</a>
+      </div>
+    </div>
+  </section>
+</div>

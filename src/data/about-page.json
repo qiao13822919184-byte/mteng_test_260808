@@ -1,0 +1,245 @@
+{
+  "schemaVersion": 1,
+  "images": {
+    "factory": {
+      "src": "/brand/factory-gate-960.webp",
+      "largeSrc": "/brand/factory-gate-1440.webp",
+      "width": 1448,
+      "height": 1086
+    }
+  },
+  "capabilities": [
+    {
+      "id": "materials",
+      "image": {
+        "src": "/brand/materials-640.webp",
+        "largeSrc": "/brand/materials-960.webp",
+        "width": 1448,
+        "height": 1086
+      },
+      "en": {
+        "title": "Material control",
+        "description": "Select 201, 304, 410 or 430 stainless steel to suit the product. Confirm the grade and specification before production.",
+        "alt": "Stainless steel coil stored in the Yumingxing workshop"
+      },
+      "zh": {
+        "title": "原料管控",
+        "description": "提供201、304、410、430等不锈钢材质选择，按产品用途确认牌号与规格后再安排生产。",
+        "alt": "裕明兴车间内存放的不锈钢卷料"
+      }
+    },
+    {
+      "id": "forming",
+      "image": {
+        "src": "/brand/forming-640.webp",
+        "largeSrc": "/brand/forming-960.webp",
+        "width": 1448,
+        "height": 1086
+      },
+      "en": {
+        "title": "Pressing & forming",
+        "description": "Form the parts to the agreed design, then check the dimensions and shape against the sample.",
+        "alt": "Press tooling and stainless steel parts during forming"
+      },
+      "zh": {
+        "title": "冲压成型",
+        "description": "按确认图样进行冲压与成型，结合样品检查尺寸和形状。",
+        "alt": "冲压模具与成型中的不锈钢部件"
+      }
+    },
+    {
+      "id": "polishing",
+      "image": {
+        "src": "/brand/polishing-640.webp",
+        "largeSrc": "/brand/polishing-960.webp",
+        "width": 1672,
+        "height": 941
+      },
+      "en": {
+        "title": "Surface finishing",
+        "description": "Agree a mirror, brushed or satin finish, and check the surface and edges against the approved sample.",
+        "alt": "Stainless steel spoons on the polishing production line"
+      },
+      "zh": {
+        "title": "表面处理",
+        "description": "按样品确认镜面、拉丝或雾面效果，检查表面质感与边缘处理。",
+        "alt": "抛光生产线上的不锈钢餐勺"
+      }
+    },
+    {
+      "id": "customization",
+      "image": {
+        "src": "/brand/customization-640.webp",
+        "largeSrc": "/brand/customization-960.webp",
+        "width": 1448,
+        "height": 1086
+      },
+      "en": {
+        "title": "Customization",
+        "description": "Discuss laser marking, product details and packaging to suit your own brand and order requirements.",
+        "alt": "Close-up of laser-engraved stainless steel handles"
+      },
+      "zh": {
+        "title": "定制处理",
+        "description": "按自有品牌与订单需求，沟通激光标识、产品细节及包装方案。",
+        "alt": "激光雕刻后的不锈钢手柄细节"
+      }
+    },
+    {
+      "id": "inspection",
+      "image": {
+        "src": "/brand/inspection-640.webp",
+        "largeSrc": "/brand/inspection-960.webp",
+        "width": 1448,
+        "height": 1086
+      },
+      "en": {
+        "title": "Quality inspection",
+        "description": "Check appearance, edges and dimensions against the agreed requirements before packing.",
+        "alt": "Gloved operator inspecting a stainless steel product"
+      },
+      "zh": {
+        "title": "品质检验",
+        "description": "包装前按确认要求检查外观、边缘与尺寸，核对产品与样品的一致性。",
+        "alt": "戴手套的操作人员检查不锈钢产品"
+      }
+    },
+    {
+      "id": "shipping",
+      "image": {
+        "src": "/brand/shipping-640.webp",
+        "largeSrc": "/brand/shipping-960.webp",
+        "width": 1448,
+        "height": 1086
+      },
+      "en": {
+        "title": "Packing & export",
+        "description": "Confirm packing, carton details and shipping arrangements for your destination and order.",
+        "alt": "Forklift loading packed cartons into a shipping container"
+      },
+      "zh": {
+        "title": "包装与出口",
+        "description": "按订单及目的地要求确认包装、外箱信息与出运安排。",
+        "alt": "叉车将装箱产品装入货运集装箱"
+      }
+    }
+  ],
+  "locales": {
+    "en": {
+      "home": "Home",
+      "breadcrumb": "About",
+      "breadcrumbLabel": "Breadcrumb",
+      "hero": {
+        "eyebrow": "About Yumingxing",
+        "title": "Stainless Steel Cutlery & Kitchen Utensils Manufacturer",
+        "description": "Based in Jieyang, China. We manufacture stainless steel cutlery and kitchen utensils for wholesalers, importers and private-label buyers."
+      },
+      "stats": [
+        {
+          "value": "Jieyang",
+          "label": "Guangdong, China"
+        },
+        {
+          "value": "B2B",
+          "label": "Wholesale & custom orders"
+        },
+        {
+          "value": "OEM / ODM",
+          "label": "Specifications agreed per project"
+        },
+        {
+          "value": "{businessStartYear}",
+          "label": "Brand & factory operations began"
+        }
+      ],
+      "story": {
+        "eyebrow": "Our Story",
+        "title": "Manufacturing in Jieyang since {businessStartYear}",
+        "paragraphs": [
+          "Yumingxing’s brand and factory operations began in {businessStartYear} in Jieyang, Guangdong, China. Our focus is stainless steel cutlery and kitchen utensils.",
+          "We supply knives, forks, spoons and kitchen tools for international wholesalers, importers and private-label buyers. Material, dimensions, finish, branding and packaging are agreed for each order.",
+          "From material selection and forming to polishing, customization, inspection and packing, the process starts with a clear product specification and an approved sample."
+        ],
+        "imageAlt": "Yumingxing factory entrance in Jieyang, Guangdong, China"
+      },
+      "identity": {
+        "title": "Brand & company",
+        "brand": "Brand",
+        "companyName": "Company name",
+        "alternateCompanyName": "Chinese company name",
+        "creditCode": "Unified Social Credit Code"
+      },
+      "capabilities": {
+        "eyebrow": "Manufacturing",
+        "title": "From material to finished product",
+        "description": "Six steps behind a wholesale order. Confirm the material, finish and inspection requirements with your product specification."
+      },
+      "cta": {
+        "eyebrow": "Start a conversation",
+        "title": "Planning a factory visit or requesting samples?",
+        "description": "Share the model, quantity, target market and customization you need. We can then discuss the next step.",
+        "whatsappLabel": "Contact on WhatsApp",
+        "contactLabel": "Contact details",
+        "whatsappMessage": "Hello, I would like to discuss Yumingxing’s factory, products and samples."
+      }
+    },
+    "zh": {
+      "home": "首页",
+      "breadcrumb": "关于我们",
+      "breadcrumbLabel": "面包屑导航",
+      "hero": {
+        "eyebrow": "关于裕明兴",
+        "title": "专注不锈钢餐厨具制造",
+        "description": "立足广东揭阳，专注不锈钢餐具与厨具制造，为国际批发商、进口商和自有品牌采购商提供批量供货与定制。"
+      },
+      "stats": [
+        {
+          "value": "揭阳",
+          "label": "广东 · 工厂所在地"
+        },
+        {
+          "value": "B2B",
+          "label": "批量采购与定制"
+        },
+        {
+          "value": "OEM / ODM",
+          "label": "按项目确认方案"
+        },
+        {
+          "value": "{businessStartYear}",
+          "label": "品牌及工厂业务起始年"
+        }
+      ],
+      "story": {
+        "eyebrow": "Our Story",
+        "title": "始于{businessStartYear}年的制造业务",
+        "paragraphs": [
+          "裕明兴的品牌及工厂业务始于{businessStartYear}年，位于广东省揭阳市，专注不锈钢餐具与厨房用具。",
+          "我们为国际批发商、进口商和自有品牌采购商提供刀、叉、勺及厨房工具。材质、尺寸、表面处理、标识与包装均按具体订单确认。",
+          "从原料选择、冲压成型到表面处理、定制、检验与包装，以清晰的产品规格和确认样品衔接各道工序。"
+        ],
+        "imageAlt": "广东揭阳裕明兴工厂大门"
+      },
+      "identity": {
+        "title": "品牌与经营主体",
+        "brand": "品牌",
+        "companyName": "中文名称",
+        "alternateCompanyName": "英文名称",
+        "creditCode": "统一社会信用代码"
+      },
+      "capabilities": {
+        "eyebrow": "工厂实力",
+        "title": "从材料到成品的全流程能力",
+        "description": "六道工序，围绕批量订单展开。材质、表面处理和检验要求随产品规格一并确认。"
+      },
+      "cta": {
+        "eyebrow": "开启合作",
+        "title": "想参观工厂或获取样品？",
+        "description": "告诉我们产品型号、数量、目标市场与定制需求，一起确认下一步。",
+        "whatsappLabel": "WhatsApp 联系",
+        "contactLabel": "查看联系方式",
+        "whatsappMessage": "您好，我想了解裕明兴的工厂、产品与样品。"
+      }
+    }
+  }
+}

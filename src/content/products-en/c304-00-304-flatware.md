@@ -9,6 +9,7 @@ order: 27
 locale: en
 slug: c304-00-304-flatware
 title: Portuguese Style Matte 304 Flatware (C304-00)
+seoTitle: Matte Stainless Steel Flatware C304-00 | Yumingxing
 summary: >-
   Portuguese Style Matte flatware with coordinated knives, forks and spoons. Material grades are listed by
   component.

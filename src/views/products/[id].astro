@@ -1,24 +1,12 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ProductCard from '../../components/ProductCard.astro';
-import { isPublished, absolute , safeJson} from '../../lib/publishing';
+import { isPublished, entrySlug, absolute , safeJson} from '../../lib/publishing';
 import { getCollection, render } from 'astro:content';
 import categoriesData from '../../data/categories.json';
 const categories = categoriesData.categories;
-import site from '../../data/site.json';
-
-export async function getStaticPaths() {
-  const products = await getCollection('products', isPublished);
-  return products.map((p) => ({
-    params: { id: p.id },
-    props: {
-      product: p,
-      related: products
-        .filter((x) => x.id !== p.id && x.data.category === p.data.category)
-        .slice(0, 3),
-    },
-  }));
-}
+import {getSite} from '../../lib/locale';
+const site=getSite('zh-CN');
 
 const { product, related } = Astro.props;
 const d = product.data;
@@ -58,21 +46,21 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: '首页', item: new URL('/', Astro.site).href },
-    { '@type': 'ListItem', position: 2, name: '产品中心', item: new URL('/products', Astro.site).href },
-    { '@type': 'ListItem', position: 3, name: d.title, item: Astro.url.href },
+    { '@type': 'ListItem', position: 1, name: '首页', item: absolute('/cn/') },
+    { '@type': 'ListItem', position: 2, name: '产品中心', item: absolute('/cn/products/') },
+    { '@type': 'ListItem', position: 3, name: d.title, item: absolute(`/cn/products/${entrySlug(product)}/`) },
   ],
 };
 ---
-<BaseLayout title={d.title} description={d.summary} image={mainImg}>
+<BaseLayout locale="zh-CN" title={d.title} description={d.summary} image={mainImg}>
   <script type="application/ld+json" slot="head" set:html={safeJson(productSchema)} />
   <script type="application/ld+json" slot="head" set:html={safeJson(breadcrumbSchema)} />
 
   <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
     <!-- Breadcrumb -->
     <nav class="text-sm text-ink-muted mb-8">
-      <a href="/" class="hover:text-ocean">首页</a> <span class="mx-1">/</span>
-      <a href="/products" class="hover:text-ocean">产品中心</a> <span class="mx-1">/</span>
+      <a href="/cn/" class="hover:text-ocean">首页</a> <span class="mx-1">/</span>
+      <a href="/cn/products/" class="hover:text-ocean">产品中心</a> <span class="mx-1">/</span>
       <span class="text-ink">{d.title}</span>
     </nav>
 
@@ -148,7 +136,7 @@ const breadcrumbSchema = {
         <p class="eyebrow">同系列推荐</p>
         <h2 class="font-display font-extrabold text-2xl md:text-3xl text-ink mt-2 mb-6">相关产品</h2>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {related.map((p) => <ProductCard product={p} />)}
+          {related.map((p) => <ProductCard product={p} locale="zh-CN" />)}
         </div>
       </div>
     )}

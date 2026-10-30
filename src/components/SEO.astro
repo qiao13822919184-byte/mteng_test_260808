@@ -1,7 +1,7 @@
 ---
 import { getSite } from '../lib/locale';
 import { absolute, canonicalPath } from '../lib/publishing';
-const locale = Astro.props.locale || 'zh-CN';
+const locale = Astro.props.locale || (Astro.url.pathname.startsWith('/cn/')?'zh-CN':'en');
 const site = getSite(locale);
 
 const {
@@ -12,7 +12,7 @@ const {
 } = Astro.props;
 
 // 页面标题统一加上品牌后缀；首页等可不传 title 走默认大标题
-const fullTitle = title ? (Astro.props.exactTitle || title.includes('|') ? title : `${title} | ${locale === 'en' ? 'Yumingxing' : `${site.brand} 裕明兴`}`) : site.seo.defaultTitle;
+const fullTitle = title ? (Astro.props.exactTitle || title.includes('|') ? title : `${title} | ${site.brand}`) : site.seo.defaultTitle;
 const canonicalURL = absolute(canonicalPath(Astro.url.pathname));
 const alternates = Astro.props.alternates;
 const ogImageURL = new URL(image, Astro.site || Astro.url);
@@ -23,13 +23,13 @@ const ogImageURL = new URL(image, Astro.site || Astro.url);
 {alternates?.alternate && <>
   <link rel="alternate" hreflang="zh-CN" href={absolute(alternates.zh)} />
   <link rel="alternate" hreflang="en" href={absolute(alternates.en)} />
-  <link rel="alternate" hreflang="x-default" href={absolute(alternates.zh)} />
+  <link rel="alternate" hreflang="x-default" href={absolute(alternates.en)} />
 </>}
 {noindex && <meta name="robots" content="noindex,nofollow" />}
 
 <!-- Open Graph -->
 <meta property="og:type" content={Astro.props.type || 'website'} />
-<meta property="og:site_name" content={site.companyName} />
+<meta property="og:site_name" content="Yumingxing" />
 <meta property="og:url" content={canonicalURL} />
 <meta property="og:title" content={fullTitle} />
 <meta property="og:description" content={description} />

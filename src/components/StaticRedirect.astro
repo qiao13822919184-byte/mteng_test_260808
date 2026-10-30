@@ -1,0 +1,35 @@
+---
+interface Props { to: string; }
+const { to } = Astro.props;
+if (!to.startsWith('/') || to.startsWith('//')) throw new Error('Migration redirects must use an internal path');
+const target = to;
+const canonical = new URL(target, Astro.site || 'https://www.mteng.ltd').href;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,follow" />
+    <title>Page moved | Yumingxing</title>
+    <link rel="canonical" href={canonical} />
+    <script is:inline define:vars={{ target }}>
+      let destination = target;
+      let query = window.location.search;
+      if (target === '/products/') {
+        const params = new URLSearchParams(query);
+        const category = params.get('cat');
+        const categoryPath = category === 'flatware-sets' ? '/stainless-steel-cutlery/' : category === 'kitchenware-sets' ? '/stainless-steel-kitchen-utensils/' : null;
+        if (categoryPath) {
+          destination = categoryPath;
+          params.delete('cat');
+          const remaining = params.toString();
+          query = remaining ? '?' + remaining : '';
+        }
+      }
+      window.location.replace(destination + query + window.location.hash);
+    </script>
+    <meta http-equiv="refresh" content={`0;url=${target}`} />
+  </head>
+  <body><p>This page has moved. <a href={target}>Continue to Yumingxing</a>.</p></body>
+</html>

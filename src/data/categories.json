@@ -2,17 +2,19 @@
   "categories": [
     {
       "slug": "flatware-sets",
-      "name": "不锈钢餐具套装",
+      "name": "不锈钢餐具",
       "nameEn": "Flatware Sets",
       "summary": "成套刀、叉、勺及配套餐桌用品，适配酒店、餐厅与零售品牌。",
-      "image": "/uploads/catalogue-20261016/c410-01.webp"
+      "image": "/uploads/catalogue-20261016/c410-01.webp",
+      "href": "/cn/stainless-steel-cutlery/"
     },
     {
       "slug": "kitchenware-sets",
-      "name": "不锈钢厨具套装",
+      "name": "不锈钢厨具",
       "nameEn": "Kitchenware Sets",
       "summary": "炒铲、汤勺、漏勺与料理工具等成套厨具，商用与家用兼顾。",
-      "image": "/uploads/catalogue-20261016/kw-07.webp"
+      "image": "/uploads/catalogue-20261016/kw-07.webp",
+      "href": "/cn/stainless-steel-kitchen-utensils/"
     }
   ]
 }

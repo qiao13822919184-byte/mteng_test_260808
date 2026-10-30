@@ -1,0 +1,26 @@
+---
+import {labels,prefix} from '../lib/locale';
+import identity from '../data/identity.json';
+import '../styles/navigation.css';
+const {locale='en',switchUrl='/cn/'}=Astro.props;
+const ui=labels(locale),base=prefix(locale),cn=locale!=='en',path=Astro.url.pathname;
+const nav=[['',ui.home],['products/',ui.products],['blog/',ui.blog],['about/',ui.about],['contact/',ui.contact]];
+const cats=[['stainless-steel-cutlery/',cn?'不锈钢餐具':'Stainless Steel Cutlery'],['stainless-steel-kitchen-utensils/',cn?'不锈钢厨具':'Stainless Steel Kitchen Utensils']];
+const active=(part)=>part===''?path===base+'/':part==='products/'?(path.startsWith(base+'/products/')||cats.some(([slug])=>path===base+'/'+slug)):path.startsWith(base+'/'+part);
+---
+<header class="sticky top-0 z-50 w-full">
+ <div class="brand-rule"></div>
+ <div class="backdrop-blur-xl bg-cream/75 border-b border-line shadow-[0_10px_30px_-26px_rgba(11,30,51,0.35)]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 ymx-header-row">
+   <a href={`${base}/`} class="ymx-brand" aria-label={`Yumingxing 裕明兴 - ${ui.home}`}><img src={identity.logo} alt="Yumingxing 裕明兴" width="150" height="57" /></a>
+   <nav class="ymx-main-nav" aria-label={cn?'主导航':'Main navigation'}>
+    {nav.map(([part,label])=>part==='products/'?<div class="ymx-product-nav" data-open="false"><div class="ymx-drop-trigger"><a href={`${base}/${part}`} class="ymx-nav-link" aria-current={active(part)?'page':undefined}>{label}</a><button type="button" class="ymx-drop-toggle" aria-label={cn?'展开产品分类':'Show product categories'} aria-expanded="false" aria-controls="ymx-product-dropdown"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="m2 4 4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" /></svg></button></div><div id="ymx-product-dropdown" class="ymx-dropdown">{cats.map(([slug,name])=><a href={`${base}/${slug}`}>{name}</a>)}</div></div>:<a class="ymx-nav-link" href={`${base}/${part}`} aria-current={active(part)?'page':undefined}>{label}</a>)}
+   </nav>
+   <div class="ymx-header-actions"><a class="ymx-language" href={switchUrl} lang={cn?'en':'zh-CN'} aria-label={cn?'Switch to English':'切换中文'}>{cn?'EN':'中文'}</a><a class="btn btn-primary ymx-header-quote" href={`${base}/contact/`}>{ui.quote}</a><button class="ymx-menu-toggle" id="nav-toggle" type="button" aria-controls="mobile-nav" aria-expanded="false" aria-label={ui.menu}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" /></svg></button></div>
+  </div>
+ </div>
+ <nav class="ymx-mobile-menu hidden" id="mobile-nav" aria-label={cn?'手机导航':'Mobile navigation'}>{nav.map(([part,label])=>part==='products/'?<div class="ymx-mobile-product"><a href={`${base}/${part}`}>{label}</a><div class="ymx-mobile-categories">{cats.map(([slug,name])=><a href={`${base}/${slug}`}>{name}</a>)}</div></div>:<a href={`${base}/${part}`}>{label}</a>)}</nav>
+</header>
+<script>
+ import '../scripts/navigation.js';
+</script>

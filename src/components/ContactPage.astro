@@ -1,0 +1,154 @@
+---
+import ResponsiveImage from './ResponsiveImage.astro';
+import { getSite, prefix } from '../lib/locale';
+import contactPage from '../data/contact-page.json';
+import '../styles/contact-page.css';
+
+interface Props { locale?: string; }
+const { locale = 'en' } = Astro.props;
+const language = locale === 'en' ? 'en' : 'zh';
+const site = getSite(locale);
+const c = site.contact;
+const copy = contactPage.locales[language];
+const base = prefix(locale);
+const waDigits = c.whatsappDigits.replace(/\D/g, '');
+const waLink = `https://wa.me/${waDigits}`;
+const mapEmbed = `https://maps.google.com/maps?q=${encodeURIComponent(contactPage.map.query)}&output=embed`;
+const methods = [
+  { label: copy.methods.whatsapp.label, value: c.whatsappDisplay, href: waLink, note: copy.methods.whatsapp.note, whatsapp: true },
+  { label: copy.methods.email.label, value: c.email, href: `mailto:${c.email}`, note: copy.methods.email.note },
+  { label: copy.methods.phone.label, value: c.phoneDisplay, href: `tel:${c.phoneDisplay.replace(/[^\d+]/g, '')}`, note: copy.methods.phone.note },
+  { label: copy.methods.wechat.label, value: c.wechat, note: copy.methods.wechat.note },
+  { label: copy.methods.address.label, value: c.addressLine, note: site.companyName },
+  { label: copy.methods.hours.label, value: c.businessHours, note: copy.methods.hours.note },
+];
+const fieldGroups = [['name', 'company'], ['product', 'qty']] as const;
+const fieldSettings = {
+  name: { required: true, autocomplete: 'name', maxlength: 100 },
+  company: { required: false, autocomplete: 'organization', maxlength: 200 },
+  product: { required: false, autocomplete: 'off', maxlength: 250 },
+  qty: { required: false, autocomplete: 'off', maxlength: 100 },
+};
+---
+<div class="contact-page">
+  <section class="brand-hero text-white relative overflow-hidden border-b border-line">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-14 md:py-18 grid lg:grid-cols-[minmax(0,1.1fr)_minmax(360px,0.9fr)] gap-10 lg:gap-14 items-center relative z-10">
+      <div>
+        <nav aria-label={copy.breadcrumbLabel} class="reveal text-sm text-white/60 mb-5">
+          <a href={`${base}/`} class="hover:text-white transition-colors">{copy.home}</a>
+          <span class="mx-1" aria-hidden="true">/</span>
+          <span class="text-white/90" aria-current="page">{copy.breadcrumb}</span>
+        </nav>
+        <p class="reveal eyebrow eyebrow-amber mb-4">{copy.hero.eyebrow}</p>
+        <h1 class="reveal reveal-d1 steel-text font-display font-extrabold text-4xl md:text-5xl leading-tight">{copy.hero.title}</h1>
+        <p class="reveal reveal-d2 text-white/75 mt-5 max-w-2xl leading-relaxed">{copy.hero.description}</p>
+      </div>
+      <div class="reveal reveal-d2 relative rounded-2xl overflow-hidden border border-white/15 ring-1 ring-white/10 bg-white/[0.04] shadow-[0_24px_70px_-36px_rgba(0,0,0,0.85)] aspect-[16/10]">
+        <ResponsiveImage src={contactPage.heroImage.src} width={contactPage.heroImage.width} height={contactPage.heroImage.height} alt={copy.hero.imageAlt} loading="eager" fetchpriority="high" class="w-full h-full object-cover" />
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 -mt-12 relative z-10" aria-label={copy.breadcrumb}>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      {methods.map((method, index) => (
+        <div class={`reveal reveal-d${index + 1} card-hover bg-white rounded-2xl border border-line p-6 shadow-[var(--shadow-soft)]`}>
+          <p class="eyebrow">{method.label}</p>
+          {method.href ? (
+            <a href={method.href} target={method.whatsapp ? '_blank' : undefined} rel={method.whatsapp ? 'noopener noreferrer' : undefined} data-wa={method.whatsapp || undefined} data-wa-product={method.whatsapp ? 'contact_method' : undefined} class="block font-display font-bold text-ink text-lg mt-2 break-words hover:text-ocean transition-colors">{method.value}</a>
+          ) : <p class="font-display font-bold text-ink text-lg mt-2 break-words">{method.value}</p>}
+          <p class="text-ink-muted text-sm mt-1">{method.note}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-16 grid lg:grid-cols-2 gap-10">
+    <div class="reveal" id="rfq">
+      <p class="eyebrow mb-2">{copy.form.eyebrow}</p>
+      <h2 class="font-display font-extrabold text-2xl md:text-3xl text-ink">{copy.form.title}</h2>
+      <p class="text-ink-muted mt-2" id="inquiry-instructions">{copy.form.description}</p>
+
+      <form id="inquiry-form" class="mt-7 space-y-4" data-contact-enquiry data-whatsapp={waDigits} data-message-heading={copy.form.messageHeading} data-message-labels={JSON.stringify(copy.form.messageLabels)} data-name-required={copy.form.nameRequired} aria-describedby="inquiry-instructions inquiry-privacy">
+        {fieldGroups.map((group) => (
+          <div class="grid sm:grid-cols-2 gap-4">
+            {group.map((name) => (
+              <div>
+                <label for={`inquiry-${name}`} class="block text-sm font-semibold text-ink-soft mb-1.5">{copy.form.fields[name].label}</label>
+                <input id={`inquiry-${name}`} name={name} type="text" required={fieldSettings[name].required} autocomplete={fieldSettings[name].autocomplete} maxlength={fieldSettings[name].maxlength} class="w-full rounded-xl border border-line bg-white px-4 py-3 focus:outline-none focus:border-steel" placeholder={copy.form.fields[name].placeholder} />
+              </div>
+            ))}
+          </div>
+        ))}
+        <div>
+          <label for="inquiry-message" class="block text-sm font-semibold text-ink-soft mb-1.5">{copy.form.fields.message.label}</label>
+          <textarea id="inquiry-message" name="message" rows="4" maxlength="4000" class="w-full rounded-xl border border-line bg-white px-4 py-3 focus:outline-none focus:border-steel" placeholder={copy.form.fields.message.placeholder}></textarea>
+        </div>
+        <button type="submit" disabled data-enquiry-submit class="btn btn-primary w-full py-4 text-base">{copy.form.button}</button>
+        <p class="text-xs text-ink-muted text-center" id="inquiry-privacy">{copy.form.privacy}</p>
+        <div data-enquiry-ready hidden role="status" aria-live="polite" class="contact-enquiry-ready text-sm text-ink-soft">
+          <p>{copy.form.ready}</p>
+          <a data-enquiry-continue href={waLink} target="_blank" rel="noopener noreferrer" data-wa data-wa-product="contact_form" class="text-ocean underline">{copy.form.continue}</a>
+        </div>
+        <noscript><p class="text-sm text-ink-muted">{copy.form.noScript} <a href={waLink} target="_blank" rel="noopener noreferrer" class="text-ocean underline">WhatsApp</a></p></noscript>
+      </form>
+    </div>
+
+    <div class="reveal reveal-d1 flex flex-col gap-6">
+      <div>
+        <div class="rounded-2xl overflow-hidden border border-line h-72 lg:h-80">
+          <iframe src={mapEmbed} title={copy.map.title} width="100%" height="100%" style="border:0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <p class="text-xs text-ink-muted mt-2">{copy.map.note}</p>
+      </div>
+      <div class="brand-hero text-white rounded-2xl p-7 ring-1 ring-white/10">
+        <p class="eyebrow eyebrow-amber mb-3">{copy.quick.eyebrow}</p>
+        <h3 class="font-display font-bold text-xl">{copy.quick.title}</h3>
+        <p class="text-white/75 text-sm mt-2 leading-relaxed">{copy.quick.description}</p>
+        <a href={waLink} target="_blank" rel="noopener noreferrer" data-wa data-wa-product="contact_quick" class="btn btn-primary w-full mt-5 py-3.5">{copy.quick.button}</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+  function setupContactEnquiry() {
+    const form = document.querySelector<HTMLFormElement>('[data-contact-enquiry]');
+    if (!form || form.dataset.enquiryBound) return;
+    const nameField = form.elements.namedItem('name');
+    const productField = form.elements.namedItem('product');
+    const submit = form.querySelector<HTMLButtonElement>('[data-enquiry-submit]');
+    const ready = form.querySelector<HTMLElement>('[data-enquiry-ready]');
+    const continueLink = form.querySelector<HTMLAnchorElement>('[data-enquiry-continue]');
+    if (!(nameField instanceof HTMLInputElement) || !submit || !ready || !continueLink) return;
+    const messageLabels = JSON.parse(form.dataset.messageLabels || '{}') as Record<string, string>;
+    const waDigits = (form.dataset.whatsapp || '').replace(/\D/g, '');
+    if (!waDigits) return;
+    form.dataset.enquiryBound = 'true';
+    submit.disabled = false;
+
+    const product = new URLSearchParams(window.location.search).get('product');
+    if (product && productField instanceof HTMLInputElement) productField.value = product.slice(0, 250);
+    nameField.addEventListener('input', () => nameField.setCustomValidity(''));
+    form.addEventListener('input', () => { ready.hidden = true; continueLink.removeAttribute('href'); });
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      nameField.setCustomValidity(nameField.value.trim() ? '' : (form.dataset.nameRequired || 'Please enter your name.'));
+      if (!form.reportValidity()) return;
+      const values = new FormData(form);
+      const lines = [form.dataset.messageHeading || '[Website Enquiry]'];
+      for (const key of ['name', 'company', 'product', 'qty', 'message']) {
+        const value = String(values.get(key) || '').trim();
+        if (value) lines.push((messageLabels[key] || `${key}: `) + value);
+      }
+      const url = `https://wa.me/${waDigits}?text=${encodeURIComponent(lines.join('\n'))}`;
+      continueLink.href = url;
+      ready.hidden = false;
+      // Opens a draft only. WhatsApp still requires the visitor to press Send.
+      window.open(url, '_blank', 'noopener,noreferrer');
+    });
+  }
+  setupContactEnquiry();
+  document.addEventListener('astro:page-load', setupContactEnquiry);
+</script>

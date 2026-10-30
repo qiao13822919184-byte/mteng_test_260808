@@ -1,0 +1,8 @@
+---
+import BlogView from '../../../views/blog/[slug].astro';
+import {getCollection} from 'astro:content';
+import {isPublished,entrySlug} from '../../../lib/publishing';
+export async function getStaticPaths(){return(await getCollection('blog',isPublished)).map(post=>({params:{slug:entrySlug(post)},props:{post}}));}
+const {post}=Astro.props;
+---
+<BlogView post={post} />

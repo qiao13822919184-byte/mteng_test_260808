@@ -1,5 +1,6 @@
 ---
 import ResponsiveImage from "./ResponsiveImage.astro";
+import {prefix} from '../lib/locale';
 interface Props {
   breadcrumb: string;
   eyebrow: string;
@@ -17,7 +18,7 @@ const { breadcrumb, eyebrow, title, description, image, imageAlt, locale = 'zh-C
   <div class="max-w-7xl mx-auto px-4 sm:px-6 py-14 md:py-18 grid lg:grid-cols-[minmax(0,1.1fr)_minmax(360px,0.9fr)] gap-10 lg:gap-14 items-center relative z-10">
     <div>
       <nav class="reveal text-sm text-white/60 mb-5">
-        <a href={locale==='en'?'/en/':'/'} class="hover:text-white transition-colors">{locale==='en'?'Home':'首页'}</a>
+        <a href={`${prefix(locale)}/`} class="hover:text-white transition-colors">{locale==='en'?'Home':'首页'}</a>
         <span class="mx-1">/</span>
         <span class="text-white/90">{breadcrumb}</span>
       </nav>

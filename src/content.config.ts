@@ -5,6 +5,12 @@ import { glob } from 'astro/loaders';
 // 后台 (/admin) 以「文件夹集合」方式管理，可单独新增/删除/上传图片
 
 const optionalDate=z.preprocess(v=>v===''||v===null?undefined:v,z.coerce.date().optional());
+// Keep legacy Chinese entries valid. Explicit slugs are optional: existing file
+// IDs continue to be the public path when no slug has been supplied.
+const optionalSlug=z.preprocess(v=>v===''||v===null?undefined:v,z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/).optional());
+const chineseLocale=z.preprocess(v=>v==='zh'?'zh-CN':v,z.literal('zh-CN').default('zh-CN'));
+const editorialFields={seoTitle:z.string().optional(),metaDescription:z.string().optional(),h1:z.string().optional(),lastReviewed:z.string().optional()};
+const sourceSchema=z.object({label:z.string(),url:z.string().url()});
 const publishing = {
  draft:z.boolean().default(false), status:z.enum(['draft','approved','published']).default('published'), publishAt:optionalDate, translationKey:z.string().optional(), dateModified:optionalDate,
 };
@@ -17,6 +23,9 @@ const products = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/products' }),
   schema: z.object({
     ...publishing,
+    locale: chineseLocale,
+    slug: optionalSlug,
+    ...editorialFields,
     title: z.string(),
     category: z.string(), // 对应 src/data/categories.json 的 slug
     summary: z.string(),
@@ -37,12 +46,20 @@ const blog = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/blog' }),
   schema: z.object({
     ...publishing,
+    locale: chineseLocale,
+    slug: optionalSlug,
+    ...editorialFields,
     title: z.string(),
     description: z.string().optional(),
     date: z.coerce.date(),
     author: z.string().default('Yumingxing'),
+    reviewer: z.string().optional(),
     cover: z.string().optional(),
+    coverAlt: z.string().optional(),
     tags: z.array(z.string()).default([]),
+    topic: z.string().optional(),
+    relatedProducts: z.array(z.string()).default([]),
+    sources: z.array(sourceSchema).default([]),
   }),
 });
 

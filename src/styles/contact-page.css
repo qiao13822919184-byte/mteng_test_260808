@@ -1,0 +1,7 @@
+.contact-page #rfq{scroll-margin-top:7rem}
+.contact-page form>div,.contact-page form input,.contact-page form textarea{min-width:0}
+.contact-page .contact-enquiry-ready{padding:.875rem 1rem;border:1px solid var(--color-line);border-radius:.75rem;background:var(--color-sand)}
+.contact-page .contact-enquiry-ready[hidden]{display:none}
+.contact-page .contact-enquiry-ready a{display:inline-block;margin-top:.25rem}
+.contact-page button:disabled{cursor:not-allowed;opacity:.65}
+.contact-page :is(a,button,input,textarea):focus-visible{outline:2px solid var(--color-steel);outline-offset:3px}

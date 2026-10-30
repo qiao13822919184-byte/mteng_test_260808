@@ -7,6 +7,1138 @@ public_folder: /uploads
 local_backend: true
 locale: zh_Hans
 collections:
+  - name: sharedContent
+    label: 中英共享资料与新版页面
+    description: 企业事实统一维护；中英文文案分别核对，不自动翻译。修改后需通过构建检查才会更新线上页面。
+    delete: false
+    editor:
+      preview: false
+    preview_path: /
+    files:
+      - name: identity
+        label: 共享企业资料（中英唯一事实来源）
+        file: src/data/identity.json
+        preview_path: /
+        fields:
+          - label: 统一英文品牌
+            name: brandEn
+            widget: string
+          - label: 统一中文品牌
+            name: brandZh
+            widget: string
+          - label: 营业执照中文登记名称
+            name: legalNameZh
+            widget: string
+            hint: 以当前营业执照登记名称为准，中英文页面共用。
+          - label: 统一英文企业名称
+            name: companyNameEn
+            widget: string
+            hint: 统一对外英文名称；不将英文译名标注为政府登记英文名。
+          - label: 统一社会信用代码
+            name: creditCode
+            widget: string
+            pattern:
+              - ^[0-9A-Z]{18}$
+              - 请填写营业执照上的18位统一社会信用代码。
+          - label: 品牌／工厂业务起始年
+            name: businessStartYear
+            widget: number
+            value_type: int
+            min: 1900
+            max: 2100
+            hint: 当前2003仅为品牌／工厂开始经营的年份，不是有限公司营业执照的登记成立日期。
+          - label: 统一品牌标志
+            name: logo
+            widget: image
+          - label: 中英文共享联系方式
+            name: contact
+            widget: object
+            collapsed: true
+            fields:
+              - label: WhatsApp 号码（国家码及纯数字）
+                name: whatsappDigits
+                widget: string
+                pattern:
+                  - ^[0-9]{8,15}$
+                  - 只填国家码和号码，不含加号、空格。
+              - label: WhatsApp 显示号码
+                name: whatsappDisplay
+                widget: string
+              - label: 电话号码
+                name: phoneDisplay
+                widget: string
+              - label: 邮箱
+                name: email
+                widget: string
+                pattern:
+                  - ^[^\s@]+@[^\s@]+\.[^\s@]+$
+                  - 请填写有效邮箱。
+              - label: 微信
+                name: wechat
+                widget: string
+                required: false
+          - label: 地址
+            name: address
+            widget: object
+            collapsed: true
+            fields:
+              - label: 中文
+                name: zh
+                widget: string
+              - label: 英文
+                name: en
+                widget: string
+            hint: 在同一入口同时维护中文和英文表述；两个语言页面共享这些事实。
+          - label: 营业时间
+            name: businessHours
+            widget: object
+            collapsed: true
+            fields:
+              - label: 中文
+                name: zh
+                widget: string
+              - label: 英文
+                name: en
+                widget: string
+            hint: 在同一入口同时维护中文和英文表述；两个语言页面共享这些事实。
+      - name: homeSections
+        label: 首页新增板块与精选顺序
+        file: src/data/home-sections.json
+        preview_path: /
+        fields:
+          - label: 配置版本
+            name: schemaVersion
+            widget: hidden
+            default: 1
+          - label: 企业介绍
+            name: intro
+            widget: object
+            collapsed: true
+            fields:
+              - label: 图片
+                name: image
+                widget: image
+              - label: 大尺寸图片
+                name: imageLarge
+                widget: image
+                hint: 与小图使用同一张照片的大尺寸版本，保持相同比例。
+              - label: 图片原始宽度（像素）
+                name: imageWidth
+                widget: number
+                value_type: int
+                min: 1
+              - label: 图片原始高度（像素）
+                name: imageHeight
+                widget: number
+                value_type: int
+                min: 1
+              - label: 英文
+                name: en
+                widget: object
+                collapsed: true
+                fields:
+                  - label: 小标题
+                    name: eyebrow
+                    widget: string
+                    hint: 保留现有大括号内容即可，网页会自动填入「共享企业资料」中的事实；改年份或企业名称请到共享资料入口，不需要编写代码。
+                  - label: 标题
+                    name: title
+                    widget: string
+                  - label: 简介
+                    name: lead
+                    widget: text
+                    hint: 保留现有大括号内容即可，网页会自动填入「共享企业资料」中的事实；改年份或企业名称请到共享资料入口，不需要编写代码。
+                  - label: 正文
+                    name: body
+                    widget: text
+                    hint: 保留现有大括号内容即可，网页会自动填入「共享企业资料」中的事实；改年份或企业名称请到共享资料入口，不需要编写代码。
+                  - label: 联系按钮文字
+                    name: contactLabel
+                    widget: string
+                  - label: 关于按钮文字
+                    name: aboutLabel
+                    widget: string
+                  - label: 图片说明
+                    name: imageAlt
+                    widget: string
+              - label: 中文
+                name: zh
+                widget: object
+                collapsed: true
+                fields:
+                  - label: 小标题
+                    name: eyebrow
+                    widget: string
+                    hint: 保留现有大括号内容即可，网页会自动填入「共享企业资料」中的事实；改年份或企业名称请到共享资料入口，不需要编写代码。
+                  - label: 标题
+                    name: title
+                    widget: string
+                  - label: 简介
+                    name: lead
+                    widget: text
+                    hint: 保留现有大括号内容即可，网页会自动填入「共享企业资料」中的事实；改年份或企业名称请到共享资料入口，不需要编写代码。
+                  - label: 正文
+                    name: body
+                    widget: text
+                    hint: 保留现有大括号内容即可，网页会自动填入「共享企业资料」中的事实；改年份或企业名称请到共享资料入口，不需要编写代码。
+                  - label: 联系按钮文字
+                    name: contactLabel
+                    widget: string
+                  - label: 关于按钮文字
+                    name: aboutLabel
+                    widget: string
+                  - label: 图片说明
+                    name: imageAlt
+                    widget: string
+          - label: 首页两大产品类目
+            name: collections
+            widget: list
+            collapsed: true
+            fields:
+              - label: 关联分类
+                name: categorySlug
+                widget: select
+                options:
+                  - label: 不锈钢餐具
+                    value: flatware-sets
+                  - label: 不锈钢厨具
+                    value: kitchenware-sets
+              - label: 分类地址
+                name: path
+                widget: hidden
+              - label: 英文
+                name: en
+                widget: object
+                collapsed: true
+                fields:
+                  - label: 标题
+                    name: title
+                    widget: string
+                  - label: 简要说明
+                    name: summary
+                    widget: text
+                  - label: 链接文字
+                    name: linkLabel
+                    widget: string
+              - label: 中文
+                name: zh
+                widget: object
+                collapsed: true
+                fields:
+                  - label: 标题
+                    name: title
+                    widget: string
+                  - label: 简要说明
+                    name: summary
+                    widget: text
+                  - label: 链接文字
+                    name: linkLabel
+                    widget: string
+            min: 2
+            max: 2
+            summary: '{{fields.zh.title}} / {{fields.en.title}}'
+            hint: 两大类目共享同一结构；图片在中英文产品分类中维护，文字在这里同时核对。
+          - label: 首页精选产品顺序（8款）
+            name: featuredProductKeys
+            widget: list
+            collapsed: true
+            field:
+              label: 选择产品
+              name: product
+              widget: relation
+              collection: productsEn
+              search_fields:
+                - title
+                - model
+                - translationKey
+              display_fields:
+                - '{{title}} — {{translationKey}}'
+              value_field: translationKey
+              filters:
+                - field: status
+                  values:
+                    - published
+                - field: draft
+                  values:
+                    - false
+            min: 8
+            max: 8
+            hint: 顺序同时用于中英文首页。请选择已发布且有中文对应版本的产品，保留4款厨具与4款餐具；每种语言的参数仍需人工核对。
+      - name: aboutPage
+        label: 关于我们：中英文内容与工厂照片
+        file: src/data/about-page.json
+        preview_path: /about/
+        fields:
+          - label: 配置版本
+            name: schemaVersion
+            widget: hidden
+            default: 1
+          - label: 页面图片
+            name: images
+            widget: object
+            collapsed: true
+            fields:
+              - label: 工厂大门
+                name: factory
+                widget: object
+                collapsed: true
+                fields:
+                  - label: 图片文件
+                    name: src
+                    widget: image
+                  - label: 大尺寸图片文件
+                    name: largeSrc
+                    widget: image
+                    hint: 与小图使用同一张照片的大尺寸版本，保持相同比例。
+                  - label: 原始宽度（像素）
+                    name: width
+                    widget: number
+                    value_type: int
+                    min: 1
+                  - label: 原始高度（像素）
+                    name: height
+                    widget: number
+                    value_type: int
+                    min: 1
+          - label: 工厂能力
+            name: capabilities
+            widget: list
+            collapsed: true
+            fields:
+              - label: 固定标识
+                name: id
+                widget: hidden
+              - label: 图片
+                name: image
+                widget: object
+                collapsed: true
+                fields:
+                  - label: 图片文件
+                    name: src
+                    widget: image
+                  - label: 大尺寸图片文件
+                    name: largeSrc
+                    widget: image
+                    hint: 与小图使用同一张照片的大尺寸版本，保持相同比例。
+                  - label: 原始宽度（像素）
+                    name: width
+                    widget: number
+                    value_type: int
+                    min: 1
+                  - label: 原始高度（像素）
+                    name: height
+                    widget: number
+                    value_type: int
+                    min: 1
+              - label: 英文
+                name: en
+                widget: object
+                collapsed: true
+                fields:
+                  - label: 标题
+                    name: title
+                    widget: string
+                  - label: 说明文字
+                    name: description
+                    widget: text
+                  - label: 图片说明
+                    name: alt
+                    widget: string
+              - label: 中文
+                name: zh
+                widget: object
+                collapsed: true
+                fields:
+                  - label: 标题
+                    name: title
+                    widget: string
+                  - label: 说明文字
+                    name: description
+                    widget: text
+                  - label: 图片说明
+                    name: alt
+                    widget: string
+            min: 6
+            max: 6
+            summary: '{{fields.zh.title}} / {{fields.en.title}}'
+          - label: 中英文文案
+            name: locales
+            widget: object
+            collapsed: true
+            fields:
+              - label: 英文
+                name: en
+                widget: object
+                collapsed: true
+                fields:
+                  - label: 首页链接文字
+                    name: home
+                    widget: string
+                  - label: 面包屑名称
+                    name: breadcrumb
+                    widget: string
+                  - label: 面包屑辅助说明
+                    name: breadcrumbLabel
+                    widget: string
+                  - label: 页面首屏
+                    name: hero
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: 小标题
+                        name: eyebrow
+                        widget: string
+                      - label: 标题
+                        name: title
+                        widget: string
+                      - label: 说明文字
+                        name: description
+                        widget: text
+                  - label: 信息卡
+                    name: stats
+                    widget: list
+                    collapsed: true
+                    fields:
+                      - label: 展示内容
+                        name: value
+                        widget: string
+                      - label: 名称文字
+                        name: label
+                        widget: string
+                    min: 4
+                    max: 4
+                    hint: 只使用已确认信息；业务历史年份保留现有自动填入标记，不作为法定成立年份。
+                  - label: 企业故事
+                    name: story
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: 小标题
+                        name: eyebrow
+                        widget: string
+                      - label: 标题
+                        name: title
+                        widget: string
+                        hint: 保留现有大括号内容即可，网页会自动填入「共享企业资料」中的事实；改年份或企业名称请到共享资料入口，不需要编写代码。
+                      - label: 段落
+                        name: paragraphs
+                        widget: list
+                        collapsed: true
+                        field:
+                          label: 内容
+                          name: item
+                          widget: text
+                      - label: 图片说明
+                        name: imageAlt
+                        widget: string
+                  - label: 企业资料栏目名称
+                    name: identity
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: 标题
+                        name: title
+                        widget: string
+                      - label: 品牌栏目名称
+                        name: brand
+                        widget: string
+                      - label: 企业名称栏目名称
+                        name: companyName
+                        widget: string
+                      - label: 另一语言企业名称栏目名称
+                        name: alternateCompanyName
+                        widget: string
+                      - label: 统一社会信用代码
+                        name: creditCode
+                        widget: string
+                    hint: 这里只编辑栏目文字。企业名称、代码等实际内容来自共享企业资料。
+                  - label: 工厂能力
+                    name: capabilities
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: 小标题
+                        name: eyebrow
+                        widget: string
+                      - label: 标题
+                        name: title
+                        widget: string
+                      - label: 说明文字
+                        name: description
+                        widget: text
+                  - label: 合作咨询区
+                    name: cta
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: 小标题
+                        name: eyebrow
+                        widget: string
+                      - label: 标题
+                        name: title
+                        widget: string
+                      - label: 说明文字
+                        name: description
+                        widget: text
+                      - label: WhatsApp 按钮文字
+                        name: whatsappLabel
+                        widget: string
+                      - label: 联系按钮文字
+                        name: contactLabel
+                        widget: string
+                      - label: WhatsApp 预填消息
+                        name: whatsappMessage
+                        widget: text
+              - label: 中文
+                name: zh
+                widget: object
+                collapsed: true
+                fields:
+                  - label: 首页链接文字
+                    name: home
+                    widget: string
+                  - label: 面包屑名称
+                    name: breadcrumb
+                    widget: string
+                  - label: 面包屑辅助说明
+                    name: breadcrumbLabel
+                    widget: string
+                  - label: 页面首屏
+                    name: hero
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: 小标题
+                        name: eyebrow
+                        widget: string
+                      - label: 标题
+                        name: title
+                        widget: string
+                      - label: 说明文字
+                        name: description
+                        widget: text
+                  - label: 信息卡
+                    name: stats
+                    widget: list
+                    collapsed: true
+                    fields:
+                      - label: 展示内容
+                        name: value
+                        widget: string
+                      - label: 名称文字
+                        name: label
+                        widget: string
+                    min: 4
+                    max: 4
+                    hint: 只使用已确认信息；业务历史年份保留现有自动填入标记，不作为法定成立年份。
+                  - label: 企业故事
+                    name: story
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: 小标题
+                        name: eyebrow
+                        widget: string
+                      - label: 标题
+                        name: title
+                        widget: string
+                        hint: 保留现有大括号内容即可，网页会自动填入「共享企业资料」中的事实；改年份或企业名称请到共享资料入口，不需要编写代码。
+                      - label: 段落
+                        name: paragraphs
+                        widget: list
+                        collapsed: true
+                        field:
+                          label: 内容
+                          name: item
+                          widget: text
+                      - label: 图片说明
+                        name: imageAlt
+                        widget: string
+                  - label: 企业资料栏目名称
+                    name: identity
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: 标题
+                        name: title
+                        widget: string
+                      - label: 品牌栏目名称
+                        name: brand
+                        widget: string
+                      - label: 企业名称栏目名称
+                        name: companyName
+                        widget: string
+                      - label: 另一语言企业名称栏目名称
+                        name: alternateCompanyName
+                        widget: string
+                      - label: 统一社会信用代码
+                        name: creditCode
+                        widget: string
+                    hint: 这里只编辑栏目文字。企业名称、代码等实际内容来自共享企业资料。
+                  - label: 工厂能力
+                    name: capabilities
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: 小标题
+                        name: eyebrow
+                        widget: string
+                      - label: 标题
+                        name: title
+                        widget: string
+                      - label: 说明文字
+                        name: description
+                        widget: text
+                  - label: 合作咨询区
+                    name: cta
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: 小标题
+                        name: eyebrow
+                        widget: string
+                      - label: 标题
+                        name: title
+                        widget: string
+                      - label: 说明文字
+                        name: description
+                        widget: text
+                      - label: WhatsApp 按钮文字
+                        name: whatsappLabel
+                        widget: string
+                      - label: 联系按钮文字
+                        name: contactLabel
+                        widget: string
+                      - label: WhatsApp 预填消息
+                        name: whatsappMessage
+                        widget: text
+            hint: 中文和英文分别编辑并核对；结构共享，不会自动翻译内容。
+      - name: contactPage
+        label: 联系我们：中英文栏目与询价说明
+        file: src/data/contact-page.json
+        preview_path: /contact/
+        fields:
+          - label: 配置版本
+            name: schemaVersion
+            widget: hidden
+            default: 1
+          - label: 首屏图片
+            name: heroImage
+            widget: object
+            collapsed: true
+            fields:
+              - label: 图片文件
+                name: src
+                widget: image
+              - label: 原始宽度（像素）
+                name: width
+                widget: number
+                value_type: int
+                min: 1
+              - label: 原始高度（像素）
+                name: height
+                widget: number
+                value_type: int
+                min: 1
+          - label: 地图
+            name: map
+            widget: object
+            collapsed: true
+            fields:
+              - label: 地图搜索地点
+                name: query
+                widget: string
+                hint: 地图只展示已确认的地区；未核实具体门牌前不要标注为精确厂址。
+          - label: 中英文文案
+            name: locales
+            widget: object
+            collapsed: true
+            fields:
+              - label: 英文
+                name: en
+                widget: object
+                collapsed: true
+                fields:
+                  - label: 首页链接文字
+                    name: home
+                    widget: string
+                  - label: 面包屑名称
+                    name: breadcrumb
+                    widget: string
+                  - label: 面包屑辅助说明
+                    name: breadcrumbLabel
+                    widget: string
+                  - label: 页面首屏
+                    name: hero
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: 小标题
+                        name: eyebrow
+                        widget: string
+                      - label: 标题
+                        name: title
+                        widget: string
+                      - label: 说明文字
+                        name: description
+                        widget: text
+                      - label: 图片说明
+                        name: imageAlt
+                        widget: string
+                  - label: 联系方式栏目说明
+                    name: methods
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: WhatsApp
+                        name: whatsapp
+                        widget: object
+                        collapsed: true
+                        fields:
+                          - label: 名称文字
+                            name: label
+                            widget: string
+                          - label: 补充说明
+                            name: note
+                            widget: text
+                      - label: 邮箱
+                        name: email
+                        widget: object
+                        collapsed: true
+                        fields:
+                          - label: 名称文字
+                            name: label
+                            widget: string
+                          - label: 补充说明
+                            name: note
+                            widget: text
+                      - label: 电话
+                        name: phone
+                        widget: object
+                        collapsed: true
+                        fields:
+                          - label: 名称文字
+                            name: label
+                            widget: string
+                          - label: 补充说明
+                            name: note
+                            widget: text
+                      - label: 微信
+                        name: wechat
+                        widget: object
+                        collapsed: true
+                        fields:
+                          - label: 名称文字
+                            name: label
+                            widget: string
+                          - label: 补充说明
+                            name: note
+                            widget: text
+                      - label: 地址
+                        name: address
+                        widget: object
+                        collapsed: true
+                        fields:
+                          - label: 名称文字
+                            name: label
+                            widget: string
+                      - label: 营业时间
+                        name: hours
+                        widget: object
+                        collapsed: true
+                        fields:
+                          - label: 名称文字
+                            name: label
+                            widget: string
+                          - label: 补充说明
+                            name: note
+                            widget: text
+                  - label: 询价表单
+                    name: form
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: 小标题
+                        name: eyebrow
+                        widget: string
+                      - label: 标题
+                        name: title
+                        widget: string
+                      - label: 说明文字
+                        name: description
+                        widget: text
+                      - label: 表单填写项
+                        name: fields
+                        widget: object
+                        collapsed: true
+                        fields:
+                          - label: 姓名
+                            name: name
+                            widget: object
+                            collapsed: true
+                            fields:
+                              - label: 名称文字
+                                name: label
+                                widget: string
+                              - label: 输入提示
+                                name: placeholder
+                                widget: string
+                          - label: 公司
+                            name: company
+                            widget: object
+                            collapsed: true
+                            fields:
+                              - label: 名称文字
+                                name: label
+                                widget: string
+                              - label: 输入提示
+                                name: placeholder
+                                widget: string
+                          - label: 关注产品
+                            name: product
+                            widget: object
+                            collapsed: true
+                            fields:
+                              - label: 名称文字
+                                name: label
+                                widget: string
+                              - label: 输入提示
+                                name: placeholder
+                                widget: string
+                          - label: 预计数量
+                            name: qty
+                            widget: object
+                            collapsed: true
+                            fields:
+                              - label: 名称文字
+                                name: label
+                                widget: string
+                              - label: 输入提示
+                                name: placeholder
+                                widget: string
+                          - label: 采购需求
+                            name: message
+                            widget: object
+                            collapsed: true
+                            fields:
+                              - label: 名称文字
+                                name: label
+                                widget: string
+                              - label: 输入提示
+                                name: placeholder
+                                widget: string
+                      - label: 按钮文字
+                        name: button
+                        widget: string
+                      - label: 提交前说明
+                        name: privacy
+                        widget: text
+                      - label: 浏览器未启用脚本时的说明
+                        name: noScript
+                        widget: text
+                      - label: 询价准备完成提示
+                        name: ready
+                        widget: string
+                      - label: 继续操作文字
+                        name: continue
+                        widget: string
+                      - label: 未填写姓名提示
+                        name: nameRequired
+                        widget: string
+                      - label: 预填消息标题
+                        name: messageHeading
+                        widget: string
+                      - label: 预填消息字段名称
+                        name: messageLabels
+                        widget: object
+                        collapsed: true
+                        fields:
+                          - label: 姓名
+                            name: name
+                            widget: string
+                          - label: 公司
+                            name: company
+                            widget: string
+                          - label: 关注产品
+                            name: product
+                            widget: string
+                          - label: 预计数量
+                            name: qty
+                            widget: string
+                          - label: 采购需求
+                            name: message
+                            widget: string
+                  - label: 地图
+                    name: map
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: 标题
+                        name: title
+                        widget: string
+                      - label: 补充说明
+                        name: note
+                        widget: text
+                  - label: 快捷联系区
+                    name: quick
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: 小标题
+                        name: eyebrow
+                        widget: string
+                      - label: 标题
+                        name: title
+                        widget: string
+                      - label: 说明文字
+                        name: description
+                        widget: text
+                      - label: 按钮文字
+                        name: button
+                        widget: string
+              - label: 中文
+                name: zh
+                widget: object
+                collapsed: true
+                fields:
+                  - label: 首页链接文字
+                    name: home
+                    widget: string
+                  - label: 面包屑名称
+                    name: breadcrumb
+                    widget: string
+                  - label: 面包屑辅助说明
+                    name: breadcrumbLabel
+                    widget: string
+                  - label: 页面首屏
+                    name: hero
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: 小标题
+                        name: eyebrow
+                        widget: string
+                      - label: 标题
+                        name: title
+                        widget: string
+                      - label: 说明文字
+                        name: description
+                        widget: text
+                      - label: 图片说明
+                        name: imageAlt
+                        widget: string
+                  - label: 联系方式栏目说明
+                    name: methods
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: WhatsApp
+                        name: whatsapp
+                        widget: object
+                        collapsed: true
+                        fields:
+                          - label: 名称文字
+                            name: label
+                            widget: string
+                          - label: 补充说明
+                            name: note
+                            widget: text
+                      - label: 邮箱
+                        name: email
+                        widget: object
+                        collapsed: true
+                        fields:
+                          - label: 名称文字
+                            name: label
+                            widget: string
+                          - label: 补充说明
+                            name: note
+                            widget: text
+                      - label: 电话
+                        name: phone
+                        widget: object
+                        collapsed: true
+                        fields:
+                          - label: 名称文字
+                            name: label
+                            widget: string
+                          - label: 补充说明
+                            name: note
+                            widget: text
+                      - label: 微信
+                        name: wechat
+                        widget: object
+                        collapsed: true
+                        fields:
+                          - label: 名称文字
+                            name: label
+                            widget: string
+                          - label: 补充说明
+                            name: note
+                            widget: text
+                      - label: 地址
+                        name: address
+                        widget: object
+                        collapsed: true
+                        fields:
+                          - label: 名称文字
+                            name: label
+                            widget: string
+                      - label: 营业时间
+                        name: hours
+                        widget: object
+                        collapsed: true
+                        fields:
+                          - label: 名称文字
+                            name: label
+                            widget: string
+                          - label: 补充说明
+                            name: note
+                            widget: text
+                  - label: 询价表单
+                    name: form
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: 小标题
+                        name: eyebrow
+                        widget: string
+                      - label: 标题
+                        name: title
+                        widget: string
+                      - label: 说明文字
+                        name: description
+                        widget: text
+                      - label: 表单填写项
+                        name: fields
+                        widget: object
+                        collapsed: true
+                        fields:
+                          - label: 姓名
+                            name: name
+                            widget: object
+                            collapsed: true
+                            fields:
+                              - label: 名称文字
+                                name: label
+                                widget: string
+                              - label: 输入提示
+                                name: placeholder
+                                widget: string
+                          - label: 公司
+                            name: company
+                            widget: object
+                            collapsed: true
+                            fields:
+                              - label: 名称文字
+                                name: label
+                                widget: string
+                              - label: 输入提示
+                                name: placeholder
+                                widget: string
+                          - label: 关注产品
+                            name: product
+                            widget: object
+                            collapsed: true
+                            fields:
+                              - label: 名称文字
+                                name: label
+                                widget: string
+                              - label: 输入提示
+                                name: placeholder
+                                widget: string
+                          - label: 预计数量
+                            name: qty
+                            widget: object
+                            collapsed: true
+                            fields:
+                              - label: 名称文字
+                                name: label
+                                widget: string
+                              - label: 输入提示
+                                name: placeholder
+                                widget: string
+                          - label: 采购需求
+                            name: message
+                            widget: object
+                            collapsed: true
+                            fields:
+                              - label: 名称文字
+                                name: label
+                                widget: string
+                              - label: 输入提示
+                                name: placeholder
+                                widget: string
+                      - label: 按钮文字
+                        name: button
+                        widget: string
+                      - label: 提交前说明
+                        name: privacy
+                        widget: text
+                      - label: 浏览器未启用脚本时的说明
+                        name: noScript
+                        widget: text
+                      - label: 询价准备完成提示
+                        name: ready
+                        widget: string
+                      - label: 继续操作文字
+                        name: continue
+                        widget: string
+                      - label: 未填写姓名提示
+                        name: nameRequired
+                        widget: string
+                      - label: 预填消息标题
+                        name: messageHeading
+                        widget: string
+                      - label: 预填消息字段名称
+                        name: messageLabels
+                        widget: object
+                        collapsed: true
+                        fields:
+                          - label: 姓名
+                            name: name
+                            widget: string
+                          - label: 公司
+                            name: company
+                            widget: string
+                          - label: 关注产品
+                            name: product
+                            widget: string
+                          - label: 预计数量
+                            name: qty
+                            widget: string
+                          - label: 采购需求
+                            name: message
+                            widget: string
+                  - label: 地图
+                    name: map
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: 标题
+                        name: title
+                        widget: string
+                      - label: 补充说明
+                        name: note
+                        widget: text
+                  - label: 快捷联系区
+                    name: quick
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: 小标题
+                        name: eyebrow
+                        widget: string
+                      - label: 标题
+                        name: title
+                        widget: string
+                      - label: 说明文字
+                        name: description
+                        widget: text
+                      - label: 按钮文字
+                        name: button
+                        widget: string
+            hint: 中文和英文分别编辑并核对；结构共享，不会自动翻译内容。
   - name: settings
     label: 网站设置
     delete: false
@@ -14,18 +1146,9 @@ collections:
       preview: false
     files:
       - name: site
-        label: 基本信息与联系方式
+        label: 中文文案、SEO与统计（企业资料见共享入口）
         file: src/data/site.json
         fields:
-          - label: 品牌英文名
-            name: brand
-            widget: string
-          - label: 公司全称
-            name: companyName
-            widget: string
-          - label: 公司简称
-            name: companyShort
-            widget: string
           - label: 标语
             name: tagline
             widget: string
@@ -38,42 +1161,6 @@ collections:
           - label: 网站网址
             name: siteUrl
             widget: string
-          - label: Logo 文字
-            name: logoText
-            widget: string
-          - label: 成立年份
-            name: foundedYear
-            widget: string
-          - label: 联系方式
-            name: contact
-            widget: object
-            fields:
-              - label: WhatsApp 号码（纯数字，含国家码）
-                name: whatsappDigits
-                widget: string
-                hint: 例如 8613822919184，不要加 + 或空格
-              - label: WhatsApp 显示文本
-                name: whatsappDisplay
-                widget: string
-              - label: 邮箱
-                name: email
-                widget: string
-              - label: 电话显示
-                name: phoneDisplay
-                widget: string
-              - label: 微信
-                name: wechat
-                widget: string
-                required: false
-              - label: 地址（简）
-                name: addressLine
-                widget: string
-              - label: 地址（全）
-                name: addressFull
-                widget: string
-              - label: 营业时间
-                name: businessHours
-                widget: string
           - label: 数据亮点（首页/关于页展示）
             name: highlights
             widget: list
@@ -105,6 +1192,7 @@ collections:
                 name: ogImage
                 widget: string
                 hint: 微信/Facebook 等分享时显示，必须填完整 https 网址，不能用 /uploads 相对路径
+        preview_path: /cn/
       - name: home
         label: 首页内容
         file: src/data/home.json
@@ -202,60 +1290,7 @@ collections:
               - label: 按钮文字
                 name: button
                 widget: string
-      - name: about
-        label: 关于我们
-        file: src/data/about.json
-        fields:
-          - label: 首屏
-            name: hero
-            widget: object
-            fields:
-              - label: 小标签
-                name: eyebrow
-                widget: string
-              - label: 标题
-                name: title
-                widget: string
-              - label: 副标题
-                name: subtitle
-                widget: text
-          - label: 公司故事
-            name: story
-            widget: object
-            fields:
-              - label: 标题
-                name: title
-                widget: string
-              - label: 段落
-                name: paragraphs
-                widget: list
-                field:
-                  label: 段落
-                  name: p
-                  widget: text
-              - label: 配图
-                name: image
-                widget: image
-          - label: 工厂能力
-            name: capabilities
-            widget: list
-            fields:
-              - label: 标题
-                name: title
-                widget: string
-              - label: 描述
-                name: desc
-                widget: text
-          - label: 数据统计
-            name: stats
-            widget: list
-            fields:
-              - label: 数值
-                name: value
-                widget: string
-              - label: 说明
-                name: label
-                widget: string
+        preview_path: /cn/
       - name: categories
         label: 产品分类
         file: src/data/categories.json
@@ -276,12 +1311,14 @@ collections:
                 name: nameEn
                 widget: string
                 required: false
-              - label: 简介（首页系列卡 + 列表展示）
+              - label: 分类简介（目录内容）
                 name: summary
                 widget: text
+                hint: 首页大图卡的标题和说明在「首页新增板块与精选顺序」统一维护；分类图片仍从这里读取。
               - label: 配图（首页「产品系列」展示）
                 name: image
                 widget: image
+        preview_path: /cn/products/
       - name: pages
         label: 页面首屏与 SEO
         file: src/data/pages.json
@@ -342,28 +1379,8 @@ collections:
               - label: 图片替代文本
                 name: heroImageAlt
                 widget: string
-          - label: 联系我们
-            name: contact
-            widget: object
-            fields:
-              - label: 面包屑名称
-                name: breadcrumb
-                widget: string
-              - label: 小标签
-                name: eyebrow
-                widget: string
-              - label: 主标题
-                name: title
-                widget: string
-              - label: 简介
-                name: description
-                widget: text
-              - label: 首屏图片
-                name: heroImage
-                widget: image
-              - label: 图片替代文本
-                name: heroImageAlt
-                widget: string
+        preview_path: /cn/
+    preview_path: /cn/
   - name: products
     label: 产品
     label_singular: 产品
@@ -422,11 +1439,12 @@ collections:
           - label: 数值
             name: value
             widget: string
-      - label: 设为精选（首页展示）
+      - label: 精选标记（目录元数据）
         name: featured
         widget: boolean
         default: false
         required: false
+        hint: 首页8款的实际顺序在共享入口的「首页新增板块与精选顺序」维护。
       - label: 排序（数字越小越靠前）
         name: order
         widget: number
@@ -454,18 +1472,46 @@ collections:
         name: publishAt
         widget: datetime
         required: false
-        hint: >-
-          Only published, non-draft entries at or before this time are built. A new build is required at the scheduled
-          time.
-      - label: Translation Key
+        hint: 只有状态为 published、Draft 关闭且已到发布时间的内容才会生成。定时到点仍需一次网站构建，不会仅靠保存自动定时上线。
+      - label: 中英文翻译关联标识
         name: translationKey
         widget: string
         required: false
-        hint: Use the Chinese entry ID only for a real translation.
+        hint: 通常与当前中文文件标识一致，英文翻译选择本条目后使用相同标识。旧内容未填写时仍沿用原文件ID；发布后请勿任意修改。
+        pattern:
+          - ^[a-z0-9]+(?:-[a-z0-9]+)*$
+          - 只使用小写英文字母、数字与短横线。
       - label: Date Modified
         name: dateModified
         widget: datetime
         required: false
+      - name: locale
+        label: 语言
+        widget: hidden
+        default: zh-CN
+        required: false
+      - label: 页面地址标识（已有内容可留空）
+        name: slug
+        widget: string
+        required: false
+        pattern:
+          - ^[a-z0-9]+(?:-[a-z0-9]+)*$
+          - 只使用小写英文字母、数字与短横线。
+        hint: 留空继续使用现有文件ID，不会迁移旧地址。为新条目填写后，中文与英文尽量使用同一稳定英文标识；上线后修改需另行安排旧地址跳转。
+      - label: 搜索结果标题（可选）
+        name: seoTitle
+        widget: string
+        required: false
+      - label: 搜索结果描述（可选）
+        name: metaDescription
+        widget: text
+        required: false
+      - label: 页面H1标题（可选）
+        name: h1
+        widget: string
+        required: false
+    preview_path: /cn/products/{{slug}}/
+    description: 中文和英文通过同一翻译关联标识配对。配对不自动翻译；发布前核对型号、数量、材质、MOQ与来源。已发布地址和关联标识不要随意改动。
   - name: blog
     label: 博客
     label_singular: 文章
@@ -527,40 +1573,99 @@ collections:
         name: publishAt
         widget: datetime
         required: false
-        hint: >-
-          Only published, non-draft entries at or before this time are built. A new build is required at the scheduled
-          time.
-      - label: Translation Key
+        hint: 只有状态为 published、Draft 关闭且已到发布时间的内容才会生成。定时到点仍需一次网站构建，不会仅靠保存自动定时上线。
+      - label: 中英文翻译关联标识
         name: translationKey
         widget: string
         required: false
-        hint: Use the Chinese entry ID only for a real translation.
+        hint: 通常与当前中文文件标识一致，英文翻译选择本条目后使用相同标识。旧内容未填写时仍沿用原文件ID；发布后请勿任意修改。
+        pattern:
+          - ^[a-z0-9]+(?:-[a-z0-9]+)*$
+          - 只使用小写英文字母、数字与短横线。
       - label: Date Modified
         name: dateModified
         widget: datetime
         required: false
+      - name: locale
+        label: 语言
+        widget: hidden
+        default: zh-CN
+        required: false
+      - label: 页面地址标识（已有内容可留空）
+        name: slug
+        widget: string
+        required: false
+        pattern:
+          - ^[a-z0-9]+(?:-[a-z0-9]+)*$
+          - 只使用小写英文字母、数字与短横线。
+        hint: 留空继续使用现有文件ID，不会迁移旧地址。为新条目填写后，中文与英文尽量使用同一稳定英文标识；上线后修改需另行安排旧地址跳转。
+      - label: 搜索结果标题（可选）
+        name: seoTitle
+        widget: string
+        required: false
+      - label: 搜索结果描述（可选）
+        name: metaDescription
+        widget: text
+        required: false
+      - label: 页面H1标题（可选）
+        name: h1
+        widget: string
+        required: false
+      - label: 封面图片说明
+        name: coverAlt
+        widget: string
+        required: false
+      - label: 内容审核人
+        name: reviewer
+        widget: string
+        required: false
+      - label: 最近审核日期（YYYY-MM-DD）
+        name: lastReviewed
+        widget: string
+        required: false
+      - label: 文章主题
+        name: topic
+        widget: string
+        required: false
+      - label: 相关产品
+        name: relatedProducts
+        widget: relation
+        required: false
+        collection: products
+        search_fields:
+          - title
+        display_fields:
+          - '{{title}} — {{slug}}'
+        value_field: '{{slug}}'
+        multiple: true
+        hint: 选择正文确实涉及的产品；中英文分别核对对应型号。
+      - label: 参考来源
+        name: sources
+        widget: list
+        required: false
+        fields:
+          - label: 来源名称
+            name: label
+            widget: string
+          - label: 来源网页
+            name: url
+            widget: string
+            pattern:
+              - ^https?://.+
+              - 请使用完整的http或https来源网址。
+        hint: 填写实际参考的权威资料，不添加不存在的认证或报告。
+    preview_path: /cn/blog/{{slug}}/
+    description: 中文和英文通过同一翻译关联标识配对。配对不自动翻译；发布前核对型号、数量、材质、MOQ与来源。已发布地址和关联标识不要随意改动。
   - name: englishSettings
     label: English — Site Settings
     delete: false
     editor:
       preview: false
     files:
-      - label: English — Site Settings
+      - label: English — Copy, SEO & Analytics (shared facts above)
         name: site
         file: src/data/en/site.json
         fields:
-          - label: Brand
-            name: brand
-            widget: string
-            required: false
-          - label: Company Name
-            name: companyName
-            widget: string
-            required: false
-          - label: Company Short
-            name: companyShort
-            widget: string
-            required: false
           - label: Tagline
             name: tagline
             widget: string
@@ -577,51 +1682,6 @@ collections:
             name: siteUrl
             widget: string
             required: false
-          - label: Logo Text
-            name: logoText
-            widget: string
-            required: false
-          - label: Founded Year
-            name: foundedYear
-            widget: string
-            required: false
-          - label: Contact
-            name: contact
-            widget: object
-            required: true
-            fields:
-              - label: Whatsapp Digits
-                name: whatsappDigits
-                widget: string
-                required: false
-              - label: Whatsapp Display
-                name: whatsappDisplay
-                widget: string
-                required: false
-              - label: Email
-                name: email
-                widget: string
-                required: false
-              - label: Phone Display
-                name: phoneDisplay
-                widget: string
-                required: false
-              - label: Wechat
-                name: wechat
-                widget: string
-                required: false
-              - label: Address Line
-                name: addressLine
-                widget: string
-                required: false
-              - label: Address Full
-                name: addressFull
-                widget: string
-                required: false
-              - label: Business Hours
-                name: businessHours
-                widget: string
-                required: false
           - label: Highlights
             name: highlights
             widget: list
@@ -661,6 +1721,7 @@ collections:
                 name: ogImage
                 widget: image
                 required: false
+        preview_path: /
       - label: English — Categories
         name: categories
         file: src/data/en/categories.json
@@ -682,10 +1743,11 @@ collections:
                 name: nameEn
                 widget: string
                 required: false
-              - label: Summary
+              - label: Category summary
                 name: summary
                 widget: text
                 required: false
+                hint: 首页大图卡的标题和说明在「首页新增板块与精选顺序」统一维护；分类图片仍从这里读取。
               - label: Image
                 name: image
                 widget: image
@@ -694,6 +1756,7 @@ collections:
                 name: href
                 widget: string
                 required: false
+        preview_path: /products/
       - name: evidence
         label: English — Verified identity and assets
         file: src/data/en/about.json
@@ -778,8 +1841,8 @@ collections:
                   - public
                 default: internal
                 hint: >-
-                  Display control only. Files in public/uploads and this public repository remain publicly accessible.
-                  Keep confidential documents outside the repository.
+                  Display control only. Files in public/uploads and this public repository remain publicly
+                  accessible. Keep confidential documents outside the repository.
               - label: Status
                 name: status
                 widget: select
@@ -810,6 +1873,8 @@ collections:
                 widget: boolean
                 required: true
                 default: false
+        preview_path: /quality-compliance/
+    preview_path: /
   - name: englishHome
     label: English — Homepage
     delete: false
@@ -942,6 +2007,8 @@ collections:
             name: metaDescription
             widget: string
             required: false
+        preview_path: /
+    preview_path: /
   - name: englishPages
     label: English — Core Pages
     delete: false
@@ -1155,6 +2222,9 @@ collections:
                     widget: boolean
                     required: true
                     default: false
+        preview_path: /
+    preview_path: /
+    description: 其他英文核心页面及SEO；关于我们和联系我们的新版正文在「中英共享资料与新版页面」中维护。
   - name: productsEn
     label: English — Products
     folder: src/content/products-en
@@ -1197,14 +2267,19 @@ collections:
         name: publishAt
         widget: datetime
         required: false
-        hint: >-
-          Only published, non-draft entries at or before this time are built. A new build is required at the scheduled
-          time.
-      - label: Translation Key
+        hint: 只有状态为 published、Draft 关闭且已到发布时间的内容才会生成。定时到点仍需一次网站构建，不会仅靠保存自动定时上线。
+      - label: 对应中文内容（翻译关联）
         name: translationKey
-        widget: string
+        widget: relation
         required: false
-        hint: Use the Chinese entry ID only for a real translation.
+        hint: 仅在这篇内容是所选中文内容的真实翻译时选择；两边使用同一稳定标识。没有对应版本可留空，不会生成虚假语言配对。
+        collection: products
+        search_fields:
+          - title
+          - translationKey
+        display_fields:
+          - '{{title}} — {{slug}}'
+        value_field: '{{slug}}'
       - label: Date Modified
         name: dateModified
         widget: datetime
@@ -1513,8 +2588,8 @@ collections:
               - public
             default: internal
             hint: >-
-              Display control only. Files in public/uploads and this public repository remain publicly accessible. Keep
-              confidential documents outside the repository.
+              Display control only. Files in public/uploads and this public repository remain publicly
+              accessible. Keep confidential documents outside the repository.
           - label: Status
             name: status
             widget: select
@@ -1536,11 +2611,12 @@ collections:
             name: a
             widget: text
             required: true
-      - label: Featured
+      - label: Featured flag (catalogue metadata)
         name: featured
         widget: boolean
         required: false
         default: false
+        hint: 首页8款的实际顺序在共享入口的「首页新增板块与精选顺序」维护。
       - label: Order
         name: order
         widget: number
@@ -1550,6 +2626,8 @@ collections:
         name: body
         widget: markdown
         required: false
+    preview_path: /products/{{slug}}/
+    description: 中文和英文通过同一翻译关联标识配对。配对不自动翻译；发布前核对型号、数量、材质、MOQ与来源。已发布地址和关联标识不要随意改动。
   - name: blogEn
     label: English — Buyer Guides
     folder: src/content/blog-en
@@ -1592,14 +2670,19 @@ collections:
         name: publishAt
         widget: datetime
         required: false
-        hint: >-
-          Only published, non-draft entries at or before this time are built. A new build is required at the scheduled
-          time.
-      - label: Translation Key
+        hint: 只有状态为 published、Draft 关闭且已到发布时间的内容才会生成。定时到点仍需一次网站构建，不会仅靠保存自动定时上线。
+      - label: 对应中文内容（翻译关联）
         name: translationKey
-        widget: string
+        widget: relation
         required: false
-        hint: Use the Chinese entry ID only for a real translation.
+        hint: 仅在这篇内容是所选中文内容的真实翻译时选择；两边使用同一稳定标识。没有对应版本可留空，不会生成虚假语言配对。
+        collection: blog
+        search_fields:
+          - title
+          - translationKey
+        display_fields:
+          - '{{title}} — {{slug}}'
+        value_field: '{{slug}}'
       - label: Date Modified
         name: dateModified
         widget: datetime
@@ -1627,11 +2710,11 @@ collections:
         widget: string
         required: true
         default: Yumingxing
-      - label: Reviewer
+      - label: 内容审核人
         name: reviewer
         widget: string
         required: false
-      - label: Last Reviewed
+      - label: 最近审核日期（YYYY-MM-DD）
         name: lastReviewed
         widget: string
         required: false
@@ -1639,7 +2722,7 @@ collections:
         name: cover
         widget: image
         required: false
-      - label: Cover Alt
+      - label: 封面图片说明
         name: coverAlt
         widget: string
         required: false
@@ -1647,28 +2730,45 @@ collections:
         name: tags
         widget: list
         required: false
-      - label: Topic
+      - label: 文章主题
         name: topic
         widget: string
         required: false
-      - label: Related Products
+      - label: 相关产品
         name: relatedProducts
-        widget: list
+        widget: relation
         required: false
-      - label: Sources
+        collection: productsEn
+        search_fields:
+          - title
+        display_fields:
+          - '{{title}} — {{slug}}'
+        value_field: '{{slug}}'
+        multiple: true
+        hint: 选择正文确实涉及的产品；中英文分别核对对应型号。
+      - label: 参考来源
         name: sources
         widget: list
         required: false
         fields:
-          - label: Label
+          - label: 来源名称
             name: label
             widget: string
-            required: true
-          - label: Url
+          - label: 来源网页
             name: url
             widget: string
-            required: true
+            pattern:
+              - ^https?://.+
+              - 请使用完整的http或https来源网址。
+        hint: 填写实际参考的权威资料，不添加不存在的认证或报告。
       - label: Body
         name: body
         widget: markdown
         required: true
+      - label: 页面H1标题（可选）
+        name: h1
+        widget: string
+        required: false
+    preview_path: /blog/{{slug}}/
+    description: 中文和英文通过同一翻译关联标识配对。配对不自动翻译；发布前核对型号、数量、材质、MOQ与来源。已发布地址和关联标识不要随意改动。
+site_url: https://www.mteng.ltd

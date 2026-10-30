@@ -3,6 +3,7 @@ import ResponsiveImage from "./ResponsiveImage.astro";
 import categoriesData from '../data/categories.json';
 import enCategories from '../data/en/categories.json';
 import {entrySlug} from '../lib/publishing';
+import {prefix} from '../lib/locale';
 const {product,locale='zh-CN'}=Astro.props;
 const categories = locale==='en'?enCategories.categories:categoriesData.categories;
 const d = product.data;
@@ -10,11 +11,11 @@ const cat = categories.find((c) => c.slug === d.category);
 const first=d.images && d.images[0];
 const img = (typeof first==='string'?first:first?.file) || site_fallback();
 function site_fallback() {
-  return 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=1200&auto=format&fit=crop';
+  return '/brand/brand.svg';
 }
 ---
 <a
-  href={`${locale==='en'?'/en':''}/products/${entrySlug(product)}/`}
+  href={`${prefix(locale)}/products/${entrySlug(product)}/`}
   class="reveal card-hover group block bg-white rounded-2xl overflow-hidden border border-line shadow-sm"
 >
   <div class="sheen aspect-[4/3] overflow-hidden bg-sand">

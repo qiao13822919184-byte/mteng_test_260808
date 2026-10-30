@@ -1,0 +1,1272 @@
+{
+  "release": "2026-10-30",
+  "basis_commit": "476b0a2",
+  "status": "technical_verification_passed_contact_image_confirmation_pending",
+  "identity": {
+    "brand": "Yumingxing / 裕明兴",
+    "legalName": "揭阳市裕明兴五金制品有限公司",
+    "englishName": "Jieyang Yumingxing Hardware Co., Ltd.",
+    "creditCode": "91445200MA529NQG6E",
+    "businessStartYear": 2003,
+    "evidenceBoundary": "名称、代码和2003年品牌／工厂业务起始年由用户确认；本轮没有取得最新政府登记证明。2003不写入法定成立日期。"
+  },
+  "routing": {
+    "english": "/",
+    "chinese": "/cn/",
+    "hosting": "GitHub Pages",
+    "redirectMethod": "Immediate meta refresh with canonical and direct fallback link; static HTML normally responds HTTP 200, not server HTTP 301/308.",
+    "oldChineseConflict": "原中文根路径由英文内容复用，不能同时无条件重定向到中文；中文等价内容位于/cn。",
+    "factoryMerge": "/en/factory/ and /factory/ point directly to /about/.",
+    "historicalBaseline": [
+      {
+        "old": "/",
+        "kind": "content",
+        "final": "/"
+      },
+      {
+        "old": "/about/",
+        "kind": "content",
+        "final": "/about/"
+      },
+      {
+        "old": "/blog/",
+        "kind": "content",
+        "final": "/blog/"
+      },
+      {
+        "old": "/blog/approve-colored-cutlery-finish-across-a-set/",
+        "kind": "content",
+        "final": "/blog/approve-colored-cutlery-finish-across-a-set/"
+      },
+      {
+        "old": "/blog/bilingual-cutlery-pack-artwork-proof/",
+        "kind": "content",
+        "final": "/blog/bilingual-cutlery-pack-artwork-proof/"
+      },
+      {
+        "old": "/blog/can-a-magnet-confirm-cutlery-steel-grade/",
+        "kind": "content",
+        "final": "/blog/can-a-magnet-confirm-cutlery-steel-grade/"
+      },
+      {
+        "old": "/blog/colored-cutlery-finish-test-scope-buyer-brief/",
+        "kind": "content",
+        "final": "/blog/colored-cutlery-finish-test-scope-buyer-brief/"
+      },
+      {
+        "old": "/blog/compare-cutlery-quotes-same-specification/",
+        "kind": "content",
+        "final": "/blog/compare-cutlery-quotes-same-specification/"
+      },
+      {
+        "old": "/blog/custom-cutlery-tooling-custody-handoff-checklist/",
+        "kind": "content",
+        "final": "/blog/custom-cutlery-tooling-custody-handoff-checklist/"
+      },
+      {
+        "old": "/blog/custom-cutlery-tooling-first-sample-release-check/",
+        "kind": "content",
+        "final": "/blog/custom-cutlery-tooling-first-sample-release-check/"
+      },
+      {
+        "old": "/blog/cutlery-18-10-18-8-18-0-grade-label-rfq/",
+        "kind": "content",
+        "final": "/blog/cutlery-18-10-18-8-18-0-grade-label-rfq/"
+      },
+      {
+        "old": "/blog/cutlery-arrival-receiving-discrepancy-record/",
+        "kind": "content",
+        "final": "/blog/cutlery-arrival-receiving-discrepancy-record/"
+      },
+      {
+        "old": "/blog/cutlery-brown-mark-receiving-evidence-triage/",
+        "kind": "content",
+        "final": "/blog/cutlery-brown-mark-receiving-evidence-triage/"
+      },
+      {
+        "old": "/blog/cutlery-care-claim-packaging-approval/",
+        "kind": "content",
+        "final": "/blog/cutlery-care-claim-packaging-approval/"
+      },
+      {
+        "old": "/blog/cutlery-carton-pallet-plan-check/",
+        "kind": "content",
+        "final": "/blog/cutlery-carton-pallet-plan-check/"
+      },
+      {
+        "old": "/blog/cutlery-cleaning-exposure-buyer-brief/",
+        "kind": "content",
+        "final": "/blog/cutlery-cleaning-exposure-buyer-brief/"
+      },
+      {
+        "old": "/blog/cutlery-complaint-physical-sample-handoff/",
+        "kind": "content",
+        "final": "/blog/cutlery-complaint-physical-sample-handoff/"
+      },
+      {
+        "old": "/blog/cutlery-component-lot-carton-traceability-handoff/",
+        "kind": "content",
+        "final": "/blog/cutlery-component-lot-carton-traceability-handoff/"
+      },
+      {
+        "old": "/blog/cutlery-component-readiness-set-assembly-schedule/",
+        "kind": "content",
+        "final": "/blog/cutlery-component-readiness-set-assembly-schedule/"
+      },
+      {
+        "old": "/blog/cutlery-component-specification-card/",
+        "kind": "content",
+        "final": "/blog/cutlery-component-specification-card/"
+      },
+      {
+        "old": "/blog/cutlery-customization-route-existing-model-private-label-new-tooling/",
+        "kind": "content",
+        "final": "/blog/cutlery-customization-route-existing-model-private-label-new-tooling/"
+      },
+      {
+        "old": "/blog/cutlery-dishwasher-claim-evidence-scope/",
+        "kind": "content",
+        "final": "/blog/cutlery-dishwasher-claim-evidence-scope/"
+      },
+      {
+        "old": "/blog/cutlery-dishwashing-basket-loading-sample-check/",
+        "kind": "content",
+        "final": "/blog/cutlery-dishwashing-basket-loading-sample-check/"
+      },
+      {
+        "old": "/blog/cutlery-finish-sample-comparison-card/",
+        "kind": "content",
+        "final": "/blog/cutlery-finish-sample-comparison-card/"
+      },
+      {
+        "old": "/blog/cutlery-finish-visual-review-lighting-reference/",
+        "kind": "content",
+        "final": "/blog/cutlery-finish-visual-review-lighting-reference/"
+      },
+      {
+        "old": "/blog/cutlery-inspection-unit-piece-set-carton/",
+        "kind": "content",
+        "final": "/blog/cutlery-inspection-unit-piece-set-carton/"
+      },
+      {
+        "old": "/blog/cutlery-logo-artwork-placement-handoff/",
+        "kind": "content",
+        "final": "/blog/cutlery-logo-artwork-placement-handoff/"
+      },
+      {
+        "old": "/blog/cutlery-logo-physical-mark-sample-approval/",
+        "kind": "content",
+        "final": "/blog/cutlery-logo-physical-mark-sample-approval/"
+      },
+      {
+        "old": "/blog/cutlery-model-production-route-factory-review/",
+        "kind": "content",
+        "final": "/blog/cutlery-model-production-route-factory-review/"
+      },
+      {
+        "old": "/blog/cutlery-moq-by-variant-enquiry-matrix/",
+        "kind": "content",
+        "final": "/blog/cutlery-moq-by-variant-enquiry-matrix/"
+      },
+      {
+        "old": "/blog/cutlery-multi-destination-allocation-sheet/",
+        "kind": "content",
+        "final": "/blog/cutlery-multi-destination-allocation-sheet/"
+      },
+      {
+        "old": "/blog/cutlery-napkin-roll-pouch-service-fit-check/",
+        "kind": "content",
+        "final": "/blog/cutlery-napkin-roll-pouch-service-fit-check/"
+      },
+      {
+        "old": "/blog/cutlery-pack-count-change-case-identity-brief/",
+        "kind": "content",
+        "final": "/blog/cutlery-pack-count-change-case-identity-brief/"
+      },
+      {
+        "old": "/blog/cutlery-pack-transport-test-scope/",
+        "kind": "content",
+        "final": "/blog/cutlery-pack-transport-test-scope/"
+      },
+      {
+        "old": "/blog/cutlery-packaging-material-claim-evidence-brief/",
+        "kind": "content",
+        "final": "/blog/cutlery-packaging-material-claim-evidence-brief/"
+      },
+      {
+        "old": "/blog/cutlery-packing-contact-mark-prevention-sample-check/",
+        "kind": "content",
+        "final": "/blog/cutlery-packing-contact-mark-prevention-sample-check/"
+      },
+      {
+        "old": "/blog/cutlery-piece-set-carton-weight-handoff/",
+        "kind": "content",
+        "final": "/blog/cutlery-piece-set-carton-weight-handoff/"
+      },
+      {
+        "old": "/blog/cutlery-post-order-change-request-record/",
+        "kind": "content",
+        "final": "/blog/cutlery-post-order-change-request-record/"
+      },
+      {
+        "old": "/blog/cutlery-pre-shipment-inspection-brief/",
+        "kind": "content",
+        "final": "/blog/cutlery-pre-shipment-inspection-brief/"
+      },
+      {
+        "old": "/blog/cutlery-product-document-request-matrix/",
+        "kind": "content",
+        "final": "/blog/cutlery-product-document-request-matrix/"
+      },
+      {
+        "old": "/blog/cutlery-project-milestone-plan/",
+        "kind": "content",
+        "final": "/blog/cutlery-project-milestone-plan/"
+      },
+      {
+        "old": "/blog/cutlery-repeat-order-version-control-card/",
+        "kind": "content",
+        "final": "/blog/cutlery-repeat-order-version-control-card/"
+      },
+      {
+        "old": "/blog/cutlery-retail-box-barcode-variant-check/",
+        "kind": "content",
+        "final": "/blog/cutlery-retail-box-barcode-variant-check/"
+      },
+      {
+        "old": "/blog/cutlery-retail-box-shelf-fit-check/",
+        "kind": "content",
+        "final": "/blog/cutlery-retail-box-shelf-fit-check/"
+      },
+      {
+        "old": "/blog/cutlery-retail-insert-unboxing-approval-card/",
+        "kind": "content",
+        "final": "/blog/cutlery-retail-insert-unboxing-approval-card/"
+      },
+      {
+        "old": "/blog/cutlery-retail-listing-specification-proof/",
+        "kind": "content",
+        "final": "/blog/cutlery-retail-listing-specification-proof/"
+      },
+      {
+        "old": "/blog/cutlery-retail-packaging-shipping-carton-brief/",
+        "kind": "content",
+        "final": "/blog/cutlery-retail-packaging-shipping-carton-brief/"
+      },
+      {
+        "old": "/blog/cutlery-sample-approval-before-bulk-production/",
+        "kind": "content",
+        "final": "/blog/cutlery-sample-approval-before-bulk-production/"
+      },
+      {
+        "old": "/blog/cutlery-sample-quotation-cost-scope-sheet/",
+        "kind": "content",
+        "final": "/blog/cutlery-sample-quotation-cost-scope-sheet/"
+      },
+      {
+        "old": "/blog/cutlery-sample-request-scope-sheet/",
+        "kind": "content",
+        "final": "/blog/cutlery-sample-request-scope-sheet/"
+      },
+      {
+        "old": "/blog/cutlery-service-issue-buyer-record/",
+        "kind": "content",
+        "final": "/blog/cutlery-service-issue-buyer-record/"
+      },
+      {
+        "old": "/blog/cutlery-shipping-carton-identity-check/",
+        "kind": "content",
+        "final": "/blog/cutlery-shipping-carton-identity-check/"
+      },
+      {
+        "old": "/blog/cutlery-spare-piece-reorder-match-card/",
+        "kind": "content",
+        "final": "/blog/cutlery-spare-piece-reorder-match-card/"
+      },
+      {
+        "old": "/blog/cutlery-spoon-bowl-service-sample-check/",
+        "kind": "content",
+        "final": "/blog/cutlery-spoon-bowl-service-sample-check/"
+      },
+      {
+        "old": "/blog/cutlery-storage-tray-fit-measurement-sheet/",
+        "kind": "content",
+        "final": "/blog/cutlery-storage-tray-fit-measurement-sheet/"
+      },
+      {
+        "old": "/blog/cutlery-tooling-unit-cost-quote-worksheet/",
+        "kind": "content",
+        "final": "/blog/cutlery-tooling-unit-cost-quote-worksheet/"
+      },
+      {
+        "old": "/blog/cutlery-unintended-sharp-edge-inspection-zones/",
+        "kind": "content",
+        "final": "/blog/cutlery-unintended-sharp-edge-inspection-zones/"
+      },
+      {
+        "old": "/blog/dinner-fork-sample-menu-plate-check/",
+        "kind": "content",
+        "final": "/blog/dinner-fork-sample-menu-plate-check/"
+      },
+      {
+        "old": "/blog/dinner-knife-sample-service-check/",
+        "kind": "content",
+        "final": "/blog/dinner-knife-sample-service-check/"
+      },
+      {
+        "old": "/blog/flatware-pieces-sets-cartons-order-check/",
+        "kind": "content",
+        "final": "/blog/flatware-pieces-sets-cartons-order-check/"
+      },
+      {
+        "old": "/blog/hotel-cutlery-replacement-pattern-match/",
+        "kind": "content",
+        "final": "/blog/hotel-cutlery-replacement-pattern-match/"
+      },
+      {
+        "old": "/blog/how-to-choose-stainless-steel-flatware/",
+        "kind": "redirect",
+        "final": "/cn/blog/how-to-choose-stainless-steel-flatware/"
+      },
+      {
+        "old": "/blog/oem-odm-cutlery-customization/",
+        "kind": "redirect",
+        "final": "/cn/blog/oem-odm-cutlery-customization/"
+      },
+      {
+        "old": "/blog/one-piece-two-piece-table-knife-construction-rfq/",
+        "kind": "content",
+        "final": "/blog/one-piece-two-piece-table-knife-construction-rfq/"
+      },
+      {
+        "old": "/blog/restaurant-cutlery-service-assortment-worksheet/",
+        "kind": "content",
+        "final": "/blog/restaurant-cutlery-service-assortment-worksheet/"
+      },
+      {
+        "old": "/blog/restaurant-cutlery-service-trial-scorecard/",
+        "kind": "content",
+        "final": "/blog/restaurant-cutlery-service-trial-scorecard/"
+      },
+      {
+        "old": "/blog/restaurant-flatware-replenishment-count-sheet/",
+        "kind": "content",
+        "final": "/blog/restaurant-flatware-replenishment-count-sheet/"
+      },
+      {
+        "old": "/blog/stainless-cutlery-drying-storage-service-brief/",
+        "kind": "content",
+        "final": "/blog/stainless-cutlery-drying-storage-service-brief/"
+      },
+      {
+        "old": "/blog/stainless-cutlery-iron-contact-prevention-handoff/",
+        "kind": "content",
+        "final": "/blog/stainless-cutlery-iron-contact-prevention-handoff/"
+      },
+      {
+        "old": "/blog/stainless-flatware-wholesale-faq/",
+        "kind": "redirect",
+        "final": "/cn/blog/stainless-flatware-wholesale-faq/"
+      },
+      {
+        "old": "/blog/table-knife-bend-strength-evidence-brief/",
+        "kind": "content",
+        "final": "/blog/table-knife-bend-strength-evidence-brief/"
+      },
+      {
+        "old": "/contact/",
+        "kind": "content",
+        "final": "/contact/"
+      },
+      {
+        "old": "/en/",
+        "kind": "redirect",
+        "final": "/"
+      },
+      {
+        "old": "/en/about/",
+        "kind": "redirect",
+        "final": "/about/"
+      },
+      {
+        "old": "/en/blog/",
+        "kind": "redirect",
+        "final": "/blog/"
+      },
+      {
+        "old": "/en/blog/approve-colored-cutlery-finish-across-a-set/",
+        "kind": "redirect",
+        "final": "/blog/approve-colored-cutlery-finish-across-a-set/"
+      },
+      {
+        "old": "/en/blog/bilingual-cutlery-pack-artwork-proof/",
+        "kind": "redirect",
+        "final": "/blog/bilingual-cutlery-pack-artwork-proof/"
+      },
+      {
+        "old": "/en/blog/can-a-magnet-confirm-cutlery-steel-grade/",
+        "kind": "redirect",
+        "final": "/blog/can-a-magnet-confirm-cutlery-steel-grade/"
+      },
+      {
+        "old": "/en/blog/colored-cutlery-finish-test-scope-buyer-brief/",
+        "kind": "redirect",
+        "final": "/blog/colored-cutlery-finish-test-scope-buyer-brief/"
+      },
+      {
+        "old": "/en/blog/compare-cutlery-quotes-same-specification/",
+        "kind": "redirect",
+        "final": "/blog/compare-cutlery-quotes-same-specification/"
+      },
+      {
+        "old": "/en/blog/custom-cutlery-tooling-custody-handoff-checklist/",
+        "kind": "redirect",
+        "final": "/blog/custom-cutlery-tooling-custody-handoff-checklist/"
+      },
+      {
+        "old": "/en/blog/custom-cutlery-tooling-first-sample-release-check/",
+        "kind": "redirect",
+        "final": "/blog/custom-cutlery-tooling-first-sample-release-check/"
+      },
+      {
+        "old": "/en/blog/cutlery-18-10-18-8-18-0-grade-label-rfq/",
+        "kind": "redirect",
+        "final": "/blog/cutlery-18-10-18-8-18-0-grade-label-rfq/"
+      },
+      {
+        "old": "/en/blog/cutlery-arrival-receiving-discrepancy-record/",
+        "kind": "redirect",
+        "final": "/blog/cutlery-arrival-receiving-discrepancy-record/"
+      },
+      {
+        "old": "/en/blog/cutlery-brown-mark-receiving-evidence-triage/",
+        "kind": "redirect",
+        "final": "/blog/cutlery-brown-mark-receiving-evidence-triage/"
+      },
+      {
+        "old": "/en/blog/cutlery-care-claim-packaging-approval/",
+        "kind": "redirect",
+        "final": "/blog/cutlery-care-claim-packaging-approval/"
+      },
+      {
+        "old": "/en/blog/cutlery-carton-pallet-plan-check/",
+        "kind": "redirect",
+        "final": "/blog/cutlery-carton-pallet-plan-check/"
+      },
+      {
+        "old": "/en/blog/cutlery-cleaning-exposure-buyer-brief/",
+        "kind": "redirect",
+        "final": "/blog/cutlery-cleaning-exposure-buyer-brief/"
+      },
+      {
+        "old": "/en/blog/cutlery-complaint-physical-sample-handoff/",
+        "kind": "redirect",
+        "final": "/blog/cutlery-complaint-physical-sample-handoff/"
+      },
+      {
+        "old": "/en/blog/cutlery-component-lot-carton-traceability-handoff/",
+        "kind": "redirect",
+        "final": "/blog/cutlery-component-lot-carton-traceability-handoff/"
+      },
+      {
+        "old": "/en/blog/cutlery-component-readiness-set-assembly-schedule/",
+        "kind": "redirect",
+        "final": "/blog/cutlery-component-readiness-set-assembly-schedule/"
+      },
+      {
+        "old": "/en/blog/cutlery-component-specification-card/",
+        "kind": "redirect",
+        "final": "/blog/cutlery-component-specification-card/"
+      },
+      {
+        "old": "/en/blog/cutlery-customization-route-existing-model-private-label-new-tooling/",
+        "kind": "redirect",
+        "final": "/blog/cutlery-customization-route-existing-model-private-label-new-tooling/"
+      },
+      {
+        "old": "/en/blog/cutlery-dishwasher-claim-evidence-scope/",
+        "kind": "redirect",
+        "final": "/blog/cutlery-dishwasher-claim-evidence-scope/"
+      },
+      {
+        "old": "/en/blog/cutlery-dishwashing-basket-loading-sample-check/",
+        "kind": "redirect",
+        "final": "/blog/cutlery-dishwashing-basket-loading-sample-check/"
+      },
+      {
+        "old": "/en/blog/cutlery-finish-sample-comparison-card/",
+        "kind": "redirect",
+        "final": "/blog/cutlery-finish-sample-comparison-card/"
+      },
+      {
+        "old": "/en/blog/cutlery-finish-visual-review-lighting-reference/",
+        "kind": "redirect",
+        "final": "/blog/cutlery-finish-visual-review-lighting-reference/"
+      },
+      {
+        "old": "/en/blog/cutlery-inspection-unit-piece-set-carton/",
+        "kind": "redirect",
+        "final": "/blog/cutlery-inspection-unit-piece-set-carton/"
+      },
+      {
+        "old": "/en/blog/cutlery-logo-artwork-placement-handoff/",
+        "kind": "redirect",
+        "final": "/blog/cutlery-logo-artwork-placement-handoff/"
+      },
+      {
+        "old": "/en/blog/cutlery-logo-physical-mark-sample-approval/",
+        "kind": "redirect",
+        "final": "/blog/cutlery-logo-physical-mark-sample-approval/"
+      },
+      {
+        "old": "/en/blog/cutlery-model-production-route-factory-review/",
+        "kind": "redirect",
+        "final": "/blog/cutlery-model-production-route-factory-review/"
+      },
+      {
+        "old": "/en/blog/cutlery-moq-by-variant-enquiry-matrix/",
+        "kind": "redirect",
+        "final": "/blog/cutlery-moq-by-variant-enquiry-matrix/"
+      },
+      {
+        "old": "/en/blog/cutlery-multi-destination-allocation-sheet/",
+        "kind": "redirect",
+        "final": "/blog/cutlery-multi-destination-allocation-sheet/"
+      },
+      {
+        "old": "/en/blog/cutlery-napkin-roll-pouch-service-fit-check/",
+        "kind": "redirect",
+        "final": "/blog/cutlery-napkin-roll-pouch-service-fit-check/"
+      },
+      {
+        "old": "/en/blog/cutlery-pack-count-change-case-identity-brief/",
+        "kind": "redirect",
+        "final": "/blog/cutlery-pack-count-change-case-identity-brief/"
+      },
+      {
+        "old": "/en/blog/cutlery-pack-transport-test-scope/",
+        "kind": "redirect",
+        "final": "/blog/cutlery-pack-transport-test-scope/"
+      },
+      {
+        "old": "/en/blog/cutlery-packaging-material-claim-evidence-brief/",
+        "kind": "redirect",
+        "final": "/blog/cutlery-packaging-material-claim-evidence-brief/"
+      },
+      {
+        "old": "/en/blog/cutlery-packing-contact-mark-prevention-sample-check/",
+        "kind": "redirect",
+        "final": "/blog/cutlery-packing-contact-mark-prevention-sample-check/"
+      },
+      {
+        "old": "/en/blog/cutlery-piece-set-carton-weight-handoff/",
+        "kind": "redirect",
+        "final": "/blog/cutlery-piece-set-carton-weight-handoff/"
+      },
+      {
+        "old": "/en/blog/cutlery-post-order-change-request-record/",
+        "kind": "redirect",
+        "final": "/blog/cutlery-post-order-change-request-record/"
+      },
+      {
+        "old": "/en/blog/cutlery-pre-shipment-inspection-brief/",
+        "kind": "redirect",
+        "final": "/blog/cutlery-pre-shipment-inspection-brief/"
+      },
+      {
+        "old": "/en/blog/cutlery-product-document-request-matrix/",
+        "kind": "redirect",
+        "final": "/blog/cutlery-product-document-request-matrix/"
+      },
+      {
+        "old": "/en/blog/cutlery-project-milestone-plan/",
+        "kind": "redirect",
+        "final": "/blog/cutlery-project-milestone-plan/"
+      },
+      {
+        "old": "/en/blog/cutlery-repeat-order-version-control-card/",
+        "kind": "redirect",
+        "final": "/blog/cutlery-repeat-order-version-control-card/"
+      },
+      {
+        "old": "/en/blog/cutlery-retail-box-barcode-variant-check/",
+        "kind": "redirect",
+        "final": "/blog/cutlery-retail-box-barcode-variant-check/"
+      },
+      {
+        "old": "/en/blog/cutlery-retail-box-shelf-fit-check/",
+        "kind": "redirect",
+        "final": "/blog/cutlery-retail-box-shelf-fit-check/"
+      },
+      {
+        "old": "/en/blog/cutlery-retail-insert-unboxing-approval-card/",
+        "kind": "redirect",
+        "final": "/blog/cutlery-retail-insert-unboxing-approval-card/"
+      },
+      {
+        "old": "/en/blog/cutlery-retail-listing-specification-proof/",
+        "kind": "redirect",
+        "final": "/blog/cutlery-retail-listing-specification-proof/"
+      },
+      {
+        "old": "/en/blog/cutlery-retail-packaging-shipping-carton-brief/",
+        "kind": "redirect",
+        "final": "/blog/cutlery-retail-packaging-shipping-carton-brief/"
+      },
+      {
+        "old": "/en/blog/cutlery-sample-approval-before-bulk-production/",
+        "kind": "redirect",
+        "final": "/blog/cutlery-sample-approval-before-bulk-production/"
+      },
+      {
+        "old": "/en/blog/cutlery-sample-quotation-cost-scope-sheet/",
+        "kind": "redirect",
+        "final": "/blog/cutlery-sample-quotation-cost-scope-sheet/"
+      },
+      {
+        "old": "/en/blog/cutlery-sample-request-scope-sheet/",
+        "kind": "redirect",
+        "final": "/blog/cutlery-sample-request-scope-sheet/"
+      },
+      {
+        "old": "/en/blog/cutlery-service-issue-buyer-record/",
+        "kind": "redirect",
+        "final": "/blog/cutlery-service-issue-buyer-record/"
+      },
+      {
+        "old": "/en/blog/cutlery-shipping-carton-identity-check/",
+        "kind": "redirect",
+        "final": "/blog/cutlery-shipping-carton-identity-check/"
+      },
+      {
+        "old": "/en/blog/cutlery-spare-piece-reorder-match-card/",
+        "kind": "redirect",
+        "final": "/blog/cutlery-spare-piece-reorder-match-card/"
+      },
+      {
+        "old": "/en/blog/cutlery-spoon-bowl-service-sample-check/",
+        "kind": "redirect",
+        "final": "/blog/cutlery-spoon-bowl-service-sample-check/"
+      },
+      {
+        "old": "/en/blog/cutlery-storage-tray-fit-measurement-sheet/",
+        "kind": "redirect",
+        "final": "/blog/cutlery-storage-tray-fit-measurement-sheet/"
+      },
+      {
+        "old": "/en/blog/cutlery-tooling-unit-cost-quote-worksheet/",
+        "kind": "redirect",
+        "final": "/blog/cutlery-tooling-unit-cost-quote-worksheet/"
+      },
+      {
+        "old": "/en/blog/cutlery-unintended-sharp-edge-inspection-zones/",
+        "kind": "redirect",
+        "final": "/blog/cutlery-unintended-sharp-edge-inspection-zones/"
+      },
+      {
+        "old": "/en/blog/dinner-fork-sample-menu-plate-check/",
+        "kind": "redirect",
+        "final": "/blog/dinner-fork-sample-menu-plate-check/"
+      },
+      {
+        "old": "/en/blog/dinner-knife-sample-service-check/",
+        "kind": "redirect",
+        "final": "/blog/dinner-knife-sample-service-check/"
+      },
+      {
+        "old": "/en/blog/flatware-pieces-sets-cartons-order-check/",
+        "kind": "redirect",
+        "final": "/blog/flatware-pieces-sets-cartons-order-check/"
+      },
+      {
+        "old": "/en/blog/hotel-cutlery-replacement-pattern-match/",
+        "kind": "redirect",
+        "final": "/blog/hotel-cutlery-replacement-pattern-match/"
+      },
+      {
+        "old": "/en/blog/one-piece-two-piece-table-knife-construction-rfq/",
+        "kind": "redirect",
+        "final": "/blog/one-piece-two-piece-table-knife-construction-rfq/"
+      },
+      {
+        "old": "/en/blog/restaurant-cutlery-service-assortment-worksheet/",
+        "kind": "redirect",
+        "final": "/blog/restaurant-cutlery-service-assortment-worksheet/"
+      },
+      {
+        "old": "/en/blog/restaurant-cutlery-service-trial-scorecard/",
+        "kind": "redirect",
+        "final": "/blog/restaurant-cutlery-service-trial-scorecard/"
+      },
+      {
+        "old": "/en/blog/restaurant-flatware-replenishment-count-sheet/",
+        "kind": "redirect",
+        "final": "/blog/restaurant-flatware-replenishment-count-sheet/"
+      },
+      {
+        "old": "/en/blog/stainless-cutlery-drying-storage-service-brief/",
+        "kind": "redirect",
+        "final": "/blog/stainless-cutlery-drying-storage-service-brief/"
+      },
+      {
+        "old": "/en/blog/stainless-cutlery-iron-contact-prevention-handoff/",
+        "kind": "redirect",
+        "final": "/blog/stainless-cutlery-iron-contact-prevention-handoff/"
+      },
+      {
+        "old": "/en/blog/table-knife-bend-strength-evidence-brief/",
+        "kind": "redirect",
+        "final": "/blog/table-knife-bend-strength-evidence-brief/"
+      },
+      {
+        "old": "/en/blog/what-to-include-in-a-cutlery-rfq/",
+        "kind": "redirect",
+        "final": "/blog/what-to-include-in-a-cutlery-rfq/"
+      },
+      {
+        "old": "/en/contact/",
+        "kind": "redirect",
+        "final": "/contact/"
+      },
+      {
+        "old": "/en/factory/",
+        "kind": "redirect",
+        "final": "/about/"
+      },
+      {
+        "old": "/en/hotel-restaurant-cutlery/",
+        "kind": "redirect",
+        "final": "/hotel-restaurant-cutlery/"
+      },
+      {
+        "old": "/en/oem-odm-cutlery/",
+        "kind": "redirect",
+        "final": "/oem-odm-cutlery/"
+      },
+      {
+        "old": "/en/products/",
+        "kind": "redirect",
+        "final": "/products/"
+      },
+      {
+        "old": "/en/products/c304-00-304-flatware/",
+        "kind": "redirect",
+        "final": "/products/c304-00-304-flatware/"
+      },
+      {
+        "old": "/en/products/c304-01a-304-flatware/",
+        "kind": "redirect",
+        "final": "/products/c304-01a-304-flatware/"
+      },
+      {
+        "old": "/en/products/c304-01b-304-flatware/",
+        "kind": "redirect",
+        "final": "/products/c304-01b-304-flatware/"
+      },
+      {
+        "old": "/en/products/c304-02a-304-flatware/",
+        "kind": "redirect",
+        "final": "/products/c304-02a-304-flatware/"
+      },
+      {
+        "old": "/en/products/c304-02b-304-flatware/",
+        "kind": "redirect",
+        "final": "/products/c304-02b-304-flatware/"
+      },
+      {
+        "old": "/en/products/c304-03-304-flatware/",
+        "kind": "redirect",
+        "final": "/products/c304-03-304-flatware/"
+      },
+      {
+        "old": "/en/products/c304-04-304-flatware/",
+        "kind": "redirect",
+        "final": "/products/c304-04-304-flatware/"
+      },
+      {
+        "old": "/en/products/c304-05-304-flatware/",
+        "kind": "redirect",
+        "final": "/products/c304-05-304-flatware/"
+      },
+      {
+        "old": "/en/products/c304-06-304-flatware/",
+        "kind": "redirect",
+        "final": "/products/c304-06-304-flatware/"
+      },
+      {
+        "old": "/en/products/c304-07-304-flatware/",
+        "kind": "redirect",
+        "final": "/products/c304-07-304-flatware/"
+      },
+      {
+        "old": "/en/products/portuguese-five-piece-flatware-set/",
+        "kind": "redirect",
+        "final": "/products/portuguese-five-piece-flatware-set/"
+      },
+      {
+        "old": "/en/products/s410-serving-utensils/",
+        "kind": "redirect",
+        "final": "/products/s410-serving-utensils/"
+      },
+      {
+        "old": "/en/products/s430-serving-utensils/",
+        "kind": "redirect",
+        "final": "/products/s430-serving-utensils/"
+      },
+      {
+        "old": "/en/products/yhx-2013-kitchenware-set/",
+        "kind": "redirect",
+        "final": "/products/yhx-2013-kitchenware-set/"
+      },
+      {
+        "old": "/en/products/yhx-2028-kitchenware-set/",
+        "kind": "redirect",
+        "final": "/products/yhx-2028-kitchenware-set/"
+      },
+      {
+        "old": "/en/products/yhx-2042-kitchenware-set/",
+        "kind": "redirect",
+        "final": "/products/yhx-2042-kitchenware-set/"
+      },
+      {
+        "old": "/en/products/ymx-1010-4-410-flatware/",
+        "kind": "redirect",
+        "final": "/products/ymx-1010-4-410-flatware/"
+      },
+      {
+        "old": "/en/products/ymx-1010-5-410-flatware/",
+        "kind": "redirect",
+        "final": "/products/ymx-1010-5-410-flatware/"
+      },
+      {
+        "old": "/en/products/ymx-1011-410-flatware/",
+        "kind": "redirect",
+        "final": "/products/ymx-1011-410-flatware/"
+      },
+      {
+        "old": "/en/products/ymx-1012-410-flatware/",
+        "kind": "redirect",
+        "final": "/products/ymx-1012-410-flatware/"
+      },
+      {
+        "old": "/en/products/ymx-1013-410-flatware/",
+        "kind": "redirect",
+        "final": "/products/ymx-1013-410-flatware/"
+      },
+      {
+        "old": "/en/products/ymx-1014-410-flatware/",
+        "kind": "redirect",
+        "final": "/products/ymx-1014-410-flatware/"
+      },
+      {
+        "old": "/en/products/ymx-1015-410-flatware/",
+        "kind": "redirect",
+        "final": "/products/ymx-1015-410-flatware/"
+      },
+      {
+        "old": "/en/products/ymx-1016-4-410-flatware/",
+        "kind": "redirect",
+        "final": "/products/ymx-1016-4-410-flatware/"
+      },
+      {
+        "old": "/en/products/ymx-1017-410-flatware/",
+        "kind": "redirect",
+        "final": "/products/ymx-1017-410-flatware/"
+      },
+      {
+        "old": "/en/products/ymx-1035-410-flatware/",
+        "kind": "redirect",
+        "final": "/products/ymx-1035-410-flatware/"
+      },
+      {
+        "old": "/en/products/ymx-1044-410-flatware/",
+        "kind": "redirect",
+        "final": "/products/ymx-1044-410-flatware/"
+      },
+      {
+        "old": "/en/products/ymx-1050-410-flatware/",
+        "kind": "redirect",
+        "final": "/products/ymx-1050-410-flatware/"
+      },
+      {
+        "old": "/en/products/ymx-1084-1-410-flatware/",
+        "kind": "redirect",
+        "final": "/products/ymx-1084-1-410-flatware/"
+      },
+      {
+        "old": "/en/products/ymx-1084-2-410-flatware/",
+        "kind": "redirect",
+        "final": "/products/ymx-1084-2-410-flatware/"
+      },
+      {
+        "old": "/en/products/ymx-2011-black-handle-kitchenware-set/",
+        "kind": "redirect",
+        "final": "/products/ymx-2011-black-handle-kitchenware-set/"
+      },
+      {
+        "old": "/en/products/ymx-2014-kitchenware-set/",
+        "kind": "redirect",
+        "final": "/products/ymx-2014-kitchenware-set/"
+      },
+      {
+        "old": "/en/products/ymx-2015-kitchenware-set/",
+        "kind": "redirect",
+        "final": "/products/ymx-2015-kitchenware-set/"
+      },
+      {
+        "old": "/en/products/ymx-2023-kitchenware-set/",
+        "kind": "redirect",
+        "final": "/products/ymx-2023-kitchenware-set/"
+      },
+      {
+        "old": "/en/products/ymx-2032-square-wood-handle-kitchenware-set/",
+        "kind": "redirect",
+        "final": "/products/ymx-2032-square-wood-handle-kitchenware-set/"
+      },
+      {
+        "old": "/en/products/ymx-2041-golden-wood-kitchenware-set/",
+        "kind": "redirect",
+        "final": "/products/ymx-2041-golden-wood-kitchenware-set/"
+      },
+      {
+        "old": "/en/products/ymx-2068-kitchenware-set/",
+        "kind": "redirect",
+        "final": "/products/ymx-2068-kitchenware-set/"
+      },
+      {
+        "old": "/en/products/ymx-2142-201-stainless-kitchenware-set/",
+        "kind": "redirect",
+        "final": "/products/ymx-2142-201-stainless-kitchenware-set/"
+      },
+      {
+        "old": "/en/quality-compliance/",
+        "kind": "redirect",
+        "final": "/quality-compliance/"
+      },
+      {
+        "old": "/en/stainless-steel-cutlery/",
+        "kind": "redirect",
+        "final": "/stainless-steel-cutlery/"
+      },
+      {
+        "old": "/en/stainless-steel-kitchen-utensils/",
+        "kind": "redirect",
+        "final": "/stainless-steel-kitchen-utensils/"
+      },
+      {
+        "old": "/products/",
+        "kind": "content",
+        "final": "/products/"
+      },
+      {
+        "old": "/products/c304-00-304-flatware/",
+        "kind": "content",
+        "final": "/products/c304-00-304-flatware/"
+      },
+      {
+        "old": "/products/c304-01a-304-flatware/",
+        "kind": "content",
+        "final": "/products/c304-01a-304-flatware/"
+      },
+      {
+        "old": "/products/c304-01b-304-flatware/",
+        "kind": "content",
+        "final": "/products/c304-01b-304-flatware/"
+      },
+      {
+        "old": "/products/c304-02a-304-flatware/",
+        "kind": "content",
+        "final": "/products/c304-02a-304-flatware/"
+      },
+      {
+        "old": "/products/c304-02b-304-flatware/",
+        "kind": "content",
+        "final": "/products/c304-02b-304-flatware/"
+      },
+      {
+        "old": "/products/c304-03-304-flatware/",
+        "kind": "content",
+        "final": "/products/c304-03-304-flatware/"
+      },
+      {
+        "old": "/products/c304-04-304-flatware/",
+        "kind": "content",
+        "final": "/products/c304-04-304-flatware/"
+      },
+      {
+        "old": "/products/c304-05-304-flatware/",
+        "kind": "content",
+        "final": "/products/c304-05-304-flatware/"
+      },
+      {
+        "old": "/products/c304-06-304-flatware/",
+        "kind": "content",
+        "final": "/products/c304-06-304-flatware/"
+      },
+      {
+        "old": "/products/c304-07-304-flatware/",
+        "kind": "content",
+        "final": "/products/c304-07-304-flatware/"
+      },
+      {
+        "old": "/products/portuguese-five-piece-flatware-set/",
+        "kind": "content",
+        "final": "/products/portuguese-five-piece-flatware-set/"
+      },
+      {
+        "old": "/products/s410-serving-utensils/",
+        "kind": "content",
+        "final": "/products/s410-serving-utensils/"
+      },
+      {
+        "old": "/products/s430-serving-utensils/",
+        "kind": "content",
+        "final": "/products/s430-serving-utensils/"
+      },
+      {
+        "old": "/products/yhx-2013-kitchenware-set/",
+        "kind": "content",
+        "final": "/products/yhx-2013-kitchenware-set/"
+      },
+      {
+        "old": "/products/yhx-2028-kitchenware-set/",
+        "kind": "content",
+        "final": "/products/yhx-2028-kitchenware-set/"
+      },
+      {
+        "old": "/products/yhx-2042-kitchenware-set/",
+        "kind": "content",
+        "final": "/products/yhx-2042-kitchenware-set/"
+      },
+      {
+        "old": "/products/ymx-1010-4-410-flatware/",
+        "kind": "content",
+        "final": "/products/ymx-1010-4-410-flatware/"
+      },
+      {
+        "old": "/products/ymx-1010-5-410-flatware/",
+        "kind": "content",
+        "final": "/products/ymx-1010-5-410-flatware/"
+      },
+      {
+        "old": "/products/ymx-1011-410-flatware/",
+        "kind": "content",
+        "final": "/products/ymx-1011-410-flatware/"
+      },
+      {
+        "old": "/products/ymx-1012-410-flatware/",
+        "kind": "content",
+        "final": "/products/ymx-1012-410-flatware/"
+      },
+      {
+        "old": "/products/ymx-1013-410-flatware/",
+        "kind": "content",
+        "final": "/products/ymx-1013-410-flatware/"
+      },
+      {
+        "old": "/products/ymx-1014-410-flatware/",
+        "kind": "content",
+        "final": "/products/ymx-1014-410-flatware/"
+      },
+      {
+        "old": "/products/ymx-1015-410-flatware/",
+        "kind": "content",
+        "final": "/products/ymx-1015-410-flatware/"
+      },
+      {
+        "old": "/products/ymx-1016-4-410-flatware/",
+        "kind": "content",
+        "final": "/products/ymx-1016-4-410-flatware/"
+      },
+      {
+        "old": "/products/ymx-1017-410-flatware/",
+        "kind": "content",
+        "final": "/products/ymx-1017-410-flatware/"
+      },
+      {
+        "old": "/products/ymx-1035-410-flatware/",
+        "kind": "content",
+        "final": "/products/ymx-1035-410-flatware/"
+      },
+      {
+        "old": "/products/ymx-1044-410-flatware/",
+        "kind": "content",
+        "final": "/products/ymx-1044-410-flatware/"
+      },
+      {
+        "old": "/products/ymx-1050-410-flatware/",
+        "kind": "content",
+        "final": "/products/ymx-1050-410-flatware/"
+      },
+      {
+        "old": "/products/ymx-1084-1-410-flatware/",
+        "kind": "content",
+        "final": "/products/ymx-1084-1-410-flatware/"
+      },
+      {
+        "old": "/products/ymx-1084-2-410-flatware/",
+        "kind": "content",
+        "final": "/products/ymx-1084-2-410-flatware/"
+      },
+      {
+        "old": "/products/ymx-2011-black-handle-kitchenware-set/",
+        "kind": "content",
+        "final": "/products/ymx-2011-black-handle-kitchenware-set/"
+      },
+      {
+        "old": "/products/ymx-2014-kitchenware-set/",
+        "kind": "content",
+        "final": "/products/ymx-2014-kitchenware-set/"
+      },
+      {
+        "old": "/products/ymx-2015-kitchenware-set/",
+        "kind": "content",
+        "final": "/products/ymx-2015-kitchenware-set/"
+      },
+      {
+        "old": "/products/ymx-2023-kitchenware-set/",
+        "kind": "content",
+        "final": "/products/ymx-2023-kitchenware-set/"
+      },
+      {
+        "old": "/products/ymx-2032-square-wood-handle-kitchenware-set/",
+        "kind": "content",
+        "final": "/products/ymx-2032-square-wood-handle-kitchenware-set/"
+      },
+      {
+        "old": "/products/ymx-2041-golden-wood-kitchenware-set/",
+        "kind": "content",
+        "final": "/products/ymx-2041-golden-wood-kitchenware-set/"
+      },
+      {
+        "old": "/products/ymx-2068-kitchenware-set/",
+        "kind": "content",
+        "final": "/products/ymx-2068-kitchenware-set/"
+      },
+      {
+        "old": "/products/ymx-2142-201-stainless-kitchenware-set/",
+        "kind": "content",
+        "final": "/products/ymx-2142-201-stainless-kitchenware-set/"
+      }
+    ],
+    "historicalBaselineNote": "2026-10-29的226条映射用于验证已有路径没有遗失；后续新增文章使本次构建数量可能增加。"
+  },
+  "sourceFindings": [
+    {
+      "id": "product_physical_parity",
+      "status": "pass",
+      "evidence": "38对产品的表格数据列数值相同；比较时排除翻译名称列，避免名称中的420/430造成误报。"
+    },
+    {
+      "id": "old_en_body_links",
+      "status": "final_generated_html_pass",
+      "evidence": "初始源稿中文博客119处、英文博客225处/en链接；生产输出必须改成最终地址且不能产生跳转链。 最终229个业务HTML未发现旧/en内部链接或重定向绕行。"
+    },
+    {
+      "id": "cms_chinese_blog_fields",
+      "status": "schema_cms_and_build_pass",
+      "evidence": "中文扩展字段及共享identity/home/about/contact后台入口已补齐；实施代理用实际schema校验214个Markdown通过。独立最终构建检查仍待完成。"
+    },
+    {
+      "id": "draft_scheduling",
+      "status": "unit_and_final_build_pass",
+      "evidence": "草稿、未发布状态、未来发布时间、时区边界、无效日期、旧中文默认发布及JSON安全转义单测通过；构建输出仍需核对草稿不存在。"
+    },
+    {
+      "id": "route_inventory_defaults",
+      "status": "unit_pass",
+      "evidence": "共享路由inventory采用英文draft=true/status=draft、中文历史缺省published；新单测覆盖两项英文必需显式状态、无效日期、publishAt优先与query/hash保留。现有显式内容未改变。"
+    },
+    {
+      "id": "approved_title_alignment",
+      "status": "all_10_approved_titles_pass",
+      "evidence": "最终构建的10个批准英文Title已逐条验证；C304-00仅修改SEO标题，组件牌号和正文未改。"
+    },
+    {
+      "id": "original_contact_structure",
+      "status": "source_and_generated_html_pass",
+      "evidence": "正式Contact共享组件保留原三段结构、六联系卡、五字段与地图；两语表单文案完整，WhatsApp只打开预填信息待用户发送；About使用六张真实工序照片与共同身份。"
+    }
+  ],
+  "releaseGates": [
+    "业务页为英文根和中文/cn；同款真实配对自指canonical及双向en、zh-CN、英文x-default",
+    "旧/en与Factory仅为静态跳转；跳转、后台和404不进入sitemap",
+    "业务页不能有noindex/nosnippet或robots意外阻断；404和admin必须noindex",
+    "无旧/en内部链接、/cn/cn、断链、缺失srcset资源和伪造配对",
+    "静态HTML可读正文、唯一H1、独立标题、描述及正确语言；英文正文和字段提示不混入中文界面",
+    "统一Organization主体，不虚构法定foundingDate、sameAs、价格、库存、评分或作者资历",
+    "两首页各11段8款同序产品、About各6张工序图、Contact各原版5字段",
+    "分类数量按源数据校验；双语38对物理数据与MOQ/材质数字一致",
+    "博客继续使用生成的480/800/1200 WebP缩略图，保留既有尺寸与字节预算",
+    "保留后台仓库和分支；两语发布字段可编辑；中文博客扩展字段不得丢失"
+  ],
+  "skillRecommendationsNotAdopted": [
+    "没有把技能的主观GEO/权威度分数当作真实搜索或AI推荐排名。",
+    "没有因为缺乏sameAs链接、SearchAction、speakable、llms.txt或固定字数而虚构数据或扩写网站。",
+    "没有把GPTBot训练控制等同于OAI-SearchBot搜索控制；不要求训练机器人全部开放。",
+    "没有把B2B询价Product语义等同于Google商品富结果资格，不补假Offer或评论。",
+    "没有把静态页面检查当作真实用户Core Web Vitals、Google收录或AI引用测试。"
+  ],
+  "officialSourcesChecked": [
+    {
+      "url": "https://developers.google.com/search/docs/appearance/ai-features",
+      "application": "Google AI搜索沿用SEO基础，无额外专用schema或AI文本文件要求；收录和展示不保证。"
+    },
+    {
+      "url": "https://developers.google.com/search/docs/specialty/international/localized-versions",
+      "application": "每个真实语言版本互相列出并自列，使用完整URL；未翻译页面不伪造语言版本。"
+    },
+    {
+      "url": "https://developers.google.com/search/docs/crawling-indexing/301-redirects",
+      "application": "服务器永久跳转优先；0秒meta refresh可作为永久迁移信号，但文件本身并不返回HTTP301。"
+    },
+    {
+      "url": "https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages",
+      "application": "GitHub Pages提供静态HTML/CSS/JavaScript托管，继续保持已选托管方式。"
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/bots",
+      "application": "OAI-SearchBot用于搜索，GPTBot用于训练；两者设置独立。"
+    },
+    {
+      "url": "https://developers.google.com/search/docs/appearance/structured-data/product-snippet",
+      "application": "Google商品富结果有独立资格要求，不能用虚构价格/评价补齐。"
+    }
+  ],
+  "notMeasured": [
+    "真实用户Core Web Vitals",
+    "Google/Bing当前关键词排名",
+    "真实搜索引擎收录变化",
+    "ChatGPT或其他AI平台引用排名",
+    "后台在线登录与真实写入",
+    "企业当前政府登记证明"
+  ],
+  "validation": {
+    "verifiedAt": "2026-10-30T01:47:51.456Z",
+    "full_verify": "passed: test:publishing + test:blog-images + optimized build + test:site",
+    "built_routes": 350,
+    "indexable_business_pages": 229,
+    "english_pages": 115,
+    "chinese_pages": 114,
+    "static_redirects": 120,
+    "sitemap_urls": 229,
+    "historical_urls_checked": 226,
+    "historical_chinese_urls_reused": 108,
+    "product_pairs_checked": 38,
+    "errors": [],
+    "warnings": [],
+    "independent_samples": "Home/About/Contact both languages, English Blog and C304-00: language, canonical, legal entity, no legal foundingDate, indexability and five Contact fields passed.",
+    "dependency_audit": "official_npm_registry_zero_vulnerabilities_2026-10-30",
+    "production_http": "deployment not yet verified",
+    "visual_and_interaction": "parent performing browser checks; no external messages sent by this audit",
+    "browser": "Desktop and 390px mobile: home, About, Contact, menu, language paths, carousel next/reduced-motion, required name, product prefill, and old category query/hash redirect passed. No WhatsApp message sent."
+  },
+  "editorialBoundary": "两语产品与文章仍保留独立编辑记录。共同模板/身份及构建校验确保关键结构和已覆盖事实一致，不代表自动翻译、后台保存实测或全文语义自动同步。",
+  "publicationGate": {
+    "source": "/uploads/yumingxing-contact-factory.webp",
+    "status": "pending_user_confirmation",
+    "issue": "原版联系页hero图片嵌入Since 1998、10000+和50+宣传数字；与用户确认2003业务起始年冲突，指标本轮未核验。用户此前明确保留原版联系页，因此等待确认仅替换为其提供的真实厂门照片，或暂缓核实。",
+    "onlineChanged": false,
+    "proposed": "/brand/factory-gate-1440.webp"
+  }
+}

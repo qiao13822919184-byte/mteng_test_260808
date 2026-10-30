@@ -1,0 +1,68 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from './PageHero.astro';
+import ProductCard from './ProductCard.astro';
+import { getCollection } from 'astro:content';
+import { isPublished, entrySlug, absolute, safeJson } from '../lib/publishing';
+import { prefix } from '../lib/locale';
+
+interface Props { locale?: string; category?: 'flatware-sets' | 'kitchenware-sets'; }
+const { locale = 'en', category } = Astro.props;
+const en = locale === 'en';
+const base = prefix(locale);
+const allProducts = (await getCollection(en ? 'productsEn' : 'products', isPublished)).sort((a, b) => a.data.order - b.data.order);
+const products = category ? allProducts.filter(product => product.data.category === category) : allProducts;
+const categories = [
+  { slug: 'flatware-sets', path: '/stainless-steel-cutlery/', name: en ? 'Stainless Steel Cutlery' : '不锈钢餐具' },
+  { slug: 'kitchenware-sets', path: '/stainless-steel-kitchen-utensils/', name: en ? 'Stainless Steel Kitchen Utensils' : '不锈钢厨具' },
+];
+const copy = en ? {
+  all: { title: 'Cutlery & Kitchen Utensil Catalogue | Yumingxing', h1: 'Products for Wholesale Sourcing', description: 'Browse stainless steel cutlery and kitchen utensils. Compare models, component materials and MOQ units, then send your sourcing requirements.' },
+  'flatware-sets': { title: 'Wholesale Stainless Steel Cutlery | Yumingxing', h1: 'Stainless Steel Cutlery for Wholesale Orders', description: 'Explore stainless steel cutlery for wholesale and private label orders. Compare model-specific materials, component options and finishes.' },
+  'kitchenware-sets': { title: 'Stainless Steel Kitchen Utensils Manufacturer | Yumingxing', h1: 'Stainless Steel Kitchen Utensils for Bulk Orders', description: 'Explore stainless steel kitchen utensils for wholesale orders. Compare turners, ladles and serving tools by model, material and component.' },
+} : {
+  all: { title: '餐具与厨具批发目录 | 裕明兴', h1: '面向批量采购的产品目录', description: '查看裕明兴不锈钢餐具与厨具，按型号核对组件材质、表面与起订量单位，再沟通数量、包装及交付要求。' },
+  'flatware-sets': { title: '不锈钢餐具批发与选型 | 裕明兴', h1: '不锈钢餐具批发与选型', description: '查看适合批发与自有品牌采购的不锈钢刀、叉、勺，按型号比较组件、材质与表面处理。' },
+  'kitchenware-sets': { title: '不锈钢厨具制造与批发 | 裕明兴', h1: '不锈钢厨具批量采购', description: '查看不锈钢锅铲、汤勺及厨房工具，按型号核对材质与组件，再确认批量采购需求。' },
+};
+const page = copy[category || 'all'];
+const path = base + (categories.find(item => item.slug === category)?.path || '/products/');
+const heroImage = category === 'kitchenware-sets' ? '/uploads/catalogue-20261016/kw-07-800.webp' : '/uploads/flatware-portuguese-silver.webp';
+const heroAlt = category === 'kitchenware-sets' ? (en ? 'Stainless steel kitchen utensils, model YHX-2142' : 'YHX-2142 不锈钢厨具') : (en ? 'Portuguese-style stainless steel cutlery collection' : '葡式不锈钢餐具系列');
+const itemList = {
+  '@context': 'https://schema.org', '@type': 'ItemList', name: page.h1, numberOfItems: products.length,
+  itemListElement: products.map((product, index) => ({ '@type': 'ListItem', position: index + 1, name: product.data.title, url: absolute(`${base}/products/${entrySlug(product)}/`) })),
+};
+const breadcrumb = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: en ? 'Home' : '首页', item: absolute(`${base}/`) },
+    { '@type': 'ListItem', position: 2, name: en ? 'Product' : '产品', item: absolute(`${base}/products/`) },
+    ...(category ? [{ '@type': 'ListItem', position: 3, name: categories.find(item => item.slug === category)?.name, item: absolute(path) }] : []),
+  ],
+};
+---
+<BaseLayout locale={locale} title={page.title} description={page.description} image={heroImage}>
+  {!category && <script is:inline slot="head" define:vars={{ base }}>
+    (function () {
+      const cataloguePath = base + '/products';
+      if (![cataloguePath, cataloguePath + '/', cataloguePath + '/index.html'].includes(window.location.pathname)) return;
+      const params = new URLSearchParams(window.location.search);
+      const category = params.get('cat');
+      const categoryPath = category === 'flatware-sets' ? '/stainless-steel-cutlery/' : category === 'kitchenware-sets' ? '/stainless-steel-kitchen-utensils/' : null;
+      if (!categoryPath) return;
+      params.delete('cat');
+      const remaining = params.toString();
+      window.location.replace(base + categoryPath + (remaining ? '?' + remaining : '') + window.location.hash);
+    })();
+  </script>}
+  <script slot="head" type="application/ld+json" set:html={safeJson(itemList)} />
+  <script slot="head" type="application/ld+json" set:html={safeJson(breadcrumb)} />
+  <PageHero locale={locale} breadcrumb={en ? 'Product' : '产品'} eyebrow={en ? 'PRODUCT CATALOGUE' : '产品目录'} title={page.h1} description={en ? 'Compare models, component materials and finishes. Send your quantities and destination to discuss a quotation.' : '按型号核对组件、材质与表面，再提供数量及目的地沟通报价。'} image={heroImage} imageAlt={heroAlt} />
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-12">
+    <nav class="flex flex-wrap gap-3 mb-10" aria-label={en ? 'Product categories' : '产品分类'}>
+      {categories.map(item => <a class={`btn ${item.slug === category ? 'btn-primary' : 'btn-ghost'} px-5 py-3`} aria-current={item.slug === category ? 'page' : undefined} href={`${base}${item.path}`}>{item.name}</a>)}
+    </nav>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">{products.map(product => <ProductCard product={product} locale={locale} />)}</div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,10 @@
+---
+import StaticRedirect from '../../components/StaticRedirect.astro';
+import {migrationRoutes} from '../../lib/legacy-links.mjs';
+export function getStaticPaths(){
+  const oldEnglish=new Set([...migrationRoutes().en,'/factory/']);
+  return [...oldEnglish].map(path=>({params:{path:path==='/'?undefined:path.slice(1,-1)},props:{to:path==='/factory/'?'/about/':path}}));
+}
+const {to}=Astro.props;
+---
+<StaticRedirect to={to} />

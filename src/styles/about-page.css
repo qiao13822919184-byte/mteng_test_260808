@@ -1,0 +1,24 @@
+/* About additions inherit the mirrored site's original palette and typography. */
+.about-page .about-facts .card-hover{min-width:0}
+.about-page h1,.about-page h2{text-wrap:balance}
+.about-page .about-facts .font-display{font-size:clamp(1.25rem,2.4vw,1.875rem)}
+.about-page .about-story>div{min-width:0}
+.about-page .about-story-photo img{object-fit:contain}
+.about-page .about-identity{margin-top:1.5rem;padding-top:1.25rem;border-top:1px solid var(--color-line)}
+.about-page .about-identity h3{font-size:1rem;margin-bottom:.65rem}
+.about-page .about-identity dl{display:grid;gap:.55rem;font-size:.8125rem;line-height:1.65}
+.about-page .about-identity dl>div{display:grid;grid-template-columns:minmax(7.3rem,.55fr) minmax(0,1fr);gap:.5rem 1rem}
+.about-page .about-identity dt{color:var(--color-ink-muted)}
+.about-page .about-identity dd{color:var(--color-ink-soft);overflow-wrap:anywhere}
+.about-page .about-capabilities-intro{margin-top:1rem;font-size:.9375rem}
+.about-page .about-capability-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:1.5rem}
+.about-page .about-capability-card{min-width:0;overflow:hidden}
+.about-page .about-capability-image{aspect-ratio:4/3;overflow:hidden;background:var(--color-sand)}
+.about-page .about-capability-image img{display:block;width:100%;height:100%;object-fit:contain}
+.about-page .about-capability-copy{padding:1.25rem 1.4rem 1.5rem}
+.about-page .about-capability-heading{display:flex;align-items:center;gap:.8rem}
+.about-page .about-capability-heading>span{flex-shrink:0}
+.about-page .about-capability-copy p{margin-top:.7rem}
+@media(min-width:640px){.about-page .about-capability-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:1024px){.about-page .about-capability-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:480px){.about-page .about-facts .card-hover{padding:1.5rem .75rem}.about-page .about-identity dl>div{grid-template-columns:minmax(0,1fr);gap:0}.about-page .about-identity dl{gap:.75rem}}

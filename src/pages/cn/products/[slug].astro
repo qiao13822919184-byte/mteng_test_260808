@@ -1,0 +1,11 @@
+---
+import ProductView from '../../../views/products/[id].astro';
+import {getCollection} from 'astro:content';
+import {isPublished,entrySlug} from '../../../lib/publishing';
+export async function getStaticPaths(){
+  const products=await getCollection('products',isPublished);
+  return products.map(product=>({params:{slug:entrySlug(product)},props:{product,related:products.filter(item=>item.id!==product.id&&item.data.category===product.data.category).slice(0,3)}}));
+}
+const {product,related}=Astro.props;
+---
+<ProductView product={product} related={related} />
