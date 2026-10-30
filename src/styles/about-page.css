@@ -14,7 +14,7 @@
 .about-page .about-capability-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:1.5rem}
 .about-page .about-capability-card{min-width:0;overflow:hidden}
 .about-page .about-capability-image{aspect-ratio:4/3;overflow:hidden;background:var(--color-sand)}
-.about-page .about-capability-image img{display:block;width:100%;height:100%;object-fit:contain}
+.about-page .about-capability-image img{display:block;width:100%;height:100%;object-fit:cover}
 .about-page .about-capability-copy{padding:1.25rem 1.4rem 1.5rem}
 .about-page .about-capability-heading{display:flex;align-items:center;gap:.8rem}
 .about-page .about-capability-heading>span{flex-shrink:0}
