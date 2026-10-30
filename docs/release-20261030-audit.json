@@ -1,7 +1,7 @@
 {
   "release": "2026-10-30",
   "basis_commit": "476b0a2",
-  "status": "technical_verification_passed_contact_image_confirmation_pending",
+  "status": "verified_release_publication_authorized",
   "identity": {
     "brand": "Yumingxing / 裕明兴",
     "legalName": "揭阳市裕明兴五金制品有限公司",
@@ -1264,9 +1264,11 @@
   "editorialBoundary": "两语产品与文章仍保留独立编辑记录。共同模板/身份及构建校验确保关键结构和已覆盖事实一致，不代表自动翻译、后台保存实测或全文语义自动同步。",
   "publicationGate": {
     "source": "/uploads/yumingxing-contact-factory.webp",
-    "status": "pending_user_confirmation",
+    "status": "user_confirmed_publish_with_original_contact_image",
     "issue": "原版联系页hero图片嵌入Since 1998、10000+和50+宣传数字；与用户确认2003业务起始年冲突，指标本轮未核验。用户此前明确保留原版联系页，因此等待确认仅替换为其提供的真实厂门照片，或暂缓核实。",
     "onlineChanged": false,
-    "proposed": "/brand/factory-gate-1440.webp"
+    "proposed": "/brand/factory-gate-1440.webp",
+    "latestInstruction": "上线，保留是联系页里面的原图",
+    "interpretation": "原图保持不变。图片内Since 1998、100+员工、10000+平方米和50+国家未被本次独立核验，保留不构成核验通过；新页面正文与结构化数据继续按已确认身份和2003品牌／工厂业务起始年。"
   }
 }
