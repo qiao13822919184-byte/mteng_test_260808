@@ -17,8 +17,12 @@ const normal = p => p === '/' || path.extname(p) || p.endsWith('/') ? p : `${p}/
 const errors = [], warnings = [], details = [];
 const check = (test, message) => { if (!test) errors.push(message); };
 const records = new Map();
+// Search Console fetches this exact plain-text file from the site root.
+const verificationFile = 'googleb3b9f0e6b2f8767a.html';
+assert.equal(fs.readFileSync(path.join('dist', verificationFile), 'utf8').trimEnd(), 'google-site-verification: ' + verificationFile);
 for (const file of walk('dist').filter(f => f.endsWith('.html'))) {
   const route = '/' + path.relative('dist', file).replaceAll(path.sep, '/').replace(/index\.html$/, '');
+  if (route === '/' + verificationFile) continue;
   const html = fs.readFileSync(file, 'utf8'), all = nodes(parse(html));
   const refresh = all.find(n => n.tagName === 'meta' && attr(n, 'http-equiv')?.toLowerCase() === 'refresh');
   const rawTarget = attr(refresh, 'content')?.match(/^\s*0\s*;\s*url\s*=\s*["']?([^"']+?)["']?\s*$/i)?.[1];
