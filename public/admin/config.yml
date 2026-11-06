@@ -102,7 +102,7 @@ collections:
                 widget: string
             hint: 在同一入口同时维护中文和英文表述；两个语言页面共享这些事实。
       - name: homeSections
-        label: 首页新增板块与精选顺序
+        label: 首页共享板块、视频与精选顺序
         file: src/data/home-sections.json
         preview_path: /
         fields:
@@ -110,6 +110,14 @@ collections:
             name: schemaVersion
             widget: hidden
             default: 1
+          - label: 为什么选择裕明兴 — Facebook 视频（中英文共用）
+            name: factoryVideoUrl
+            widget: string
+            required: false
+            hint: 填写公开 Facebook 视频或 Reel 的完整网址，不填写 iframe 代码。中英文首页共用此视频；留空时使用各语言的备用图片。
+            pattern:
+              - ^https://www\.facebook\.com/.+
+              - 请填写以 https://www.facebook.com/ 开头的完整视频网址。
           - label: 企业介绍
             name: intro
             widget: object
@@ -1237,6 +1245,7 @@ collections:
           - label: 为什么选择我们
             name: whyUs
             widget: object
+            hint: 视频在「首页共享板块、视频与精选顺序」中统一设置；本处配图仅在未配置视频时显示。
             fields:
               - label: 标题
                 name: title
@@ -1931,6 +1940,7 @@ collections:
             name: whyUs
             widget: object
             required: true
+            hint: The shared homepage settings control the Facebook video. The image below appears only when no video is configured.
             fields:
               - label: Title
                 name: title

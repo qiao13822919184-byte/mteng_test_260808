@@ -18,6 +18,16 @@ const en=locale==='en',site=getSite(locale),home=en?homeEn:homeZh;
 const text=(zh,enText)=>en?enText:zh;
 const base=prefix(locale);
 const language=en?'en':'zh';
+const factoryVideoUrl = homeSections.factoryVideoUrl?.trim();
+if (factoryVideoUrl) {
+  const videoUrl = new URL(factoryVideoUrl);
+  if (videoUrl.protocol !== 'https:' || videoUrl.hostname !== 'www.facebook.com') {
+    throw new Error('The shared homepage video must use an https://www.facebook.com/ URL.');
+  }
+}
+const factoryVideoEmbed = factoryVideoUrl
+  ? `https://www.facebook.com/plugins/video.php?${new URLSearchParams({ height: '314', href: factoryVideoUrl, show_text: 'false', width: '560', t: '0' })}`
+  : '';
 const resolveIdentity=(value: string) => value.replace(/\{(businessStartYear|companyNameEn|legalNameZh)\}/g, (_, key: keyof typeof identity) => String(identity[key]));
 const intro=Object.fromEntries(Object.entries(homeSections.intro[language]).map(([key,value]) => [key,resolveIdentity(value)]));
 const identityText=(value: string) => value
@@ -214,14 +224,23 @@ const specs = en ? [{k:'Materials',v:'201 / 304 / 410 / 430',note:'Confirm the g
     </div>
   </section>
 
-  <!-- ============ 工艺照片 + 说明（Nyra photo + caption） ============ -->
+  <!-- Shared factory video and bilingual reasons to choose Yumingxing. -->
   <section class="max-w-7xl mx-auto px-4 sm:px-6 py-20 sm:py-28">
     <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-      <div id="factory-video-preview" data-future-facebook-video data-video-url="" class="reveal rounded-3xl overflow-hidden aspect-[4/3] ring-1 ring-line border border-line ymx-future-video">
-        <div class="sheen group w-full h-full">
-          <ResponsiveImage src={home.whyUs.image} alt={en?homeEn.whyUs.imageAlt:home.whyUs.title} width="1000" height="750" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-        </div>
-      </div>
+      <figure id="factory-video-preview" data-video-url={factoryVideoUrl} class="reveal ymx-factory-video">
+        {factoryVideoEmbed ? <>
+          <div class="ymx-factory-video-frame rounded-3xl overflow-hidden ring-1 ring-line border border-line">
+            <iframe src={factoryVideoEmbed} title={text('为什么选择裕明兴 — Facebook 视频', 'Why choose Yumingxing — Facebook video')} width="560" height="314" loading="lazy" scrolling="no" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <figcaption class="ymx-factory-video-caption">
+            <a href={factoryVideoUrl} target="_blank" rel="noopener noreferrer">{text('在 Facebook 观看', 'Watch on Facebook')} <span aria-hidden="true">↗</span></a>
+          </figcaption>
+        </> : <div class="rounded-3xl overflow-hidden aspect-[4/3] ring-1 ring-line border border-line">
+          <div class="sheen group w-full h-full">
+            <ResponsiveImage src={home.whyUs.image} alt={en?homeEn.whyUs.imageAlt:home.whyUs.title} width="1000" height="750" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+          </div>
+        </div>}
+      </figure>
       <div class="reveal reveal-d1">
         <p class="eyebrow mb-4">{home.whyUs.subtitle}</p>
         <h2 class="statement text-3xl sm:text-4xl md:text-[2.6rem] md:leading-[1.18]">{home.whyUs.title}</h2>
