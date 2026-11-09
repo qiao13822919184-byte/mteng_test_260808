@@ -6,7 +6,7 @@
     "height": 1000
   },
   "map": {
-    "query": "广东省揭阳市榕城区"
+    "embedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.872301998696!2d116.42931507500623!3d23.537094896932697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3411cca5f2031fcb%3A0xd69994c007caf6ff!2z6KOV5piO5YW05LqU6YeR5Yi25ZOB5Y6C!5e0!3m2!1szh-CN!2sus!4v1794245565080!5m2!1szh-CN!2sus"
   },
   "locales": {
     "en": {
@@ -48,8 +48,8 @@
         "messageLabels": { "name": "Name: ", "company": "Company: ", "product": "Product: ", "qty": "Quantity: ", "message": "Message: " }
       },
       "map": {
-        "title": "Factory area: Rongcheng, Jieyang",
-        "note": "The map shows the Rongcheng area. Contact us for directions before a factory visit."
+        "title": "Yumingxing factory location",
+        "note": "The map marks the Yumingxing factory. Please contact us before your visit."
       },
       "quick": {
         "eyebrow": "INSTANT CONTACT",
@@ -97,8 +97,8 @@
         "messageLabels": { "name": "姓名：", "company": "公司：", "product": "产品：", "qty": "数量：", "message": "留言：" }
       },
       "map": {
-        "title": "工厂所在地区：揭阳榕城区",
-        "note": "地图展示榕城区范围。到访工厂前，请联系我们确认具体路线。"
+        "title": "裕明兴五金制品厂位置",
+        "note": "地图已标注裕明兴厂区位置。到访前请先联系我们安排接待。"
       },
       "quick": {
         "eyebrow": "即时沟通",

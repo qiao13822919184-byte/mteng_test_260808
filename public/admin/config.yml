@@ -653,10 +653,13 @@ collections:
             widget: object
             collapsed: true
             fields:
-              - label: 地图搜索地点
-                name: query
+              - label: Google Maps 厂区地图嵌入网址（中英文共用）
+                name: embedUrl
                 widget: string
-                hint: 地图只展示已确认的地区；未核实具体门牌前不要标注为精确厂址。
+                hint: 从 Google Maps 厂区地点的「分享 → 嵌入地图」中复制 iframe 的 src 网址；不要填写整段 iframe 代码。更新一次即可同步中英文联系页。
+                pattern:
+                  - ^https://www\.google\.com/maps/embed\?pb=.+
+                  - 请填写以 https://www.google.com/maps/embed?pb= 开头的地图嵌入网址。
           - label: 中英文文案
             name: locales
             widget: object
