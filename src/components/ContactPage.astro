@@ -13,10 +13,11 @@ const copy = contactPage.locales[language];
 const base = prefix(locale);
 const waDigits = c.whatsappDigits.replace(/\D/g, '');
 const waLink = `https://wa.me/${waDigits}`;
+const gmailLink = `https://mail.google.com/mail/?${new URLSearchParams({ view: 'cm', fs: '1', to: c.email })}`;
 const mapEmbed = `https://maps.google.com/maps?q=${encodeURIComponent(contactPage.map.query)}&output=embed`;
 const methods = [
-  { label: copy.methods.whatsapp.label, value: c.whatsappDisplay, href: waLink, note: copy.methods.whatsapp.note, whatsapp: true },
-  { label: copy.methods.email.label, value: c.email, href: `mailto:${c.email}`, note: copy.methods.email.note },
+  { label: copy.methods.whatsapp.label, value: c.whatsappDisplay, href: waLink, note: copy.methods.whatsapp.note, whatsapp: true, newTab: true },
+  { label: copy.methods.email.label, value: c.email, href: gmailLink, note: copy.methods.email.note, newTab: true },
   { label: copy.methods.phone.label, value: c.phoneDisplay, href: `tel:${c.phoneDisplay.replace(/[^\d+]/g, '')}`, note: copy.methods.phone.note },
   { label: copy.methods.wechat.label, value: c.wechat, note: copy.methods.wechat.note },
   { label: copy.methods.address.label, value: c.addressLine, note: site.companyName },
@@ -55,7 +56,7 @@ const fieldSettings = {
         <div class={`reveal reveal-d${index + 1} card-hover bg-white rounded-2xl border border-line p-6 shadow-[var(--shadow-soft)]`}>
           <p class="eyebrow">{method.label}</p>
           {method.href ? (
-            <a href={method.href} target={method.whatsapp ? '_blank' : undefined} rel={method.whatsapp ? 'noopener noreferrer' : undefined} data-wa={method.whatsapp || undefined} data-wa-product={method.whatsapp ? 'contact_method' : undefined} class="block font-display font-bold text-ink text-lg mt-2 break-words hover:text-ocean transition-colors">{method.value}</a>
+            <a href={method.href} target={method.newTab ? '_blank' : undefined} rel={method.newTab ? 'noopener noreferrer' : undefined} data-wa={method.whatsapp || undefined} data-wa-product={method.whatsapp ? 'contact_method' : undefined} class="block font-display font-bold text-ink text-lg mt-2 break-words hover:text-ocean transition-colors">{method.value}</a>
           ) : <p class="font-display font-bold text-ink text-lg mt-2 break-words">{method.value}</p>}
           <p class="text-ink-muted text-sm mt-1">{method.note}</p>
         </div>

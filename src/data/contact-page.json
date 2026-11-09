@@ -21,7 +21,7 @@
       },
       "methods": {
         "whatsapp": { "label": "WhatsApp", "note": "Click to start a conversation" },
-        "email": { "label": "Email", "note": "Business cooperation and enquiries" },
+        "email": { "label": "Email", "note": "Open Gmail to send an enquiry" },
         "phone": { "label": "Phone", "note": "Available during business hours" },
         "wechat": { "label": "WeChat", "note": "Please include your purchasing requirements when adding us" },
         "address": { "label": "Address" },
@@ -70,7 +70,7 @@
       },
       "methods": {
         "whatsapp": { "label": "WhatsApp", "note": "点击直接对话" },
-        "email": { "label": "邮箱 Email", "note": "商务合作与询价" },
+        "email": { "label": "邮箱 Email", "note": "点击打开 Gmail，发送商务合作与询价邮件" },
         "phone": { "label": "电话 Phone", "note": "工作时间内接听" },
         "wechat": { "label": "微信 WeChat", "note": "添加时请备注采购需求" },
         "address": { "label": "地址 Address" },
